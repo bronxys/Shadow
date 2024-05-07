@@ -17,6 +17,6 @@ cd /sdcard/SHADOW-BOT-v3.5
 
 const vaiSeFuder = "Boa Sorte"
 // Espero q goste do bot. Qualquer dúvida, me chame no zap: +55 21 97198-3758
-// Um beijo, um abraço e um amasso do Vitu e do Gabs <3
+// Um beijo, um abraço e um amasso do Vitu <3
 // Para comprar a base 100% editável, entre em contato com o número acima :)
 
