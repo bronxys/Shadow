@@ -1,0 +1,26 @@
+[
+  {
+    "command": "antiimg",
+    "info": "Este comando serve para restrigir/banir os participantes de enviar imagens no grupo, lembrando que este comando deve ser ativado para começar à executar sua função. Veja o exemplo abaixo:\n\nPara ativar a proteção ao seu grupo use [ #prefixo#antiimg 1 ], para desativar, use [ #prefixo#antiimg 0 ]"
+  },
+  {
+    "command": "antivideo",
+    "info": "Este comando serve para restrigir/banir os participantes de enviar vídeos no grupo, lembrando que este comando deve ser ativado para começar à executar sua função. Veja o exemplo abaixo:\n\nPara ativar a proteção ao seu grupo use [ #prefixo#antivideo 1 ], para desativar, use[ #prefixo#antivideo 0 ]"
+  },
+  {
+    "command": "antiaudio",
+    "info": "Este comando serve para restrigir/banir os participantes de enviar áudios no grupo, lembrando que este comando deve ser ativado para começar à executar sua função. Veja o exemplo abaixo:\n\nPara ativar a proteção ao seu grupo use [ #prefixo#antiaudio 1 ], para desativar, use [ #prefixo#antiaudio 0 ]"
+  },
+  {
+    "command": "antiloc",
+    "info": "Este comando serve para restrigir/banir os participantes de enviar localização no grupo, lembrando que este comando deve ser ativado para começar à executar sua função, Veja o exemplo abaixo:\n\nPara ativar a proteção ao seu grupo use [ #prefixo#antiloc 1 ], para desativar, use [ #prefixo#antiloc 0 ]"
+  },
+  {
+    "command": "anticontato",
+    "info": "Este comando serve para restrigir/banir os participantes de enviar contatos no grupo, lembrando que este comando deve ser ativado para começar à executar sua função, ou seja, veja o exemplo abaixo:\n\nPara ativar a proteção ao seu grupo use [ #prefixo#anticontato 1 ], para desativar, use [ #prefixo#anticontato 0 ]"
+  },
+  {
+    "command": "antidoc",
+    "info": "Este comando serve para restrigir/banir os participantes de enviar documentos no grupo, lembrando que este comando deve ser ativado para começar à executar sua função, ou seja, veja o exemplo abaixo:\n\nPara ativar a proteção ao seu grupo use [ #prefixo#antidoc 1 ], para desativar, use [ #prefixo#antidoc 0 ]"
+  }
+]
