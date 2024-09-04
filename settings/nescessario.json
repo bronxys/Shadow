@@ -4,7 +4,7 @@
   "banChats": true,
   "menu_audio": false,
   "verificado": true,
-  "modoaluguel": true,
+  "modoaluguel": false,
   "consoleoff": true,
   "antipv": false,
   "anticall": true,
