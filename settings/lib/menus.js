@@ -152,6 +152,7 @@ return `
 ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rmadv @*
 ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antiimg (1/0)*
 ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antiimg2 (1/0)*
+ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}autototext (1/0)*
 ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antivideo (1/0)*
 ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antiaudio (1/0)*
 ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antisticker (1/0)*
