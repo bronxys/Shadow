@@ -9,9 +9,9 @@ COMANDOS DE INSTALAÇÃO DO SHADOW-BOT - BY: VITUKJK
 6°- pkg install python
 7°- pkg install
 8°- apt install ffmpeg -y
-9°- cd /sdcard/Download/SHADOW-BOT-V4
+9°- cd /sdcard/Download/Shadow
 (se esse não for, tenta o de baixo)
-cd /sdcard/SHADOW-BOT-V4
+cd /sdcard/Shadow
 10°- sh start.sh
 */
 
