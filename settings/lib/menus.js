@@ -1,754 +1,874 @@
 const menu = (prefix, NomeDoBot, sender) => {
-return `​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Bot:* ${NomeDoBot}
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Usuário:* @${sender.split("@")[0]}⁩ 
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯
-.✦ۣۜۜ☆ۣۜۜ͜͡ৡ 𖥾ᤢ۪.۫ꪶ🍧『𝐌𝐄𝐍𝐔』
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}alugarbot*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}minhaskey*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}suicidio*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}sugestao*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}idiomas*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}bug*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}avaliar*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ping*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}noticias*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cnnbrasil*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}globo*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}poder360*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}uol*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}corretor*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}legenda-foto*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}jovempan*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}falar*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}emoji*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}emojimix*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}tagme*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}perfil*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}nick*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}tabela*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ptvmsg*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}traduzir*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}calcular*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}simi*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cantadas*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}atividade*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rankativo*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}checkativo*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}donos*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}dono*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}criador*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}fatos*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}lerfoto*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}correio*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}repetir*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}printsite*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}memes*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}dado*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}contar*
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯`;
-};
-
-exports.menu = menu;
-
-// MENU PORNÔ
-
-const menuporno = (prefix, NomeDoBot, sender) => {
-return `​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Bot:* ${NomeDoBot}
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Usuário:* @${sender.split("@")[0]}⁩ 
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯
- ஓீ͜- 🔞『𝐌𝐄𝐍𝐔 𝐏𝐎𝐑𝐍𝐎』
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}amador*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}onlyfans*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}porno*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}egirlvideo*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}aline*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}alifox*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}alycia*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}amichan*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}aninha*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}victoria*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}belle*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}brenda*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cami*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}clowniac*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}feh*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}giovanna*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}isadora*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}isa*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}lay*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}leticia*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}marina*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}maru*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}princesa*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}meladinha*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}nath*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}nega*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}polonesa*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rute*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}celestine*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}carnie*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}gotica*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}phsearch*
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯`
-};
-
-exports.menuporno = menuporno;
+    return `​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+    ┎┅┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅☾⋆
+    ┖╮*⚡𝑺𝒆𝒋𝒂 𝑩𝒆𝒎-𝑽𝒊𝒏𝒅𝒐 (𝒂)!🛸*
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ┇ |
+    ┇ |⚡⋆͜͡҈➳ *Bot:* ${NomeDoBot}
+    ┇ |⚡⋆͜͡҈➳ *Usuário:* @${sender.split("@")[0]}⁩ 
+    ┇ |
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰┮╼╼╼╼╼╍⋅⊹⋅⋅⦁ ⚡ ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆
+    ▹▫◃
+    ┎┶┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅☾⋆
+    ┖╮
+    ╭┤ˑ࣪    ִ .̇  ۫  ̣ ֽ֗🛸 𝐌𝐄𝐍𝐔 🛸·๋  ִ֗  ᐧ ֶּ֓ ˑ࣪ 
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ┇ |⚡⋆͜͡҈➳ *${prefix}totext*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}alugarbot*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}minhaskey*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}suicidio*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}sugestao*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}idiomas*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}bug*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}avaliar*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}ping*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}noticias*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}cnnbrasil*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}globo*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}poder360*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}uol*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}corretor*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}legenda-foto*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}jovempan*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}falar*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}emoji*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}emojimix*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}tagme*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}perfil*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}nick*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}tabela*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}ptvmsg*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}traduzir*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}calcular*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}simi*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}cantadas*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}atividade*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}rankativo*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}checkativo*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}donos*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}dono*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}criador*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}fatos*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}lerfoto*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}correio*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}repetir*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}printsite*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}memes*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}dado*
+    ┇ |⚡⋆͜͡҈➳ *${prefix}contar*
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰╼╼╼╼╼╍⋅⊹⋅⋅⦁ ⚡ ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆`;
+    };
     
-// MENU PESQUISAS
-
-const pesquisas = (prefix, NomeDoBot, sender) => {
-return `​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Bot:* ${NomeDoBot}
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Usuário:* @${sender.split("@")[0]}⁩⁩⁩ 
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯
-.ৡླ 𖥾ᤢ۪ꪶ📚『𝐏𝐄𝐒𝐐𝐔𝐈𝐒𝐀𝐒』
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}igstalk*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}pensador*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}nasa*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}serie*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}movie*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}playstore*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}aptoide*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}gpt*  
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}clima*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}book*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}lyrics*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}signo*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}amazon*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}mlsrc*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}americanas*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}submarino*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}wikipedia*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}imagine*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}gimage*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}pinterest*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}gemini*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cotacao*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}dicionario*
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯`;
-};
-
-exports.pesquisas = pesquisas;
-
-// MENU DE ADMINISTRADORES 
-
-const menuadm = (prefix, NomeDoBot, sender) => {
-return `
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Bot:* ${NomeDoBot}
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Usuário:* @${sender.split("@")[0]} 
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯
-᳝'꩖͜͡⚘.࿆ํ·ٜꪶ👽『𝐌𝐄𝐍𝐔 - 𝐀𝐃𝐌𝐈𝐍𝐒』
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}advertir @*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rmadv @*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antiimg (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antiimg2 (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}autototext (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antivideo (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antiaudio (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antisticker (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antiloc (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}anticontato (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antidoc (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antilinkgp (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antifake (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antinotas (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}anticatalogo (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antipalavrao (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}addpalavra (palavra)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}delpalavra (palavra)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}limitecaracteres (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}bemvindo (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}bemvindo2 (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}simih (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}simih2 (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}autosticker (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}autoresp (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}modo+18 (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}modo-gamer (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}modopuxadas (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}odelete (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}x9visuunica (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}x9 (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}legenda_imagem (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}legenda_video (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}legenda_estrangeiro (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}legendabv (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}legendabv2 (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}legendasaiu (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}legendasaiu2 (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}so_adm*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}resetlink*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}requestgp -list*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}requestgp -a (numero)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}requestgp -r (numero)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}grupo (f/a)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}fechargp (tempo)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}listanegra (numero)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}tirardalista (numero)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}listanegraG (numero)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}tirardalistaG (numero)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}multiprefixo (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}add_prefixo (prefixo)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}tirar_prefixo (prefixo)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}banghost*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}mute*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}desmute*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ban*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ausente (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ativo*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}promover*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rebaixar*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}changegroup (all/adms)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rmphotogp (remove a ft do gp)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ephemeral [1/0] (msg-temp)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}descgp (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}nomegp (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}totag (mencionar algo)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}status*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}limpar*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}atividades*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}linkgp*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}grupoinfo*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}hidetag (texto ou marcar algo)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}marcar (marca geral do gp)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}marcar2 (marca geral em wa.me)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}anagrama (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antipalavra (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}criartabela (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}tabelagp*
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯`;
-};
-
-exports.menuadm = menuadm;
-
-//MENU DOWNLOADS
-
-const menudownload = (prefix, NomeDoBot, sender) => {
-return` ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Bot:* ${NomeDoBot}
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Usuário:* @${sender.split("@")[0]}
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯
-❀࿆⃧፝྅⃕ꦿ 📲『𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐒』
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}play*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}play2*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}playmix*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}playmp4*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ytmp4*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ytmp3*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}spotify*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}tiktok*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}igdl*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}deezer*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}soundcloud*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}mediafire*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}gerarlink*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}gdrive*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}aptoide*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}gitclone*
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯`;
-};
-
-exports.menudownload = menudownload;
-
-// MENU STICKERS
-
-const menusticker = (prefix, NomeDoBot, sender) => {
-return` ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ Bot: ${NomeDoBot}
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ Usuário: @${sender.split("@")[0]}
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯
-᭥ꩌ゚໋ ꯴᩠ꦽꦼ🌹『𝐌𝐄𝐍𝐔 𝐒𝐓𝐈𝐂𝐊𝐄𝐑』
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}figurinhas (quantidade)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}figumemes (quantidade)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}figuflork (quantidade)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}figuemoji (quantidade)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}figucoreana (quantidade)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}figubebe (quantidade)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}figufunny (quantidade)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}figuanimais (quantidade)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}figudesenho (quantidade)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}figuraiva (quantidade)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}figuroblox (quantidade)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}figaleatoria (quantidade)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ttp (seu texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}attp (seu texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}sticker (marcar ft/video)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}fsticker (marcar ft/video)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}toimg (marcar figurinha)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}togif (marcar fig animada)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}tovid (marcar fig animada)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}qc (seu texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}roubar (marcar figurinha)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rbale (marcar figurinha)*
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯`;
-};
-
-exports.menusticker = menusticker;
-
-// MENU DE DONO
-
-const menudono = (prefix, NomeDoBot, sender) => {
-return `​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ Bot: ${NomeDoBot}
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ Usuário: @${sender.split('@')[0]}
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯
-ঔৣ͜͡҉❅ۣ̤ۜ🤴ৡ『𝐌𝐄𝐍𝐔-𝐃𝐎𝐍𝐎』
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}addrent*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}tirarrent*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}delrent*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cortesia24*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}listrent*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}lastrent*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}keys*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}gerarkeygp*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}gerarkeycort*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rmkey*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}addvipgp (dias)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}delvipgp*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}bangp*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}unbangp*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}fotomenu (marcar img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}blockspam (spam em grupo)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}blockcmd (comando)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}unblockcmd (comando)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cmdviplist*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}addcmdvip (comando)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}fundobemvindo (marcar img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}fundosaiu (marcar img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}servip*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}listagp*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}antiligar (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}modoaluguel (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}tmgp*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}infocmd_add (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}infocmd_del (comando)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}visualizarmsg*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}console*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}botoff*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}boton*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}verificado-global*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rmpalavra_forca*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}addpalavras_forca*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}addvip*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}delvip*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}addvipgp (quantos dias)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}modo-vip (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}privphotobot*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}privaddgroup*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}clonar (marcar img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}fotobot (marcar img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}block (marcar pessoa)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}unblock (marcar pessoa)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}setprefix (novo prefixo)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}bcgp (Transmissão-pv)*
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯`;
-};
-
-exports.menudono = menudono;
-
-// MENU DE LOGOS 
-
-const menulogos = (prefix, NomeDoBot, sender) => {
-return `​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Bot: ${NomeDoBot}*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Usuário: @${sender.split('@')[0]}* 
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯
-❀࿆⃧፝྅⃕ꦿ🎨『𝑴𝑬𝑵𝑼 𝑳𝑶𝑮𝑶𝑺』
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}amongus (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}script (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}gta (texto/texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}pubgv (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}natalmsg (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}anonovo (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}tigrev (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}googlesg (texto/texto/texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}glitch (texto/texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}glitch3 (texto/texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}grafity (texto/texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}space (texto/texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}marvel (texto/texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}gameplay (texto/texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}stone (texto/texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}steel (texto/texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ffbanner (texto/texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}avatar (texto/texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}videogame (texto/texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}pubg (texto/texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}thorstyle (texto/texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}neonlight (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}orangejuice (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ranbowequalizer (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}peridot (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rock (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}esmeralda (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}3ddragon (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}purpleshiny (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}robotr2 (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}berry (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}hologram (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cartoon (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}deepsea (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}shadow-sky (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}metalic (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}logoneon (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ninjalogo (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}harry-potter (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}flower-typography (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}butterfly (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}starballons (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}frozen (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}3dsilver (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}goldtext (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}illuminated-metallic (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}sweet-candy (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}strawberry (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}seta (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}grafite (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}goldt (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}tela (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}3dboxtxt (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}chocolate-cake (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}magma (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}green-horror (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}blackpink2 (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}logobear (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}flaming (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}carved-wood (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}night-sky (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}naturalleaves (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}candycane (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}christmas (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}merrychristmas (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}3ddeep (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}drug (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}americanflag (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}scifi (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}sandsummer (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}desfocado (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}vietnam (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}brilhante (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}sandwriting (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}sandengraved (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}summerysand (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}glue (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}dark (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}galaxystyle (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}minion (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}horrorgift (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}holographic (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}deluxe (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}glossyblue (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}deluxegold (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}glossycarbon (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}fabric (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}watercolor (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}1917 (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}multicolor (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}generator (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}wonderful (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}holiday (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}technology (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}winter (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}neontext (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}halloweenfire (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}metaldark (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}darkgold (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}wicker (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}firework (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}steeltext (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}goldfoil (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ultragloss (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}denimtext (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}stargreen (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}captain (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}toxic (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}txtquadrinhos (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}hackneon (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}equipemascote (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ffavatar (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}gizquadro (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}angelglx (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}blackpink (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}girlmascote (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}mascotegame (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}fpsmascote (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}logogame (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}glitch2 (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}3dgold (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}placaloli (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}phadow (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}efeitoneon (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cemiterio (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}metalgold (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}fire (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}romantic (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}smoke (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}papel (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}lovemsg (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}lovemsg2 (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}lovemsg3 (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}coffecup (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}coffecup2 (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cup (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}florwooden (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}lobometal (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}harryp (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}txtborboleta (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}madeira (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}pornhub (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}escudo (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}transformer (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}america (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}demongreen (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}wetglass (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}toxic (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}neon3 (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}neondevil (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}neongreen (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}lava (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}halloween (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}demonfire (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}demongreen (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}thunder (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}thunderv2 (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}colaq (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}luxury (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}matrix (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}horror (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}nuvem (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}neon (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}neon1 (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}neon2 (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}neon3d (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}neve (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}areia (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}vidro (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}style (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}pink (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}carbon (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}metalblue (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}jeans (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ossos (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}asfalto (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}3dgoldenblack (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}3d_business (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}summer (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}natal (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}jokerlogo (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}blood (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}break (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}fiction (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}3dstone (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}lapis (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}gelo (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rainbow (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}metalfire (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cria (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ff1 (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ff2 (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}game (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}entardecer (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}indian (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ffrose (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ffgreen (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}wolf (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}dragonred (texto)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}purple (texto)*
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯`;
-};
-
-exports.menulogos = menulogos;
-
-// MENU DE ALTERAR ÁUDIOS E VÍDEOS
-
-const alteradores = (prefix, NomeDoBot, sender) => { 
-
-return`╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Bot: ${NomeDoBot}*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Usuário: @${sender.split("@")[0]}*
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯
-ꪶ⚘ঔৣ͜͡҉⚙️『𝐀𝐋𝐓𝐄𝐑𝐀𝐃𝐎𝐑𝐄𝐒』
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}videolento (marcar/vid)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}videorapido (marcar/vid)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}videocontrario (marcar/vid)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}audiolento (marcar/audio)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}audiorapido (marcar/audio)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}grave (marcar/audio)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}grave2 (marcar/audio)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}esquilo (marcar/audio)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}estourar (marcar/audio)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}bass (marcar/audio)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}bass2 (marcar/audio)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}vozmenino (marcar/audio)*
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯`;
-};
-
-exports.alteradores = alteradores;
-
-// MENU PREMIUM 
-
-const menuprem = (prefix, NomeDoBot, sender) => { 
-
-return `
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ Bot: ${NomeDoBot} 
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ Usuário: @${sender.split("@")[0]} 
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯
-๖ۣۜ͡ஓீ͜͜͡❥𖤃·۪۫ˑ݈🍷『𝐌𝐄𝐍𝐔 𝐕𝐈𝐏』
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *shadow (pergunta/sem prefixo)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}calendario*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ddd (Ex: 21)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}gerarcpf*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}listavip*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}encurtalink (link)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}encurtalink2 (link+nome)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}encurtalink3 (link)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}encurtalink4 (link)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}celular (Ex: iPhone)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cotacao (moeda)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}casar (@pessoa)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}correio (número/msg)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}nick (nome)*
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯`
-/*๖ۣۜ͡ஓீ͜͜͡❥𖤃·۪۫ˑ݈🎲『𝐏𝐔𝐗𝐀𝐃𝐀𝐒』ESTA SEM PUXADAS POR ENQUANTO 
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cpf1 (número)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cpf2 (número)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cpf3 (número)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cpf4 (número)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cpf5 (número)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}chassi (cpf)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}inss (cpf)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}telefone (número)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}telefone2 (número)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}telefone3 (número)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}score (cpf)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}vacina (cpf)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}nome (nome)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}nome2 (nome)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}parentes (cpf)* 
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}beneficios (cpf)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}placa (placa)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}placa2 (placa)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}vizinhos (cpf)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}email (email)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}site (site)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rg (número)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cnpj (número)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}scep (número)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ip (número)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}chkgg (número)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}bin (número)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}bank (número)*
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯*/
-};
-
-exports.menuprem = menuprem;
-
-// MENU DE BRINCADEIRAS.. 
-
-const brincadeiras = (prefix, NomeDoBot, sender) => {
-return `
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Bot: ${NomeDoBot}*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Usuário: @${sender.split("@")[0]}*
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯
-ꦽꦶ̸꧇ ᭥⃕꙰҉ 🎮『𝐌𝐄𝐍𝐔 𝐆𝐀𝐌𝐄𝐒』
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}akinator*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}gay (marcar @)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}infiel (marcar @)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}feio (marcar @)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}corno (marcar @)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}gostoso (marcar @)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}gostosa (marcar @)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}beijar (marcar @)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}matar (marcar @)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}tapa (marcar @)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}chute (marcar @)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}nazista (marcar @)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}chance (fale algo)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}jogodavelha (marcar @)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}anagrama (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}quizanimais (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}enigma (1/0)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}casal (casal do grupo)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}r-forca (letra)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}resetforca (resetar)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}jogodaforca (iniciar)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ppt (pedra/papel/tesoura)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cassino*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}quando (pergunta)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rankgay*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rankgado*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rankcorno*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rankgostoso*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rankgostosa*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ranknazista*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rankotakus*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rankpau*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}mencionar (fale algo)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}death (nome)*
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯`;
-};
-
-exports.brincadeiras = brincadeiras;
-
-// MENU DE EFEITOS DE IMAGEM
-
-const efeitos = (prefix, NomeDoBot, sender) => {
-return `
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Bot: ${NomeDoBot}*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *Usuário: @${sender.split("@")[0]}*
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯
-ꦽꦶ̸꧇ ᭥⃕꙰҉ 🪄『𝐌𝐄𝐍𝐔 𝐄𝐅𝐄𝐈𝐓𝐎𝐒』
-╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}legenda-foto (texto/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}comunismo (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}bolsonaro (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}bnw (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}beaultiful (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}blur (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}affect (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}del (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}circle (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}dither (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}facepalm (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}invert (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}lgbt (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}magik (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rotate (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rip (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}jail (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}trash (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}pixelate (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}sepia (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}wanted (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}wasted (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}animeia (marcar/img)*
-ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}zombie (marcar/img)*
-╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯`;
-};
-
-exports.efeitos = efeitos;
+    exports.menu = menu;
+    
+    // MENU PORNÔ
+    
+    const menuporno = (prefix, NomeDoBot, sender) => {
+    return `​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+    ┎┅┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅☾⋆
+    ┖╮*😈 𝑺𝒆𝒋𝒂 𝑩𝒆𝒎-𝑽𝒊𝒏𝒅𝒐 (𝒂)! 🔞*
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ┇ |
+    ┇ |⚡⋆͜͡҈➳  *Bot:* ${NomeDoBot}
+    ┇ |⚡⋆͜͡҈➳  *Usuário:* @${sender.split("@")[0]}⁩ 
+    ┇ |
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰┮╼╼╼╼╼╍⋅⊹⋅⋅⦁ 😈 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆
+    ▹▫◃
+    ┎┶┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅☾⋆
+    ┖╮
+    ╭┤ˑ࣪    ִ .̇  ۫  ̣ ֽ֗ 🔞 𝐌𝐄𝐍𝐔 - 𝐏𝐎𝐑𝐍𝐎 😈·๋  ִ֗  ᐧ ֶּ֓ ˑ࣪ 
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆
+    ┇ | 😈⋆͜͡҈➳ *${prefix}amador*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}onlyfans*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}porno*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}egirlvideo*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}aline*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}alifox*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}alycia*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}amichan*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}aninha*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}victoria*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}belle*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}brenda*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}cami*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}clowniac*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}feh*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}giovanna*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}isadora*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}isa*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}lay*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}leticia*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}marina*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}maru*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}princesa*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}meladinha*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}nath*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}nega*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}polonesa*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}rute*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}celestine*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}carnie*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}gotica*
+    ┇ | 😈⋆͜͡҈➳ *${prefix}phsearch*
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰╼╼╼╼╼╍⋅⊹⋅⋅⦁ 😈 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆`
+    };
+    
+    exports.menuporno = menuporno;
+        
+    // MENU PESQUISAS
+    
+    const pesquisas = (prefix, NomeDoBot, sender) => {
+    return `​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+    ┎┅┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅☾⋆
+    ┖╮*📚 𝑺𝒆𝒋𝒂 𝑩𝒆𝒎-𝑽𝒊𝒏𝒅𝒐 (𝒂)! 🤓*
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ┇ |
+    ┇ |⚡⋆͜͡҈➳ *Bot:* ${NomeDoBot}
+    ┇ |⚡⋆͜͡҈➳ *Usuário:* @${sender.split("@")[0]}⁩⁩⁩ 
+    ┇ |
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰┮╼╼╼╼╼╍⋅⊹⋅⋅⦁ 🤓 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆
+    ▹▫◃
+    ┎┶┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅☾⋆
+    ┖╮
+    ╭┤ˑ࣪    ִ .̇  ۫  ̣ ֽ֗ 📚 𝐏𝐄𝐒𝐐𝐔𝐈𝐒𝐀𝐒 🤓·๋  ִ֗  ᐧ ֶּ֓ ˑ࣪ 
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆
+    ┇ | 📚⋆͜͡҈➳ *${prefix}igstalk*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}pensador*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}nasa*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}serie*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}movie*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}playstore*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}aptoide*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}gpt*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}clima*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}book*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}lyrics*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}signo*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}amazon*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}mlsrc*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}americanas*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}submarino*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}wikipedia*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}imagine*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}gimage*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}pinterest*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}gemini*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}cotacao*
+    ┇ | 📚⋆͜͡҈➳ *${prefix}dicionario*
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰╼╼╼╼╼╍⋅⊹⋅⋅⦁ 📚 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆`;
+    };
+    
+    exports.pesquisas = pesquisas;
+    
+    // MENU DE ADMINISTRADORES 
+    
+    const menuadm = (prefix, NomeDoBot, sender) => {
+    return `
+    ┎┅┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅
+    ┖╮*🛡 𝑺𝒆𝒋𝒂 𝑩𝒆𝒎-𝑽𝒊𝒏𝒅𝒐 (𝒂)! 🛡*
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ┇ |
+    ┇ |⚡⋆͜͡҈➳ *Bot:* ${NomeDoBot}
+    ┇ |⚡⋆͜͡҈➳ *Usuário:* @${sender.split("@")[0]} 
+    ┇ |
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰┮╼╼╼╼╼╍⋅⊹⋅⋅⦁ 🛡 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆
+    ▹▫◃
+    ┎┶┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅☾⋆
+    ┖╮
+    ╭┤ˑ࣪    ִ .̇  ۫  ̣ ֽ֗ 🛡 𝐌𝐄𝐍𝐔 - 𝐀𝐃𝐌𝐈𝐍𝐒 🛡·๋  ִ֗  ᐧ ֶּ֓ ˑ࣪ 
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}autototext 1/0*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}autogpt 1/0*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}advertir @*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}rmadv @*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}antiimg (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}antiimg2 (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}antivideo (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}antiaudio (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}antisticker (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}antiloc (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}anticontato (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}antidoc (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}antilinkgp (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}antifake (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}antinotas (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}anticatalogo (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}antipalavrao (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}addpalavra (palavra)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}delpalavra (palavra)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}limitecaracteres (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}bemvindo (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}bemvindo2 (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}simih (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}simih2 (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}autosticker (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}autoresp (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}modo+18 (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}modo-gamer (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}modopuxadas (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}odelete (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}x9visuunica (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}x9 (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}legenda_imagem (texto)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}legenda_video (texto)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}legenda_estrangeiro (texto)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}legendabv (texto)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}legendabv2 (texto)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}legendasaiu (texto)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}legendasaiu2 (texto)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}so_adm*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}resetlink*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}requestgp -list*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}requestgp -a (numero)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}requestgp -r (numero)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}grupo (f/a)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}fechargp (tempo)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}listanegra (numero)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}tirardalista (numero)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}listanegraG (numero)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}tirardalistaG (numero)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}multiprefixo (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}add_prefixo (prefixo)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}tirar_prefixo (prefixo)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}banghost*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}mute*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}desmute*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}ban*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}ausente (texto)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}ativo*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}promover*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}rebaixar*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}changegroup (all/adms)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}rmphotogp (remove a ft do gp)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}ephemeral [1/0] (msg-temp)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}descgp (texto)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}nomegp (texto)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}totag (mencionar algo)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}status*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}limpar*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}atividades*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}linkgp*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}grupoinfo*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}hidetag (texto ou marcar algo)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}marcar (marca geral do gp)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}marcar2 (marca geral em wa.me)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}anagrama (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}antipalavra (1/0)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}criartabela (texto)*
+    ┇ | 🛡⋆͜͡҈➳ *${prefix}tabelagp*
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰╼╼╼╼╼╍⋅⊹⋅⋅⦁ 🛡 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆`;
+    };
+    
+    exports.menuadm = menuadm;
+    
+    //MENU DOWNLOADS
+    
+    const menudownload = (prefix, NomeDoBot, sender) => {
+    return` ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+    ┎┅┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅
+    ┖╮*💿 𝑺𝒆𝒋𝒂 𝑩𝒆𝒎-𝑽𝒊𝒏𝒅𝒐 (𝒂)! 💿*
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ┇ |
+    ┇ | ⚡⋆͜͡҈➳ *Bot:* ${NomeDoBot}
+    ┇ | ⚡⋆͜͡҈➳ *Usuário:* @${sender.split("@")[0]}
+    ┇ |
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰┮╼╼╼╼╼╍⋅⊹⋅⋅⦁ 💿 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆
+    ▹▫◃
+    ┎┶┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅☾⋆
+    ┖╮
+    ╭┤ˑ࣪    ִ .̇  ۫  ̣ ֽ֗ 💿 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐒 💿·๋  ִ֗  ᐧ ֶּ֓ ˑ࣪ 
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆
+    ┇ | 💿⋆͜͡҈➳ *${prefix}play*
+    ┇ | 💿⋆͜͡҈➳ *${prefix}play2*
+    ┇ | 💿⋆͜͡҈➳ *${prefix}playmix*
+    ┇ | 💿⋆͜͡҈➳ *${prefix}playmp4*
+    ┇ | 💿⋆͜͡҈➳ *${prefix}ytmp4*
+    ┇ | 💿⋆͜͡҈➳ *${prefix}ytmp3*
+    ┇ | 💿⋆͜͡҈➳ *${prefix}spotify*
+    ┇ | 💿⋆͜͡҈➳ *${prefix}tiktok*
+    ┇ | 💿⋆͜͡҈➳ *${prefix}igdl*
+    ┇ | 💿⋆͜͡҈➳ *${prefix}deezer*
+    ┇ | 💿⋆͜͡҈➳ *${prefix}soundcloud*
+    ┇ | 💿⋆͜͡҈➳ *${prefix}mediafire*
+    ┇ | 💿⋆͜͡҈➳ *${prefix}gerarlink*
+    ┇ | 💿⋆͜͡҈➳ *${prefix}gdrive*
+    ┇ | 💿⋆͜͡҈➳ *${prefix}aptoide*
+    ┇ | 💿⋆͜͡҈➳ *${prefix}gitclone*
+    ┇ | 💿⋆͜͡҈➳ *${prefix}kwai*
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰╼╼╼╼╼╍⋅⊹⋅⋅⦁ 💿 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆`;
+    };
+    
+    exports.menudownload = menudownload;
+    
+    // MENU STICKERS
+    
+    const menusticker = (prefix, NomeDoBot, sender) => {
+    return` ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+    ┎┅┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅
+    ┖╮*🌹 𝑺𝒆𝒋𝒂 𝑩𝒆𝒎-𝑽𝒊𝒏𝒅𝒐 (𝒂)! 🌹*
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ┇ |
+    ┇ | ⚡⋆͜͡҈➳ *Bot:* ${NomeDoBot}
+    ┇ | ⚡⋆͜͡҈➳ *Usuário:* @${sender.split("@")[0]}
+    ┇ |
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰┮╼╼╼╼╼╍⋅⊹⋅⋅⦁ 🌹 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆
+    ▹▫◃
+    ┎┶┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅☾⋆
+    ┖╮
+    ╭┤ˑ࣪    ִ .̇  ۫  ̣ ֽ֗ 🌹 𝐌𝐄𝐍𝐔 - 𝐒𝐓𝐈𝐂𝐊𝐄𝐑 🌹·๋  ִ֗  ᐧ ֶּ֓ ˑ࣪ 
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}figusrc (tema/quantidade)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}figurinhas (quantidade)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}figumemes (quantidade)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}figuflork (quantidade)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}figuemoji (quantidade)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}figucoreana (quantidade)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}figubebe (quantidade)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}figufunny (quantidade)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}figuanimais (quantidade)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}figudesenho (quantidade)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}figuraiva (quantidade)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}figuroblox (quantidade)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}figaleatoria (quantidade)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}ttp (seu texto)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}attp (seu texto)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}sticker (marcar ft/video)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}fsticker (marcar ft/video)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}toimg (marcar figurinha)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}togif (marcar fig animada)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}tovid (marcar fig animada)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}qc (seu texto)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}roubar (marcar figurinha)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}rbale (marcar figurinha)*
+    ┇ | 🌹⋆͜͡҈➳ *${prefix}sfundo (marcar imagem)*
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰╼╼╼╼╼╍⋅⊹⋅⋅⦁ 🌹 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆`;
+    };
+    
+    exports.menusticker = menusticker;
+    
+    // MENU DE DONO
+    
+    const menudono = (prefix, NomeDoBot, sender) => {
+    return `​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+    ┎┅┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅
+    ┖╮*🤴🏻 𝑺𝒆𝒋𝒂 𝑩𝒆𝒎-𝑽𝒊𝒏𝒅𝒐 (𝒂)! 🤴🏻*
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ┇ |
+    ┇ | ⚡⋆͜͡҈➳ *Bot:* ${NomeDoBot}
+    ┇ | ⚡⋆͜͡҈➳ *Usuário:* @${sender.split("@")[0]}
+    ┇ |
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰┮╼╼╼╼╼╍⋅⊹⋅⋅⦁ 👑 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆
+    ▹▫◃
+    ┎┶┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅☾
+    ┖╮
+    ╭┤ˑ࣪    ִ .̇  ۫  ̣ ֽ֗ 🤴🏻 𝐌𝐄𝐍𝐔 - 𝐃𝐎𝐍𝐎 🤴🏻·๋  ִ֗  ᐧ ֶּ֓ ˑ࣪ 
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆
+    ┇ | 👑⋆͜͡҈➳ *${prefix}linksite*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}valor1*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}valor2*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}valor3*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}valor4*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}valor5*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}addrent*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}tirarrent*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}delrent*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}cortesia24*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}listrent*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}lastrent*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}keys*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}gerarkeygp*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}gerarkeycort*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}rmkey*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}addvipgp (dias)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}delvipgp*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}bangp*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}unbangp*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}fotomenu (marcar img)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}blockspam (spam em grupo)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}blockcmd (comando)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}unblockcmd (comando)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}cmdviplist*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}addcmdvip (comando)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}fundobemvindo (marcar img)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}fundosaiu (marcar img)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}servip*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}listagp*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}antiligar (1/0)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}modoaluguel (1/0)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}tmgp*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}infocmd_add (texto)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}infocmd_del (comando)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}visualizarmsg*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}console*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}botoff*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}boton*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}verificado-global*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}rmpalavra_forca*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}addpalavras_forca*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}addvip*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}delvip*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}addvipgp (quantos dias)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}modo-vip (1/0)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}privphotobot*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}privaddgroup*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}clonar (marcar img)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}fotobot (marcar img)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}block (marcar pessoa)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}unblock (marcar pessoa)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}setprefix (novo prefixo)*
+    ┇ | 👑⋆͜͡҈➳ *${prefix}bcgp (Transmissão-pv)*
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰╼╼╼╼╼╍⋅⊹⋅⋅⦁ 👑 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆`;
+    };
+    
+    exports.menudono = menudono;
+    
+    // MENU DE LOGOS 
+    
+    const menulogos = (prefix, NomeDoBot, sender) => {
+    return `​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+    ┎┅┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅
+    ┖╮*🎨 𝑺𝒆𝒋𝒂 𝑩𝒆𝒎-𝑽𝒊𝒏𝒅𝒐 (𝒂)! 🎨*
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ┇ |
+    ┇ | ⚡⋆͜͡҈➳ *Bot:* ${NomeDoBot}
+    ┇ | ⚡⋆͜͡҈➳ *Usuário:* @${sender.split("@")[0]}
+    ┇ |
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰┮╼╼╼╼╼╍⋅⊹⋅⋅⦁ 🎨 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆
+    ▹▫◃
+    ┎┶┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅☾
+    ┖╮
+    ╭┤ˑ࣪    ִ .̇  ۫  ̣ ֽ֗ 🎨 *𝐌𝐄𝐍𝐔 - 𝐋𝐎𝐆𝐎𝐒* 🎨·๋  ִ֗  ᐧ ֶּ֓ ˑ࣪ 
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}amongus (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}script (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}gta (texto/texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}pubgv (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}natalmsg (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}anonovo (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}tigrev (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}googlesg (texto/texto/texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}glitch (texto/texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}glitch3 (texto/texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}grafity (texto/texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}space (texto/texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}marvel (texto/texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}gameplay (texto/texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}stone (texto/texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}steel (texto/texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}ffbanner (texto/texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}avatar (texto/texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}videogame (texto/texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}pubg (texto/texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}thorstyle (texto/texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}neonlight (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}orangejuice (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}ranbowequalizer (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}peridot (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}rock (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}esmeralda (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}3ddragon (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}purpleshiny (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}robotr2 (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}berry (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}hologram (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}cartoon (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}deepsea (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}shadow-sky (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}metalic (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}logoneon (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}ninjalogo (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}harry-potter (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}flower-typography (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}butterfly (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}starballons (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}frozen (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}3dsilver (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}goldtext (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}illuminated-metallic (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}sweet-candy (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}strawberry (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}seta (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}grafite (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}goldt (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}tela (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}3dboxtxt (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}chocolate-cake (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}magma (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}green-horror (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}blackpink2 (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}logobear (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}flaming (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}carved-wood (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}night-sky (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}naturalleaves (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}candycane (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}christmas (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}merrychristmas (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}3ddeep (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}drug (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}americanflag (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}scifi (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}sandsummer (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}desfocado (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}vietnam (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}brilhante (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}sandwriting (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}sandengraved (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}summerysand (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}glue (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}dark (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}galaxystyle (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}minion (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}horrorgift (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}holographic (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}deluxe (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}glossyblue (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}deluxegold (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}glossycarbon (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}fabric (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}watercolor (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}1917 (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}multicolor (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}generator (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}wonderful (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}holiday (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}technology (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}winter (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}neontext (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}halloweenfire (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}metaldark (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}darkgold (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}wicker (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}firework (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}steeltext (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}goldfoil (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}ultragloss (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}denimtext (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}stargreen (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}captain (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}toxic (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}txtquadrinhos (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}hackneon (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}equipemascote (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}ffavatar (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}gizquadro (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}angelglx (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}blackpink (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}girlmascote (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}mascotegame (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}fpsmascote (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}logogame (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}glitch2 (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}3dgold (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}placaloli (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}phadow (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}efeitoneon (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}cemiterio (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}metalgold (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}fire (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}romantic (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}smoke (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}papel (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}lovemsg (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}lovemsg2 (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}lovemsg3 (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}coffecup (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}coffecup2 (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}cup (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}florwooden (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}lobometal (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}harryp (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}txtborboleta (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}madeira (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}pornhub (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}escudo (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}transformer (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}america (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}demongreen (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}wetglass (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}toxic (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}neon3 (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}neondevil (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}neongreen (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}lava (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}halloween (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}demonfire (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}demongreen (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}thunder (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}thunderv2 (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}colaq (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}luxury (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}matrix (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}horror (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}nuvem (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}neon (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}neon1 (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}neon2 (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}neon3d (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}neve (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}areia (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}vidro (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}style (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}pink (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}carbon (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}metalblue (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}jeans (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}ossos (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}asfalto (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}3dgoldenblack (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}3d_business (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}summer (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}natal (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}jokerlogo (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}blood (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}break (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}fiction (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}3dstone (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}lapis (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}gelo (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}rainbow (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}metalfire (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}cria (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}ff1 (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}ff2 (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}game (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}entardecer (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}indian (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}ffrose (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}ffgreen (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}wolf (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}dragonred (texto)*
+    ┇ | 🎨⋆͜͡҈➳ *${prefix}purple (texto)*
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰╼╼╼╼╼╍⋅⊹⋅⋅⦁ 🎨 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆`;
+    };
+    
+    exports.menulogos = menulogos;
+    
+    // MENU DE ALTERAR ÁUDIOS E VÍDEOS
+    
+    const alteradores = (prefix, NomeDoBot, sender) => { 
+    
+    return`
+    ┎┅┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅
+    ┖╮*🗣 𝑺𝒆𝒋𝒂 𝑩𝒆𝒎-𝑽𝒊𝒏𝒅𝒐 (𝒂)! ⚙*
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ┇ |
+    ┇ | ⚡⋆͜͡҈➳ *Bot:* ${NomeDoBot}
+    ┇ | ⚡⋆͜͡҈➳ *Usuário:* @${sender.split("@")[0]}
+    ┇ |
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰┮╼╼╼╼╼╍⋅⊹⋅⋅⦁ 🗣 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆
+    ▹▫◃
+    ┎┶┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅☾
+    ┖╮
+    ╭┤ˑ࣪    ִ .̇  ۫  ̣ ֽ֗ 🗣 𝐀𝐋𝐓𝐄𝐑𝐀𝐃𝐎𝐑𝐄𝐒 ⚙·๋  ִ֗  ᐧ ֶּ֓ ˑ࣪ 
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆
+    ┇ | 🗣⋆͜͡҈➳ *${prefix}videolento (marcar/vid)*
+    ┇ | 🗣⋆͜͡҈➳ *${prefix}videorapido (marcar/vid)*
+    ┇ | 🗣⋆͜͡҈➳ *${prefix}videocontrario (marcar/vid)*
+    ┇ | 🗣⋆͜͡҈➳ *${prefix}audiolento (marcar/audio)*
+    ┇ | 🗣⋆͜͡҈➳ *${prefix}audiorapido (marcar/audio)*
+    ┇ | 🗣⋆͜͡҈➳ *${prefix}grave (marcar/audio)*
+    ┇ | 🗣⋆͜͡҈➳ *${prefix}grave2 (marcar/audio)*
+    ┇ | 🗣⋆͜͡҈➳ *${prefix}esquilo (marcar/audio)*
+    ┇ | 🗣⋆͜͡҈➳ *${prefix}estourar (marcar/audio)*
+    ┇ | 🗣⋆͜͡҈➳ *${prefix}bass (marcar/audio)*
+    ┇ | 🗣⋆͜͡҈➳ *${prefix}bass2 (marcar/audio)*
+    ┇ | 🗣⋆͜͡҈➳ *${prefix}vozmenino (marcar/audio)*
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰╼╼╼╼╼╍⋅⊹⋅⋅⦁ 🗣 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆`;
+    };
+    
+    exports.alteradores = alteradores;
+    
+    // MENU PREMIUM 
+    
+    const menuprem = (prefix, NomeDoBot, sender) => { 
+    
+    return `
+    ┎┅┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅
+    ┖╮*💎 𝑺𝒆𝒋𝒂 𝑩𝒆𝒎-𝑽𝒊𝒏𝒅𝒐 (𝒂)! 💎*
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ┇ |
+    ┇ | ⚡⋆͜͡҈➳ *Bot:* ${NomeDoBot}
+    ┇ | ⚡⋆͜͡҈➳ *Usuário:* @${sender.split("@")[0]}
+    ┇ |
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰┮╼╼╼╼╼╍⋅⊹⋅⋅⦁ 💎 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆
+    ▹▫◃
+    ┎┶┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅☾
+    ┖╮
+    ╭┤ˑ࣪    ִ .̇  ۫  ̣ ֽ֗  💎 𝐌𝐄𝐍𝐔 - 𝐕𝐈𝐏  💎·๋  ִ֗  ᐧ ֶּ֓ ˑ࣪ 
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆
+    ┇ | 💎⋆͜͡҈➳ *shadow (pergunta/sem prefixo)*
+    ┇ | 💎⋆͜͡҈➳ *${prefix}calendario*
+    ┇ | 💎⋆͜͡҈➳ *${prefix}ddd (Ex: 21)*
+    ┇ | 💎⋆͜͡҈➳ *${prefix}gerarcpf*
+    ┇ | 💎⋆͜͡҈➳ *${prefix}listavip*
+    ┇ | 💎⋆͜͡҈➳ *${prefix}encurtalink (link)*
+    ┇ | 💎⋆͜͡҈➳ *${prefix}encurtalink2 (link+nome)*
+    ┇ | 💎⋆͜͡҈➳ *${prefix}encurtalink3 (link)*
+    ┇ | 💎⋆͜͡҈➳ *${prefix}encurtalink4 (link)*
+    ┇ | 💎⋆͜͡҈➳ *${prefix}celular (Ex: iPhone)*
+    ┇ | 💎⋆͜͡҈➳ *${prefix}cotacao (moeda)*
+    ┇ | 💎⋆͜͡҈➳ *${prefix}casar (@pessoa)*
+    ┇ | 💎⋆͜͡҈➳ *${prefix}correio (número/msg)*
+    ┇ | 💎⋆͜͡҈➳ *${prefix}nick (nome)*
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰╼╼╼╼╼╍⋅⊹⋅⋅⦁ 💎 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆`
+    /*๖ۣۜ͡ஓீ͜͜͡❥𖤃·۪۫ˑ݈🎲『𝐏𝐔𝐗𝐀𝐃𝐀𝐒』ESTA SEM PUXADAS POR ENQUANTO 
+    ╭━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╮
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cpf1 (número)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cpf2 (número)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cpf3 (número)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cpf4 (número)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cpf5 (número)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}chassi (cpf)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}inss (cpf)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}telefone (número)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}telefone2 (número)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}telefone3 (número)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}score (cpf)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}vacina (cpf)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}nome (nome)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}nome2 (nome)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}parentes (cpf)* 
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}beneficios (cpf)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}placa (placa)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}placa2 (placa)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}vizinhos (cpf)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}email (email)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}site (site)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}rg (número)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}cnpj (número)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}scep (número)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}ip (número)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}chkgg (número)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}bin (número)*
+    ꦽꦁ১︧.۪̇〬°⃟᮪݇⃟⃟⚡ *${prefix}bank (número)*
+    ╰━━•𖧹꧁᭼⸼◍ཻꢀ᮪⸱ᨗᨗᨗ🛸⸱ᨗᨗᨗꢀ᮪ཻ◍⸼᭼꧂𖧹•━━╯*/
+    };
+    
+    exports.menuprem = menuprem;
+    
+    // MENU DE BRINCADEIRAS.. 
+    
+    const brincadeiras = (prefix, NomeDoBot, sender) => {
+    return `
+    ┎┅┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅
+    ┖╮*🎮 𝑺𝒆𝒋𝒂 𝑩𝒆𝒎-𝑽𝒊𝒏𝒅𝒐 (𝒂)! 🕹*
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ┇ |
+    ┇ | ⚡⋆͜͡҈➳ *Bot:* ${NomeDoBot}
+    ┇ | ⚡⋆͜͡҈➳ *Usuário:* @${sender.split("@")[0]}
+    ┇ |
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰┮╼╼╼╼╼╍⋅⊹⋅⋅⦁ 🎮 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆
+    ▹▫◃
+    ┎┶┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅☾
+    ┖╮
+    ╭┤ˑ࣪    ִ .̇  ۫  ̣ ֽ֗  🎮 𝐌𝐄𝐍𝐔 - 𝐆𝐀𝐌𝐄𝐒  🕹·๋  ִ֗  ᐧ ֶּ֓ ˑ࣪ 
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}akinator*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}gay (marcar @)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}infiel (marcar @)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}feio (marcar @)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}corno (marcar @)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}gostoso (marcar @)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}gostosa (marcar @)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}beijar (marcar @)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}matar (marcar @)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}tapa (marcar @)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}chute (marcar @)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}nazista (marcar @)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}chance (fale algo)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}jogodavelha (marcar @)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}anagrama (1/0)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}quizanimais (1/0)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}enigma (1/0)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}casal (casal do grupo)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}r-forca (letra)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}resetforca (resetar)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}jogodaforca (iniciar)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}ppt (pedra/papel/tesoura)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}cassino*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}quando (pergunta)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}rankgay*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}rankgado*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}rankcorno*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}rankgostoso*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}rankgostosa*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}ranknazista*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}rankotakus*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}rankpau*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}mencionar (fale algo)*
+    ┇ | 🎮⋆͜͡҈➳ *${prefix}death (nome)*
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰╼╼╼╼╼╍⋅⊹⋅⋅⦁ 🎮 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆`;
+    };
+    
+    exports.brincadeiras = brincadeiras;
+    
+    // MENU DE EFEITOS DE IMAGEM
+    
+    const efeitos = (prefix, NomeDoBot, sender) => {
+    return `
+    ┎┅┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅
+    ┖╮*🪄 𝑺𝒆𝒋𝒂 𝑩𝒆𝒎-𝑽𝒊𝒏𝒅𝒐 (𝒂)! 🪄*
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ┇ |
+    ┇ | ⚡⋆͜͡҈➳ *Bot:* ${NomeDoBot}
+    ┇ | ⚡⋆͜͡҈➳ *Usuário:* @${sender.split("@")[0]}
+    ┇ |
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰┮╼╼╼╼╼╍⋅⊹⋅⋅⦁ 🪄 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆
+    ▹▫◃
+    ┎┶┅┅┅━═⋅═━━━━═⋅═━┅┅┅┅☾
+    ┖╮
+    ╭┤ˑ࣪    ִ .̇  ۫  ̣ ֽ֗  🪄 𝐌𝐄𝐍𝐔 - 𝐄𝐅𝐄𝐈𝐓𝐎𝐒  🪄·๋  ִ֗  ᐧ ֶּ֓ ˑ࣪ 
+    ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}legenda-foto (texto/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}comunismo (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}bolsonaro (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}bnw (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}beaultiful (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}blur (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}affect (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}del (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}circle (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}dither (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}facepalm (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}invert (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}lgbt (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}magik (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}rotate (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}rip (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}jail (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}trash (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}pixelate (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}sepia (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}wanted (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}wasted (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}animeia (marcar/img)*
+    ┇ | 🪄⋆͜͡҈➳ *${prefix}zombie (marcar/img)*
+    ┇╰┉━┅━┅━┅━┅━┅━┅━⋅≎⋆ᐧ
+    ╰╼╼╼╼╼╍⋅⊹⋅⋅⦁ 🪄 ⦁⋅⋅⊹⋅╍╾╾╾╾☾⋆`;
+    };
+    
+    exports.efeitos = efeitos;

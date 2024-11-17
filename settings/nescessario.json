@@ -4,22 +4,43 @@
   "banChats": true,
   "menu_audio": false,
   "verificado": true,
-  "modoaluguel": false,
+  "modoaluguel": true,
   "consoleoff": true,
   "antipv": false,
   "anticall": true,
   "visualizarmsg": true,
   "listanegraG": [],
   "botoes": true,
-  "TOKEN_GPT": ".",
+  "site": "https://kayserapis.com",
+  "TOKEN_GPT": "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",
   "cmd_premium": [],
-  "dono1": "5521971983758",
-  "dono2": ".",
-  "dono3": ".",
-  "dono4": ".",
-  "dono5": ".",
+  "dono1": "5521967414300",
+  "dono2": "",
+  "dono3": "",
+  "dono4": "",
+  "dono5": "",
   "dono6": ".",
   "botoff": false,
   "Odelete": true,
-  "fundo1": "https://telegra.ph/file/a5aeb8cdd980db931e39d.jpg"
+  "fundo1": "https://telegra.ph/file/a5aeb8cdd980db931e39d.jpg",
+  "valor1": {
+    "preco": "8.58",
+    "dias": 15
+  },
+  "valor2": {
+    "preco": "13.63",
+    "dias": 30
+  },
+  "valor3": {
+    "preco": "21.71",
+    "dias": 60
+  },
+  "valor4": {
+    "preco": "30.90",
+    "dias": 90
+  },
+  "valor5": {
+    "preco": "38.90",
+    "dias": 120
+  }
 }
