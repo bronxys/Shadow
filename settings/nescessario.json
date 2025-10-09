@@ -1,10 +1,10 @@
 {
   "crtt": "𝐉𝐎𝐆𝐎 𝐃𝐀 𝐕𝐄𝐋𝐇𝐀",
   "forwarding": false,
-  "banChats": true,
+  "banChats": false,
   "menu_audio": false,
   "verificado": true,
-  "modoaluguel": true,
+  "modoaluguel": false,
   "consoleoff": true,
   "antipv": false,
   "anticall": true,
