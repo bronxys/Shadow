@@ -77,12 +77,37 @@ const generateRegistrationNode = ({ registrationId, signedPreKey, signedIdentity
     const appVersionBuf = crypto_1.createHash('md5')
         .update(config.version.join('.')) // join as string
         .digest()
+
     const companion = {
         os: config.browser[0],
         platformType: getPlatformType(config.browser[1]),
         requireFullSync: config.syncFullHistory,
+        historySyncConfig: {
+            storageQuotaMb: 10240,
+            inlineInitialPayloadInE2EeMsg: true,
+            recentSyncDaysLimit: undefined,
+            supportCallLogHistory: false,
+            supportBotUserAgentChatHistory: true,
+            supportCagReactionsAndPolls: true,
+            supportBizHostedMsg: true,
+            supportRecentSyncChunkMessageCountTuning: true,
+            supportHostedGroupMsg: true,
+            supportFbidBotChatHistory: true,
+            supportAddOnHistorySyncMigration: undefined,
+            supportMessageAssociation: true,
+            supportGroupHistory: false,
+            onDemandReady: undefined,
+            supportGuestChat: undefined
+        },
+        version: {
+            primary: 10,
+            secondary: 15,
+            tertiary: 7
+        }
     }
+
     const companionProto = WAProto_1.proto.DeviceProps.encode(companion).finish()
+
     const registerPayload = {
         ...getClientPayload(config),
         passive: false,
@@ -96,8 +121,9 @@ const generateRegistrationNode = ({ registrationId, signedPreKey, signedIdentity
             eSkeyId: generics_1.encodeBigEndian(signedPreKey.keyId, 3),
             eSkeyVal: signedPreKey.keyPair.public,
             eSkeySig: signedPreKey.signature,
-        },
+        }
     }
+
     return WAProto_1.proto.ClientPayload.fromObject(registerPayload)
 }
 
@@ -115,25 +141,41 @@ const configureSuccessfulPairing = (stanza, { advSecretKey, signedIdentityKey, s
     const jid = deviceNode.attrs.jid
     const lid = deviceNode.attrs.lid
     const { details, hmac, accountType } = WAProto_1.proto.ADVSignedDeviceIdentityHMAC.decode(deviceIdentityNode.content)
-    const isHostedAccount = accountType !== undefined && accountType === WAProto_1.proto.ADVEncryptionType.HOSTED
-    const hmacPrefix = isHostedAccount ? Buffer.from([6, 5]) : Buffer.alloc(0) 
+    
+    let hmacPrefix = Buffer.from([])
+    if (accountType !== undefined && accountType === WAProto_1.proto.ADVEncryptionType.HOSTED) {
+        hmacPrefix = Buffer.from([6, 5])
+    }
+
     const advSign = crypto_2.hmacSign(Buffer.concat([hmacPrefix, details]), Buffer.from(advSecretKey, 'base64'))
     if (Buffer.compare(hmac, advSign) !== 0) {
         throw new boom_1.Boom('Invalid account signature')
     }
+
     const account = WAProto_1.proto.ADVSignedDeviceIdentity.decode(details)
     const { accountSignatureKey, accountSignature, details: deviceDetails } = account
-    const accountMsg = Buffer.concat([Buffer.from([6, 0]), deviceDetails, signedIdentityKey.public])
+
+    const decodedDeviceIdentity = WAProto_1.proto.ADVDeviceIdentity.decode(deviceDetails)
+
+    const accountSignaturePrefix =
+        decodedDeviceIdentity.deviceType === WAProto_1.proto.ADVEncryptionType.HOSTED
+            ? Buffer.from([6, 5])
+            : Buffer.from([6, 0])
+    const accountMsg = Buffer.concat([accountSignaturePrefix, deviceDetails, signedIdentityKey.public])
     if (!crypto_2.Curve.verify(accountSignatureKey, accountMsg, accountSignature)) {
         throw new boom_1.Boom('Failed to verify account signature')
     }
-    
-    const devicePrefix = isHostedAccount ? Buffer.from([6, 6]) : Buffer.from([6, 1]) 
-    const deviceMsg = Buffer.concat([devicePrefix, deviceDetails, signedIdentityKey.public, accountSignatureKey])
+
+    const deviceMsg = Buffer.concat([
+        Buffer.from([6, 1]),
+        deviceDetails,
+        signedIdentityKey.public,
+        accountSignatureKey
+    ])
     account.deviceSignature = crypto_2.Curve.sign(signedIdentityKey.private, deviceMsg)
     const identity = signal_1.createSignalIdentity(lid, accountSignatureKey)
     const accountEnc = encodeSignedDeviceIdentity(account, false)
-    const deviceIdentity = WAProto_1.proto.ADVDeviceIdentity.decode(account.details)
+    const deviceIdentityData = WAProto_1.proto.ADVDeviceIdentity.decode(account.details)
     const reply = {
         tag: 'iq',
         attrs: {
@@ -148,7 +190,7 @@ const configureSuccessfulPairing = (stanza, { advSecretKey, signedIdentityKey, s
                 content: [
                     {
                         tag: 'device-identity',
-                        attrs: { 'key-index': deviceIdentity.keyIndex.toString() },
+                        attrs: { 'key-index': deviceIdentityData.keyIndex.toString() },
                         content: accountEnc
                     }
                 ]

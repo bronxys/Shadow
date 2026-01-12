@@ -36,11 +36,11 @@ const NACK_REASONS = {
 }
 
 const extractAddressingContext = (stanza) => {
-	const addressingMode = stanza.attrs.addressing_mode
     let senderAlt
     let recipientAlt
     
     const sender = stanza.attrs.participant || stanza.attrs.from
+    const addressingMode = stanza.attrs.addressing_mode || (sender?.endsWith('lid') ? 'lid' : 'pn')
     
     if (WABinary_1.isLidUser(sender)) {
         // Message is LID-addressed: sender is LID, extract corresponding PN
@@ -72,14 +72,15 @@ const getDecryptionJid = async (sender, repository) => {
     if (!sender.includes('@s.whatsapp.net')) {
         return sender
     }
-    return (await repository.getLIDMappingStore().getLIDForPN(sender))
+    return (await repository.lidMapping.getLIDForPN(sender))
 }
 
 const storeMappingFromEnvelope = async (stanza, sender, decryptionJid, repository, logger) => {
     const { senderAlt } = extractAddressingContext(stanza)
+    
     if (senderAlt && WABinary_1.isLidUser(senderAlt) && WABinary_1.isJidUser(sender) && decryptionJid === sender) {
         try {
-            await repository.storeLIDPNMapping(senderAlt, sender)
+            await repository.lidMapping.storeLIDPNMappings([{ lid: senderAlt, pn: sender }])
             logger.debug({ sender, senderAlt }, 'Stored LID mapping from envelope')
         }
         catch (error) {

@@ -6,7 +6,7 @@ import { proto } from '../../WAProto'
 import { AuthenticationState, SignalAuthState, TransactionCapabilityOptions } from './Auth'
 import { GroupMetadata } from './GroupMetadata'
 import { MediaConnInfo } from './Message'
-import { SignalRepository } from './Signal'
+import { SignalRepositoryWithLIDStore } from './Signal'
 
 export type WAVersion = [number, number, number]
 
@@ -14,13 +14,26 @@ export type WABrowserDescription = [string, string, string]
 
 export type CacheStore = {
     /** get a cached key and change the stats */
-    get<T>(key: string): T | undefined
+    get<T>(key: string): Promise<T> | T | undefined
     /** set a key in the cache */
-    set<T>(key: string, value: T): void
+    set<T>(key: string, value: T): Promise<void> | void | number | boolean
     /** delete a key from the cache */
-    del(key: string): void
+    del(key: string): void | Promise<void> | number | boolean
     /** flush all data */
-    flushAll(): void
+    flushAll(): void | Promise<void>
+}
+
+export type PossiblyExtendedCacheStore = CacheStore & {
+    mget?: <T>(keys: string[]) => Promise<Record<string, T | undefined>>
+    mset?: <T>(entries: {
+        key: string
+        value: T
+    }[]) => Promise<void> | void | number | boolean
+    mdel?: (keys: string[]) => void | Promise<void> | number | boolean
+}
+
+export type PatchedMessageWithRecipientJID = proto.IMessage & {
+    recipientJid?: string
 }
 
 export type SocketConfig = {
@@ -75,7 +88,7 @@ export type SocketConfig = {
      * used to determine whether to retry a message or not */
     msgRetryCounterCache?: CacheStore
     /** provide a cache to store a user's device list */
-    userDevicesCache?: CacheStore
+    userDevicesCache?: PossiblyExtendedCacheStore
     /** cache to store call offers */
     callOfferCache?: CacheStore
     /** cache to track placeholder resends */
@@ -104,7 +117,7 @@ export type SocketConfig = {
     /**
      * Optionally patch the message before sending out
      * */
-    patchMessageBeforeSending: (msg: proto.IMessage, recipientJids: string[]) => Promise<proto.IMessage> | proto.IMessage
+    patchMessageBeforeSending: (msg: proto.IMessage, recipientJids?: string[]) => Promise<PatchedMessageWithRecipientJID[] | PatchedMessageWithRecipientJID> | PatchedMessageWithRecipientJID[] | PatchedMessageWithRecipientJID
     /** verify app state MACs */
     appStateMacVerification: {
         patch: boolean
@@ -124,5 +137,5 @@ export type SocketConfig = {
         jid: string
         exists: boolean
         lid: string
-    }[] | undefined>) => SignalRepository
+    }[] | undefined>) => SignalRepositoryWithLIDStore
 }

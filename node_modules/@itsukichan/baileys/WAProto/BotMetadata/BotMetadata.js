@@ -54,6 +54,7 @@ $root.BotMetadata = (function() {
          * @property {BotMetadata.IBotUnifiedResponseMutation|null} [unifiedResponseMutation] BotMetadata unifiedResponseMutation
          * @property {BotMetadata.IBotMessageOriginMetadata|null} [botMessageOriginMetadata] BotMetadata botMessageOriginMetadata
          * @property {BotMetadata.IInThreadSurveyMetadata|null} [inThreadSurveyMetadata] BotMetadata inThreadSurveyMetadata
+         * @property {BotMetadata.IAIThreadInfo|null} [botThreadInfo] BotMetadata botThreadInfo
          */
 
         /**
@@ -81,11 +82,11 @@ $root.BotMetadata = (function() {
 
         /**
          * BotMetadata personaId.
-         * @member {string|null|undefined} personaId
+         * @member {string} personaId
          * @memberof BotMetadata.BotMetadata
          * @instance
          */
-        BotMetadata.prototype.personaId = null;
+        BotMetadata.prototype.personaId = "";
 
         /**
          * BotMetadata pluginMetadata.
@@ -105,11 +106,11 @@ $root.BotMetadata = (function() {
 
         /**
          * BotMetadata invokerJid.
-         * @member {string|null|undefined} invokerJid
+         * @member {string} invokerJid
          * @memberof BotMetadata.BotMetadata
          * @instance
          */
-        BotMetadata.prototype.invokerJid = null;
+        BotMetadata.prototype.invokerJid = "";
 
         /**
          * BotMetadata sessionMetadata.
@@ -129,11 +130,11 @@ $root.BotMetadata = (function() {
 
         /**
          * BotMetadata timezone.
-         * @member {string|null|undefined} timezone
+         * @member {string} timezone
          * @memberof BotMetadata.BotMetadata
          * @instance
          */
-        BotMetadata.prototype.timezone = null;
+        BotMetadata.prototype.timezone = "";
 
         /**
          * BotMetadata reminderMetadata.
@@ -153,11 +154,11 @@ $root.BotMetadata = (function() {
 
         /**
          * BotMetadata messageDisclaimerText.
-         * @member {string|null|undefined} messageDisclaimerText
+         * @member {string} messageDisclaimerText
          * @memberof BotMetadata.BotMetadata
          * @instance
          */
-        BotMetadata.prototype.messageDisclaimerText = null;
+        BotMetadata.prototype.messageDisclaimerText = "";
 
         /**
          * BotMetadata progressIndicatorMetadata.
@@ -225,11 +226,11 @@ $root.BotMetadata = (function() {
 
         /**
          * BotMetadata aiConversationContext.
-         * @member {Uint8Array|null|undefined} aiConversationContext
+         * @member {Uint8Array} aiConversationContext
          * @memberof BotMetadata.BotMetadata
          * @instance
          */
-        BotMetadata.prototype.aiConversationContext = null;
+        BotMetadata.prototype.aiConversationContext = $util.newBuffer([]);
 
         /**
          * BotMetadata botPromotionMessageMetadata.
@@ -265,19 +266,19 @@ $root.BotMetadata = (function() {
 
         /**
          * BotMetadata conversationStarterPromptId.
-         * @member {string|null|undefined} conversationStarterPromptId
+         * @member {string} conversationStarterPromptId
          * @memberof BotMetadata.BotMetadata
          * @instance
          */
-        BotMetadata.prototype.conversationStarterPromptId = null;
+        BotMetadata.prototype.conversationStarterPromptId = "";
 
         /**
          * BotMetadata botResponseId.
-         * @member {string|null|undefined} botResponseId
+         * @member {string} botResponseId
          * @memberof BotMetadata.BotMetadata
          * @instance
          */
-        BotMetadata.prototype.botResponseId = null;
+        BotMetadata.prototype.botResponseId = "";
 
         /**
          * BotMetadata verificationMetadata.
@@ -311,338 +312,13 @@ $root.BotMetadata = (function() {
          */
         BotMetadata.prototype.inThreadSurveyMetadata = null;
 
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
         /**
-         * BotMetadata _avatarMetadata.
-         * @member {"avatarMetadata"|undefined} _avatarMetadata
+         * BotMetadata botThreadInfo.
+         * @member {BotMetadata.IAIThreadInfo|null|undefined} botThreadInfo
          * @memberof BotMetadata.BotMetadata
          * @instance
          */
-        Object.defineProperty(BotMetadata.prototype, "_avatarMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["avatarMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _personaId.
-         * @member {"personaId"|undefined} _personaId
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_personaId", {
-            get: $util.oneOfGetter($oneOfFields = ["personaId"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _pluginMetadata.
-         * @member {"pluginMetadata"|undefined} _pluginMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_pluginMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["pluginMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _suggestedPromptMetadata.
-         * @member {"suggestedPromptMetadata"|undefined} _suggestedPromptMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_suggestedPromptMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["suggestedPromptMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _invokerJid.
-         * @member {"invokerJid"|undefined} _invokerJid
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_invokerJid", {
-            get: $util.oneOfGetter($oneOfFields = ["invokerJid"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _sessionMetadata.
-         * @member {"sessionMetadata"|undefined} _sessionMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_sessionMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["sessionMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _memuMetadata.
-         * @member {"memuMetadata"|undefined} _memuMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_memuMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["memuMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _timezone.
-         * @member {"timezone"|undefined} _timezone
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_timezone", {
-            get: $util.oneOfGetter($oneOfFields = ["timezone"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _reminderMetadata.
-         * @member {"reminderMetadata"|undefined} _reminderMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_reminderMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["reminderMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _modelMetadata.
-         * @member {"modelMetadata"|undefined} _modelMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_modelMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["modelMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _messageDisclaimerText.
-         * @member {"messageDisclaimerText"|undefined} _messageDisclaimerText
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_messageDisclaimerText", {
-            get: $util.oneOfGetter($oneOfFields = ["messageDisclaimerText"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _progressIndicatorMetadata.
-         * @member {"progressIndicatorMetadata"|undefined} _progressIndicatorMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_progressIndicatorMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["progressIndicatorMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _capabilityMetadata.
-         * @member {"capabilityMetadata"|undefined} _capabilityMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_capabilityMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["capabilityMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _imagineMetadata.
-         * @member {"imagineMetadata"|undefined} _imagineMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_imagineMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["imagineMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _memoryMetadata.
-         * @member {"memoryMetadata"|undefined} _memoryMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_memoryMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["memoryMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _renderingMetadata.
-         * @member {"renderingMetadata"|undefined} _renderingMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_renderingMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["renderingMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _botMetricsMetadata.
-         * @member {"botMetricsMetadata"|undefined} _botMetricsMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_botMetricsMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["botMetricsMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _botLinkedAccountsMetadata.
-         * @member {"botLinkedAccountsMetadata"|undefined} _botLinkedAccountsMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_botLinkedAccountsMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["botLinkedAccountsMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _richResponseSourcesMetadata.
-         * @member {"richResponseSourcesMetadata"|undefined} _richResponseSourcesMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_richResponseSourcesMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["richResponseSourcesMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _aiConversationContext.
-         * @member {"aiConversationContext"|undefined} _aiConversationContext
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_aiConversationContext", {
-            get: $util.oneOfGetter($oneOfFields = ["aiConversationContext"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _botPromotionMessageMetadata.
-         * @member {"botPromotionMessageMetadata"|undefined} _botPromotionMessageMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_botPromotionMessageMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["botPromotionMessageMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _botModeSelectionMetadata.
-         * @member {"botModeSelectionMetadata"|undefined} _botModeSelectionMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_botModeSelectionMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["botModeSelectionMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _botQuotaMetadata.
-         * @member {"botQuotaMetadata"|undefined} _botQuotaMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_botQuotaMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["botQuotaMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _botAgeCollectionMetadata.
-         * @member {"botAgeCollectionMetadata"|undefined} _botAgeCollectionMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_botAgeCollectionMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["botAgeCollectionMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _conversationStarterPromptId.
-         * @member {"conversationStarterPromptId"|undefined} _conversationStarterPromptId
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_conversationStarterPromptId", {
-            get: $util.oneOfGetter($oneOfFields = ["conversationStarterPromptId"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _botResponseId.
-         * @member {"botResponseId"|undefined} _botResponseId
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_botResponseId", {
-            get: $util.oneOfGetter($oneOfFields = ["botResponseId"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _verificationMetadata.
-         * @member {"verificationMetadata"|undefined} _verificationMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_verificationMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["verificationMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _unifiedResponseMutation.
-         * @member {"unifiedResponseMutation"|undefined} _unifiedResponseMutation
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_unifiedResponseMutation", {
-            get: $util.oneOfGetter($oneOfFields = ["unifiedResponseMutation"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _botMessageOriginMetadata.
-         * @member {"botMessageOriginMetadata"|undefined} _botMessageOriginMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_botMessageOriginMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["botMessageOriginMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetadata _inThreadSurveyMetadata.
-         * @member {"inThreadSurveyMetadata"|undefined} _inThreadSurveyMetadata
-         * @memberof BotMetadata.BotMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetadata.prototype, "_inThreadSurveyMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["inThreadSurveyMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotMetadata.prototype.botThreadInfo = null;
 
         /**
          * Creates a new BotMetadata instance using the specified properties.
@@ -728,6 +404,8 @@ $root.BotMetadata = (function() {
                 $root.BotMetadata.BotMessageOriginMetadata.encode(message.botMessageOriginMetadata, writer.uint32(/* id 29, wireType 2 =*/234).fork()).ldelim();
             if (message.inThreadSurveyMetadata != null && Object.hasOwnProperty.call(message, "inThreadSurveyMetadata"))
                 $root.BotMetadata.InThreadSurveyMetadata.encode(message.inThreadSurveyMetadata, writer.uint32(/* id 30, wireType 2 =*/242).fork()).ldelim();
+            if (message.botThreadInfo != null && Object.hasOwnProperty.call(message, "botThreadInfo"))
+                $root.BotMetadata.AIThreadInfo.encode(message.botThreadInfo, writer.uint32(/* id 31, wireType 2 =*/250).fork()).ldelim();
             return writer;
         };
 
@@ -884,6 +562,10 @@ $root.BotMetadata = (function() {
                         message.inThreadSurveyMetadata = $root.BotMetadata.InThreadSurveyMetadata.decode(reader, reader.uint32());
                         break;
                     }
+                case 31: {
+                        message.botThreadInfo = $root.BotMetadata.AIThreadInfo.decode(reader, reader.uint32());
+                        break;
+                    }
                 default:
                     reader.skipType(tag & 7);
                     break;
@@ -919,225 +601,146 @@ $root.BotMetadata = (function() {
         BotMetadata.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
             if (message.avatarMetadata != null && message.hasOwnProperty("avatarMetadata")) {
-                properties._avatarMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotAvatarMetadata.verify(message.avatarMetadata);
-                    if (error)
-                        return "avatarMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotAvatarMetadata.verify(message.avatarMetadata);
+                if (error)
+                    return "avatarMetadata." + error;
             }
-            if (message.personaId != null && message.hasOwnProperty("personaId")) {
-                properties._personaId = 1;
+            if (message.personaId != null && message.hasOwnProperty("personaId"))
                 if (!$util.isString(message.personaId))
                     return "personaId: string expected";
-            }
             if (message.pluginMetadata != null && message.hasOwnProperty("pluginMetadata")) {
-                properties._pluginMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotPluginMetadata.verify(message.pluginMetadata);
-                    if (error)
-                        return "pluginMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotPluginMetadata.verify(message.pluginMetadata);
+                if (error)
+                    return "pluginMetadata." + error;
             }
             if (message.suggestedPromptMetadata != null && message.hasOwnProperty("suggestedPromptMetadata")) {
-                properties._suggestedPromptMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotSuggestedPromptMetadata.verify(message.suggestedPromptMetadata);
-                    if (error)
-                        return "suggestedPromptMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotSuggestedPromptMetadata.verify(message.suggestedPromptMetadata);
+                if (error)
+                    return "suggestedPromptMetadata." + error;
             }
-            if (message.invokerJid != null && message.hasOwnProperty("invokerJid")) {
-                properties._invokerJid = 1;
+            if (message.invokerJid != null && message.hasOwnProperty("invokerJid"))
                 if (!$util.isString(message.invokerJid))
                     return "invokerJid: string expected";
-            }
             if (message.sessionMetadata != null && message.hasOwnProperty("sessionMetadata")) {
-                properties._sessionMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotSessionMetadata.verify(message.sessionMetadata);
-                    if (error)
-                        return "sessionMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotSessionMetadata.verify(message.sessionMetadata);
+                if (error)
+                    return "sessionMetadata." + error;
             }
             if (message.memuMetadata != null && message.hasOwnProperty("memuMetadata")) {
-                properties._memuMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotMemuMetadata.verify(message.memuMetadata);
-                    if (error)
-                        return "memuMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotMemuMetadata.verify(message.memuMetadata);
+                if (error)
+                    return "memuMetadata." + error;
             }
-            if (message.timezone != null && message.hasOwnProperty("timezone")) {
-                properties._timezone = 1;
+            if (message.timezone != null && message.hasOwnProperty("timezone"))
                 if (!$util.isString(message.timezone))
                     return "timezone: string expected";
-            }
             if (message.reminderMetadata != null && message.hasOwnProperty("reminderMetadata")) {
-                properties._reminderMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotReminderMetadata.verify(message.reminderMetadata);
-                    if (error)
-                        return "reminderMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotReminderMetadata.verify(message.reminderMetadata);
+                if (error)
+                    return "reminderMetadata." + error;
             }
             if (message.modelMetadata != null && message.hasOwnProperty("modelMetadata")) {
-                properties._modelMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotModelMetadata.verify(message.modelMetadata);
-                    if (error)
-                        return "modelMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotModelMetadata.verify(message.modelMetadata);
+                if (error)
+                    return "modelMetadata." + error;
             }
-            if (message.messageDisclaimerText != null && message.hasOwnProperty("messageDisclaimerText")) {
-                properties._messageDisclaimerText = 1;
+            if (message.messageDisclaimerText != null && message.hasOwnProperty("messageDisclaimerText"))
                 if (!$util.isString(message.messageDisclaimerText))
                     return "messageDisclaimerText: string expected";
-            }
             if (message.progressIndicatorMetadata != null && message.hasOwnProperty("progressIndicatorMetadata")) {
-                properties._progressIndicatorMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotProgressIndicatorMetadata.verify(message.progressIndicatorMetadata);
-                    if (error)
-                        return "progressIndicatorMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotProgressIndicatorMetadata.verify(message.progressIndicatorMetadata);
+                if (error)
+                    return "progressIndicatorMetadata." + error;
             }
             if (message.capabilityMetadata != null && message.hasOwnProperty("capabilityMetadata")) {
-                properties._capabilityMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotCapabilityMetadata.verify(message.capabilityMetadata);
-                    if (error)
-                        return "capabilityMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotCapabilityMetadata.verify(message.capabilityMetadata);
+                if (error)
+                    return "capabilityMetadata." + error;
             }
             if (message.imagineMetadata != null && message.hasOwnProperty("imagineMetadata")) {
-                properties._imagineMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotImagineMetadata.verify(message.imagineMetadata);
-                    if (error)
-                        return "imagineMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotImagineMetadata.verify(message.imagineMetadata);
+                if (error)
+                    return "imagineMetadata." + error;
             }
             if (message.memoryMetadata != null && message.hasOwnProperty("memoryMetadata")) {
-                properties._memoryMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotMemoryMetadata.verify(message.memoryMetadata);
-                    if (error)
-                        return "memoryMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotMemoryMetadata.verify(message.memoryMetadata);
+                if (error)
+                    return "memoryMetadata." + error;
             }
             if (message.renderingMetadata != null && message.hasOwnProperty("renderingMetadata")) {
-                properties._renderingMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotRenderingMetadata.verify(message.renderingMetadata);
-                    if (error)
-                        return "renderingMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotRenderingMetadata.verify(message.renderingMetadata);
+                if (error)
+                    return "renderingMetadata." + error;
             }
             if (message.botMetricsMetadata != null && message.hasOwnProperty("botMetricsMetadata")) {
-                properties._botMetricsMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotMetricsMetadata.verify(message.botMetricsMetadata);
-                    if (error)
-                        return "botMetricsMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotMetricsMetadata.verify(message.botMetricsMetadata);
+                if (error)
+                    return "botMetricsMetadata." + error;
             }
             if (message.botLinkedAccountsMetadata != null && message.hasOwnProperty("botLinkedAccountsMetadata")) {
-                properties._botLinkedAccountsMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotLinkedAccountsMetadata.verify(message.botLinkedAccountsMetadata);
-                    if (error)
-                        return "botLinkedAccountsMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotLinkedAccountsMetadata.verify(message.botLinkedAccountsMetadata);
+                if (error)
+                    return "botLinkedAccountsMetadata." + error;
             }
             if (message.richResponseSourcesMetadata != null && message.hasOwnProperty("richResponseSourcesMetadata")) {
-                properties._richResponseSourcesMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotSourcesMetadata.verify(message.richResponseSourcesMetadata);
-                    if (error)
-                        return "richResponseSourcesMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotSourcesMetadata.verify(message.richResponseSourcesMetadata);
+                if (error)
+                    return "richResponseSourcesMetadata." + error;
             }
-            if (message.aiConversationContext != null && message.hasOwnProperty("aiConversationContext")) {
-                properties._aiConversationContext = 1;
+            if (message.aiConversationContext != null && message.hasOwnProperty("aiConversationContext"))
                 if (!(message.aiConversationContext && typeof message.aiConversationContext.length === "number" || $util.isString(message.aiConversationContext)))
                     return "aiConversationContext: buffer expected";
-            }
             if (message.botPromotionMessageMetadata != null && message.hasOwnProperty("botPromotionMessageMetadata")) {
-                properties._botPromotionMessageMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotPromotionMessageMetadata.verify(message.botPromotionMessageMetadata);
-                    if (error)
-                        return "botPromotionMessageMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotPromotionMessageMetadata.verify(message.botPromotionMessageMetadata);
+                if (error)
+                    return "botPromotionMessageMetadata." + error;
             }
             if (message.botModeSelectionMetadata != null && message.hasOwnProperty("botModeSelectionMetadata")) {
-                properties._botModeSelectionMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotModeSelectionMetadata.verify(message.botModeSelectionMetadata);
-                    if (error)
-                        return "botModeSelectionMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotModeSelectionMetadata.verify(message.botModeSelectionMetadata);
+                if (error)
+                    return "botModeSelectionMetadata." + error;
             }
             if (message.botQuotaMetadata != null && message.hasOwnProperty("botQuotaMetadata")) {
-                properties._botQuotaMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotQuotaMetadata.verify(message.botQuotaMetadata);
-                    if (error)
-                        return "botQuotaMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotQuotaMetadata.verify(message.botQuotaMetadata);
+                if (error)
+                    return "botQuotaMetadata." + error;
             }
             if (message.botAgeCollectionMetadata != null && message.hasOwnProperty("botAgeCollectionMetadata")) {
-                properties._botAgeCollectionMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotAgeCollectionMetadata.verify(message.botAgeCollectionMetadata);
-                    if (error)
-                        return "botAgeCollectionMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotAgeCollectionMetadata.verify(message.botAgeCollectionMetadata);
+                if (error)
+                    return "botAgeCollectionMetadata." + error;
             }
-            if (message.conversationStarterPromptId != null && message.hasOwnProperty("conversationStarterPromptId")) {
-                properties._conversationStarterPromptId = 1;
+            if (message.conversationStarterPromptId != null && message.hasOwnProperty("conversationStarterPromptId"))
                 if (!$util.isString(message.conversationStarterPromptId))
                     return "conversationStarterPromptId: string expected";
-            }
-            if (message.botResponseId != null && message.hasOwnProperty("botResponseId")) {
-                properties._botResponseId = 1;
+            if (message.botResponseId != null && message.hasOwnProperty("botResponseId"))
                 if (!$util.isString(message.botResponseId))
                     return "botResponseId: string expected";
-            }
             if (message.verificationMetadata != null && message.hasOwnProperty("verificationMetadata")) {
-                properties._verificationMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotSignatureVerificationMetadata.verify(message.verificationMetadata);
-                    if (error)
-                        return "verificationMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotSignatureVerificationMetadata.verify(message.verificationMetadata);
+                if (error)
+                    return "verificationMetadata." + error;
             }
             if (message.unifiedResponseMutation != null && message.hasOwnProperty("unifiedResponseMutation")) {
-                properties._unifiedResponseMutation = 1;
-                {
-                    var error = $root.BotMetadata.BotUnifiedResponseMutation.verify(message.unifiedResponseMutation);
-                    if (error)
-                        return "unifiedResponseMutation." + error;
-                }
+                var error = $root.BotMetadata.BotUnifiedResponseMutation.verify(message.unifiedResponseMutation);
+                if (error)
+                    return "unifiedResponseMutation." + error;
             }
             if (message.botMessageOriginMetadata != null && message.hasOwnProperty("botMessageOriginMetadata")) {
-                properties._botMessageOriginMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotMessageOriginMetadata.verify(message.botMessageOriginMetadata);
-                    if (error)
-                        return "botMessageOriginMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotMessageOriginMetadata.verify(message.botMessageOriginMetadata);
+                if (error)
+                    return "botMessageOriginMetadata." + error;
             }
             if (message.inThreadSurveyMetadata != null && message.hasOwnProperty("inThreadSurveyMetadata")) {
-                properties._inThreadSurveyMetadata = 1;
-                {
-                    var error = $root.BotMetadata.InThreadSurveyMetadata.verify(message.inThreadSurveyMetadata);
-                    if (error)
-                        return "inThreadSurveyMetadata." + error;
-                }
+                var error = $root.BotMetadata.InThreadSurveyMetadata.verify(message.inThreadSurveyMetadata);
+                if (error)
+                    return "inThreadSurveyMetadata." + error;
+            }
+            if (message.botThreadInfo != null && message.hasOwnProperty("botThreadInfo")) {
+                var error = $root.BotMetadata.AIThreadInfo.verify(message.botThreadInfo);
+                if (error)
+                    return "botThreadInfo." + error;
             }
             return null;
         };
@@ -1286,6 +889,11 @@ $root.BotMetadata = (function() {
                     throw TypeError(".BotMetadata.BotMetadata.inThreadSurveyMetadata: object expected");
                 message.inThreadSurveyMetadata = $root.BotMetadata.InThreadSurveyMetadata.fromObject(object.inThreadSurveyMetadata);
             }
+            if (object.botThreadInfo != null) {
+                if (typeof object.botThreadInfo !== "object")
+                    throw TypeError(".BotMetadata.BotMetadata.botThreadInfo: object expected");
+                message.botThreadInfo = $root.BotMetadata.AIThreadInfo.fromObject(object.botThreadInfo);
+            }
             return message;
         };
 
@@ -1302,156 +910,107 @@ $root.BotMetadata = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (message.avatarMetadata != null && message.hasOwnProperty("avatarMetadata")) {
+            if (options.defaults) {
+                object.avatarMetadata = null;
+                object.personaId = "";
+                object.pluginMetadata = null;
+                object.suggestedPromptMetadata = null;
+                object.invokerJid = "";
+                object.sessionMetadata = null;
+                object.memuMetadata = null;
+                object.timezone = "";
+                object.reminderMetadata = null;
+                object.modelMetadata = null;
+                object.messageDisclaimerText = "";
+                object.progressIndicatorMetadata = null;
+                object.capabilityMetadata = null;
+                object.imagineMetadata = null;
+                object.memoryMetadata = null;
+                object.renderingMetadata = null;
+                object.botMetricsMetadata = null;
+                object.botLinkedAccountsMetadata = null;
+                object.richResponseSourcesMetadata = null;
+                if (options.bytes === String)
+                    object.aiConversationContext = "";
+                else {
+                    object.aiConversationContext = [];
+                    if (options.bytes !== Array)
+                        object.aiConversationContext = $util.newBuffer(object.aiConversationContext);
+                }
+                object.botPromotionMessageMetadata = null;
+                object.botModeSelectionMetadata = null;
+                object.botQuotaMetadata = null;
+                object.botAgeCollectionMetadata = null;
+                object.conversationStarterPromptId = "";
+                object.botResponseId = "";
+                object.verificationMetadata = null;
+                object.unifiedResponseMutation = null;
+                object.botMessageOriginMetadata = null;
+                object.inThreadSurveyMetadata = null;
+                object.botThreadInfo = null;
+            }
+            if (message.avatarMetadata != null && message.hasOwnProperty("avatarMetadata"))
                 object.avatarMetadata = $root.BotMetadata.BotAvatarMetadata.toObject(message.avatarMetadata, options);
-                if (options.oneofs)
-                    object._avatarMetadata = "avatarMetadata";
-            }
-            if (message.personaId != null && message.hasOwnProperty("personaId")) {
+            if (message.personaId != null && message.hasOwnProperty("personaId"))
                 object.personaId = message.personaId;
-                if (options.oneofs)
-                    object._personaId = "personaId";
-            }
-            if (message.pluginMetadata != null && message.hasOwnProperty("pluginMetadata")) {
+            if (message.pluginMetadata != null && message.hasOwnProperty("pluginMetadata"))
                 object.pluginMetadata = $root.BotMetadata.BotPluginMetadata.toObject(message.pluginMetadata, options);
-                if (options.oneofs)
-                    object._pluginMetadata = "pluginMetadata";
-            }
-            if (message.suggestedPromptMetadata != null && message.hasOwnProperty("suggestedPromptMetadata")) {
+            if (message.suggestedPromptMetadata != null && message.hasOwnProperty("suggestedPromptMetadata"))
                 object.suggestedPromptMetadata = $root.BotMetadata.BotSuggestedPromptMetadata.toObject(message.suggestedPromptMetadata, options);
-                if (options.oneofs)
-                    object._suggestedPromptMetadata = "suggestedPromptMetadata";
-            }
-            if (message.invokerJid != null && message.hasOwnProperty("invokerJid")) {
+            if (message.invokerJid != null && message.hasOwnProperty("invokerJid"))
                 object.invokerJid = message.invokerJid;
-                if (options.oneofs)
-                    object._invokerJid = "invokerJid";
-            }
-            if (message.sessionMetadata != null && message.hasOwnProperty("sessionMetadata")) {
+            if (message.sessionMetadata != null && message.hasOwnProperty("sessionMetadata"))
                 object.sessionMetadata = $root.BotMetadata.BotSessionMetadata.toObject(message.sessionMetadata, options);
-                if (options.oneofs)
-                    object._sessionMetadata = "sessionMetadata";
-            }
-            if (message.memuMetadata != null && message.hasOwnProperty("memuMetadata")) {
+            if (message.memuMetadata != null && message.hasOwnProperty("memuMetadata"))
                 object.memuMetadata = $root.BotMetadata.BotMemuMetadata.toObject(message.memuMetadata, options);
-                if (options.oneofs)
-                    object._memuMetadata = "memuMetadata";
-            }
-            if (message.timezone != null && message.hasOwnProperty("timezone")) {
+            if (message.timezone != null && message.hasOwnProperty("timezone"))
                 object.timezone = message.timezone;
-                if (options.oneofs)
-                    object._timezone = "timezone";
-            }
-            if (message.reminderMetadata != null && message.hasOwnProperty("reminderMetadata")) {
+            if (message.reminderMetadata != null && message.hasOwnProperty("reminderMetadata"))
                 object.reminderMetadata = $root.BotMetadata.BotReminderMetadata.toObject(message.reminderMetadata, options);
-                if (options.oneofs)
-                    object._reminderMetadata = "reminderMetadata";
-            }
-            if (message.modelMetadata != null && message.hasOwnProperty("modelMetadata")) {
+            if (message.modelMetadata != null && message.hasOwnProperty("modelMetadata"))
                 object.modelMetadata = $root.BotMetadata.BotModelMetadata.toObject(message.modelMetadata, options);
-                if (options.oneofs)
-                    object._modelMetadata = "modelMetadata";
-            }
-            if (message.messageDisclaimerText != null && message.hasOwnProperty("messageDisclaimerText")) {
+            if (message.messageDisclaimerText != null && message.hasOwnProperty("messageDisclaimerText"))
                 object.messageDisclaimerText = message.messageDisclaimerText;
-                if (options.oneofs)
-                    object._messageDisclaimerText = "messageDisclaimerText";
-            }
-            if (message.progressIndicatorMetadata != null && message.hasOwnProperty("progressIndicatorMetadata")) {
+            if (message.progressIndicatorMetadata != null && message.hasOwnProperty("progressIndicatorMetadata"))
                 object.progressIndicatorMetadata = $root.BotMetadata.BotProgressIndicatorMetadata.toObject(message.progressIndicatorMetadata, options);
-                if (options.oneofs)
-                    object._progressIndicatorMetadata = "progressIndicatorMetadata";
-            }
-            if (message.capabilityMetadata != null && message.hasOwnProperty("capabilityMetadata")) {
+            if (message.capabilityMetadata != null && message.hasOwnProperty("capabilityMetadata"))
                 object.capabilityMetadata = $root.BotMetadata.BotCapabilityMetadata.toObject(message.capabilityMetadata, options);
-                if (options.oneofs)
-                    object._capabilityMetadata = "capabilityMetadata";
-            }
-            if (message.imagineMetadata != null && message.hasOwnProperty("imagineMetadata")) {
+            if (message.imagineMetadata != null && message.hasOwnProperty("imagineMetadata"))
                 object.imagineMetadata = $root.BotMetadata.BotImagineMetadata.toObject(message.imagineMetadata, options);
-                if (options.oneofs)
-                    object._imagineMetadata = "imagineMetadata";
-            }
-            if (message.memoryMetadata != null && message.hasOwnProperty("memoryMetadata")) {
+            if (message.memoryMetadata != null && message.hasOwnProperty("memoryMetadata"))
                 object.memoryMetadata = $root.BotMetadata.BotMemoryMetadata.toObject(message.memoryMetadata, options);
-                if (options.oneofs)
-                    object._memoryMetadata = "memoryMetadata";
-            }
-            if (message.renderingMetadata != null && message.hasOwnProperty("renderingMetadata")) {
+            if (message.renderingMetadata != null && message.hasOwnProperty("renderingMetadata"))
                 object.renderingMetadata = $root.BotMetadata.BotRenderingMetadata.toObject(message.renderingMetadata, options);
-                if (options.oneofs)
-                    object._renderingMetadata = "renderingMetadata";
-            }
-            if (message.botMetricsMetadata != null && message.hasOwnProperty("botMetricsMetadata")) {
+            if (message.botMetricsMetadata != null && message.hasOwnProperty("botMetricsMetadata"))
                 object.botMetricsMetadata = $root.BotMetadata.BotMetricsMetadata.toObject(message.botMetricsMetadata, options);
-                if (options.oneofs)
-                    object._botMetricsMetadata = "botMetricsMetadata";
-            }
-            if (message.botLinkedAccountsMetadata != null && message.hasOwnProperty("botLinkedAccountsMetadata")) {
+            if (message.botLinkedAccountsMetadata != null && message.hasOwnProperty("botLinkedAccountsMetadata"))
                 object.botLinkedAccountsMetadata = $root.BotMetadata.BotLinkedAccountsMetadata.toObject(message.botLinkedAccountsMetadata, options);
-                if (options.oneofs)
-                    object._botLinkedAccountsMetadata = "botLinkedAccountsMetadata";
-            }
-            if (message.richResponseSourcesMetadata != null && message.hasOwnProperty("richResponseSourcesMetadata")) {
+            if (message.richResponseSourcesMetadata != null && message.hasOwnProperty("richResponseSourcesMetadata"))
                 object.richResponseSourcesMetadata = $root.BotMetadata.BotSourcesMetadata.toObject(message.richResponseSourcesMetadata, options);
-                if (options.oneofs)
-                    object._richResponseSourcesMetadata = "richResponseSourcesMetadata";
-            }
-            if (message.aiConversationContext != null && message.hasOwnProperty("aiConversationContext")) {
+            if (message.aiConversationContext != null && message.hasOwnProperty("aiConversationContext"))
                 object.aiConversationContext = options.bytes === String ? $util.base64.encode(message.aiConversationContext, 0, message.aiConversationContext.length) : options.bytes === Array ? Array.prototype.slice.call(message.aiConversationContext) : message.aiConversationContext;
-                if (options.oneofs)
-                    object._aiConversationContext = "aiConversationContext";
-            }
-            if (message.botPromotionMessageMetadata != null && message.hasOwnProperty("botPromotionMessageMetadata")) {
+            if (message.botPromotionMessageMetadata != null && message.hasOwnProperty("botPromotionMessageMetadata"))
                 object.botPromotionMessageMetadata = $root.BotMetadata.BotPromotionMessageMetadata.toObject(message.botPromotionMessageMetadata, options);
-                if (options.oneofs)
-                    object._botPromotionMessageMetadata = "botPromotionMessageMetadata";
-            }
-            if (message.botModeSelectionMetadata != null && message.hasOwnProperty("botModeSelectionMetadata")) {
+            if (message.botModeSelectionMetadata != null && message.hasOwnProperty("botModeSelectionMetadata"))
                 object.botModeSelectionMetadata = $root.BotMetadata.BotModeSelectionMetadata.toObject(message.botModeSelectionMetadata, options);
-                if (options.oneofs)
-                    object._botModeSelectionMetadata = "botModeSelectionMetadata";
-            }
-            if (message.botQuotaMetadata != null && message.hasOwnProperty("botQuotaMetadata")) {
+            if (message.botQuotaMetadata != null && message.hasOwnProperty("botQuotaMetadata"))
                 object.botQuotaMetadata = $root.BotMetadata.BotQuotaMetadata.toObject(message.botQuotaMetadata, options);
-                if (options.oneofs)
-                    object._botQuotaMetadata = "botQuotaMetadata";
-            }
-            if (message.botAgeCollectionMetadata != null && message.hasOwnProperty("botAgeCollectionMetadata")) {
+            if (message.botAgeCollectionMetadata != null && message.hasOwnProperty("botAgeCollectionMetadata"))
                 object.botAgeCollectionMetadata = $root.BotMetadata.BotAgeCollectionMetadata.toObject(message.botAgeCollectionMetadata, options);
-                if (options.oneofs)
-                    object._botAgeCollectionMetadata = "botAgeCollectionMetadata";
-            }
-            if (message.conversationStarterPromptId != null && message.hasOwnProperty("conversationStarterPromptId")) {
+            if (message.conversationStarterPromptId != null && message.hasOwnProperty("conversationStarterPromptId"))
                 object.conversationStarterPromptId = message.conversationStarterPromptId;
-                if (options.oneofs)
-                    object._conversationStarterPromptId = "conversationStarterPromptId";
-            }
-            if (message.botResponseId != null && message.hasOwnProperty("botResponseId")) {
+            if (message.botResponseId != null && message.hasOwnProperty("botResponseId"))
                 object.botResponseId = message.botResponseId;
-                if (options.oneofs)
-                    object._botResponseId = "botResponseId";
-            }
-            if (message.verificationMetadata != null && message.hasOwnProperty("verificationMetadata")) {
+            if (message.verificationMetadata != null && message.hasOwnProperty("verificationMetadata"))
                 object.verificationMetadata = $root.BotMetadata.BotSignatureVerificationMetadata.toObject(message.verificationMetadata, options);
-                if (options.oneofs)
-                    object._verificationMetadata = "verificationMetadata";
-            }
-            if (message.unifiedResponseMutation != null && message.hasOwnProperty("unifiedResponseMutation")) {
+            if (message.unifiedResponseMutation != null && message.hasOwnProperty("unifiedResponseMutation"))
                 object.unifiedResponseMutation = $root.BotMetadata.BotUnifiedResponseMutation.toObject(message.unifiedResponseMutation, options);
-                if (options.oneofs)
-                    object._unifiedResponseMutation = "unifiedResponseMutation";
-            }
-            if (message.botMessageOriginMetadata != null && message.hasOwnProperty("botMessageOriginMetadata")) {
+            if (message.botMessageOriginMetadata != null && message.hasOwnProperty("botMessageOriginMetadata"))
                 object.botMessageOriginMetadata = $root.BotMetadata.BotMessageOriginMetadata.toObject(message.botMessageOriginMetadata, options);
-                if (options.oneofs)
-                    object._botMessageOriginMetadata = "botMessageOriginMetadata";
-            }
-            if (message.inThreadSurveyMetadata != null && message.hasOwnProperty("inThreadSurveyMetadata")) {
+            if (message.inThreadSurveyMetadata != null && message.hasOwnProperty("inThreadSurveyMetadata"))
                 object.inThreadSurveyMetadata = $root.BotMetadata.InThreadSurveyMetadata.toObject(message.inThreadSurveyMetadata, options);
-                if (options.oneofs)
-                    object._inThreadSurveyMetadata = "inThreadSurveyMetadata";
-            }
+            if (message.botThreadInfo != null && message.hasOwnProperty("botThreadInfo"))
+                object.botThreadInfo = $root.BotMetadata.AIThreadInfo.toObject(message.botThreadInfo, options);
             return object;
         };
 
@@ -1482,6 +1041,695 @@ $root.BotMetadata = (function() {
         };
 
         return BotMetadata;
+    })();
+
+    BotMetadata.AIThreadInfo = (function() {
+
+        /**
+         * Properties of a AIThreadInfo.
+         * @memberof BotMetadata
+         * @interface IAIThreadInfo
+         * @property {BotMetadata.AIThreadInfo.IAIThreadServerInfo|null} [serverInfo] AIThreadInfo serverInfo
+         * @property {BotMetadata.AIThreadInfo.IAIThreadClientInfo|null} [clientInfo] AIThreadInfo clientInfo
+         */
+
+        /**
+         * Constructs a new AIThreadInfo.
+         * @memberof BotMetadata
+         * @classdesc Represents a AIThreadInfo.
+         * @implements IAIThreadInfo
+         * @constructor
+         * @param {BotMetadata.IAIThreadInfo=} [properties] Properties to set
+         */
+        function AIThreadInfo(properties) {
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * AIThreadInfo serverInfo.
+         * @member {BotMetadata.AIThreadInfo.IAIThreadServerInfo|null|undefined} serverInfo
+         * @memberof BotMetadata.AIThreadInfo
+         * @instance
+         */
+        AIThreadInfo.prototype.serverInfo = null;
+
+        /**
+         * AIThreadInfo clientInfo.
+         * @member {BotMetadata.AIThreadInfo.IAIThreadClientInfo|null|undefined} clientInfo
+         * @memberof BotMetadata.AIThreadInfo
+         * @instance
+         */
+        AIThreadInfo.prototype.clientInfo = null;
+
+        /**
+         * Creates a new AIThreadInfo instance using the specified properties.
+         * @function create
+         * @memberof BotMetadata.AIThreadInfo
+         * @static
+         * @param {BotMetadata.IAIThreadInfo=} [properties] Properties to set
+         * @returns {BotMetadata.AIThreadInfo} AIThreadInfo instance
+         */
+        AIThreadInfo.create = function create(properties) {
+            return new AIThreadInfo(properties);
+        };
+
+        /**
+         * Encodes the specified AIThreadInfo message. Does not implicitly {@link BotMetadata.AIThreadInfo.verify|verify} messages.
+         * @function encode
+         * @memberof BotMetadata.AIThreadInfo
+         * @static
+         * @param {BotMetadata.IAIThreadInfo} message AIThreadInfo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        AIThreadInfo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.serverInfo != null && Object.hasOwnProperty.call(message, "serverInfo"))
+                $root.BotMetadata.AIThreadInfo.AIThreadServerInfo.encode(message.serverInfo, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+            if (message.clientInfo != null && Object.hasOwnProperty.call(message, "clientInfo"))
+                $root.BotMetadata.AIThreadInfo.AIThreadClientInfo.encode(message.clientInfo, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+            return writer;
+        };
+
+        /**
+         * Encodes the specified AIThreadInfo message, length delimited. Does not implicitly {@link BotMetadata.AIThreadInfo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof BotMetadata.AIThreadInfo
+         * @static
+         * @param {BotMetadata.IAIThreadInfo} message AIThreadInfo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        AIThreadInfo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a AIThreadInfo message from the specified reader or buffer.
+         * @function decode
+         * @memberof BotMetadata.AIThreadInfo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {BotMetadata.AIThreadInfo} AIThreadInfo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        AIThreadInfo.decode = function decode(reader, length, error) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.BotMetadata.AIThreadInfo();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                if (tag === error)
+                    break;
+                switch (tag >>> 3) {
+                case 1: {
+                        message.serverInfo = $root.BotMetadata.AIThreadInfo.AIThreadServerInfo.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 2: {
+                        message.clientInfo = $root.BotMetadata.AIThreadInfo.AIThreadClientInfo.decode(reader, reader.uint32());
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a AIThreadInfo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof BotMetadata.AIThreadInfo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {BotMetadata.AIThreadInfo} AIThreadInfo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        AIThreadInfo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a AIThreadInfo message.
+         * @function verify
+         * @memberof BotMetadata.AIThreadInfo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        AIThreadInfo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.serverInfo != null && message.hasOwnProperty("serverInfo")) {
+                var error = $root.BotMetadata.AIThreadInfo.AIThreadServerInfo.verify(message.serverInfo);
+                if (error)
+                    return "serverInfo." + error;
+            }
+            if (message.clientInfo != null && message.hasOwnProperty("clientInfo")) {
+                var error = $root.BotMetadata.AIThreadInfo.AIThreadClientInfo.verify(message.clientInfo);
+                if (error)
+                    return "clientInfo." + error;
+            }
+            return null;
+        };
+
+        /**
+         * Creates a AIThreadInfo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof BotMetadata.AIThreadInfo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {BotMetadata.AIThreadInfo} AIThreadInfo
+         */
+        AIThreadInfo.fromObject = function fromObject(object) {
+            if (object instanceof $root.BotMetadata.AIThreadInfo)
+                return object;
+            var message = new $root.BotMetadata.AIThreadInfo();
+            if (object.serverInfo != null) {
+                if (typeof object.serverInfo !== "object")
+                    throw TypeError(".BotMetadata.AIThreadInfo.serverInfo: object expected");
+                message.serverInfo = $root.BotMetadata.AIThreadInfo.AIThreadServerInfo.fromObject(object.serverInfo);
+            }
+            if (object.clientInfo != null) {
+                if (typeof object.clientInfo !== "object")
+                    throw TypeError(".BotMetadata.AIThreadInfo.clientInfo: object expected");
+                message.clientInfo = $root.BotMetadata.AIThreadInfo.AIThreadClientInfo.fromObject(object.clientInfo);
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a AIThreadInfo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof BotMetadata.AIThreadInfo
+         * @static
+         * @param {BotMetadata.AIThreadInfo} message AIThreadInfo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        AIThreadInfo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (options.defaults) {
+                object.serverInfo = null;
+                object.clientInfo = null;
+            }
+            if (message.serverInfo != null && message.hasOwnProperty("serverInfo"))
+                object.serverInfo = $root.BotMetadata.AIThreadInfo.AIThreadServerInfo.toObject(message.serverInfo, options);
+            if (message.clientInfo != null && message.hasOwnProperty("clientInfo"))
+                object.clientInfo = $root.BotMetadata.AIThreadInfo.AIThreadClientInfo.toObject(message.clientInfo, options);
+            return object;
+        };
+
+        /**
+         * Converts this AIThreadInfo to JSON.
+         * @function toJSON
+         * @memberof BotMetadata.AIThreadInfo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        AIThreadInfo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for AIThreadInfo
+         * @function getTypeUrl
+         * @memberof BotMetadata.AIThreadInfo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        AIThreadInfo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/BotMetadata.AIThreadInfo";
+        };
+
+        AIThreadInfo.AIThreadClientInfo = (function() {
+
+            /**
+             * Properties of a AIThreadClientInfo.
+             * @memberof BotMetadata.AIThreadInfo
+             * @interface IAIThreadClientInfo
+             * @property {BotMetadata.AIThreadInfo.AIThreadClientInfo.AIThreadType|null} [type] AIThreadClientInfo type
+             */
+
+            /**
+             * Constructs a new AIThreadClientInfo.
+             * @memberof BotMetadata.AIThreadInfo
+             * @classdesc Represents a AIThreadClientInfo.
+             * @implements IAIThreadClientInfo
+             * @constructor
+             * @param {BotMetadata.AIThreadInfo.IAIThreadClientInfo=} [properties] Properties to set
+             */
+            function AIThreadClientInfo(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * AIThreadClientInfo type.
+             * @member {BotMetadata.AIThreadInfo.AIThreadClientInfo.AIThreadType} type
+             * @memberof BotMetadata.AIThreadInfo.AIThreadClientInfo
+             * @instance
+             */
+            AIThreadClientInfo.prototype.type = 0;
+
+            /**
+             * Creates a new AIThreadClientInfo instance using the specified properties.
+             * @function create
+             * @memberof BotMetadata.AIThreadInfo.AIThreadClientInfo
+             * @static
+             * @param {BotMetadata.AIThreadInfo.IAIThreadClientInfo=} [properties] Properties to set
+             * @returns {BotMetadata.AIThreadInfo.AIThreadClientInfo} AIThreadClientInfo instance
+             */
+            AIThreadClientInfo.create = function create(properties) {
+                return new AIThreadClientInfo(properties);
+            };
+
+            /**
+             * Encodes the specified AIThreadClientInfo message. Does not implicitly {@link BotMetadata.AIThreadInfo.AIThreadClientInfo.verify|verify} messages.
+             * @function encode
+             * @memberof BotMetadata.AIThreadInfo.AIThreadClientInfo
+             * @static
+             * @param {BotMetadata.AIThreadInfo.IAIThreadClientInfo} message AIThreadClientInfo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AIThreadClientInfo.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.type != null && Object.hasOwnProperty.call(message, "type"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int32(message.type);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified AIThreadClientInfo message, length delimited. Does not implicitly {@link BotMetadata.AIThreadInfo.AIThreadClientInfo.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof BotMetadata.AIThreadInfo.AIThreadClientInfo
+             * @static
+             * @param {BotMetadata.AIThreadInfo.IAIThreadClientInfo} message AIThreadClientInfo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AIThreadClientInfo.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a AIThreadClientInfo message from the specified reader or buffer.
+             * @function decode
+             * @memberof BotMetadata.AIThreadInfo.AIThreadClientInfo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {BotMetadata.AIThreadInfo.AIThreadClientInfo} AIThreadClientInfo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AIThreadClientInfo.decode = function decode(reader, length, error) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.BotMetadata.AIThreadInfo.AIThreadClientInfo();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    if (tag === error)
+                        break;
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.type = reader.int32();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a AIThreadClientInfo message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof BotMetadata.AIThreadInfo.AIThreadClientInfo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {BotMetadata.AIThreadInfo.AIThreadClientInfo} AIThreadClientInfo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AIThreadClientInfo.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a AIThreadClientInfo message.
+             * @function verify
+             * @memberof BotMetadata.AIThreadInfo.AIThreadClientInfo
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            AIThreadClientInfo.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.type != null && message.hasOwnProperty("type"))
+                    switch (message.type) {
+                    default:
+                        return "type: enum value expected";
+                    case 0:
+                    case 1:
+                    case 2:
+                        break;
+                    }
+                return null;
+            };
+
+            /**
+             * Creates a AIThreadClientInfo message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof BotMetadata.AIThreadInfo.AIThreadClientInfo
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {BotMetadata.AIThreadInfo.AIThreadClientInfo} AIThreadClientInfo
+             */
+            AIThreadClientInfo.fromObject = function fromObject(object) {
+                if (object instanceof $root.BotMetadata.AIThreadInfo.AIThreadClientInfo)
+                    return object;
+                var message = new $root.BotMetadata.AIThreadInfo.AIThreadClientInfo();
+                switch (object.type) {
+                default:
+                    if (typeof object.type === "number") {
+                        message.type = object.type;
+                        break;
+                    }
+                    break;
+                case "UNKNOWN":
+                case 0:
+                    message.type = 0;
+                    break;
+                case "DEFAULT":
+                case 1:
+                    message.type = 1;
+                    break;
+                case "INCOGNITO":
+                case 2:
+                    message.type = 2;
+                    break;
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a AIThreadClientInfo message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof BotMetadata.AIThreadInfo.AIThreadClientInfo
+             * @static
+             * @param {BotMetadata.AIThreadInfo.AIThreadClientInfo} message AIThreadClientInfo
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            AIThreadClientInfo.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (options.defaults)
+                    object.type = options.enums === String ? "UNKNOWN" : 0;
+                if (message.type != null && message.hasOwnProperty("type"))
+                    object.type = options.enums === String ? $root.BotMetadata.AIThreadInfo.AIThreadClientInfo.AIThreadType[message.type] === undefined ? message.type : $root.BotMetadata.AIThreadInfo.AIThreadClientInfo.AIThreadType[message.type] : message.type;
+                return object;
+            };
+
+            /**
+             * Converts this AIThreadClientInfo to JSON.
+             * @function toJSON
+             * @memberof BotMetadata.AIThreadInfo.AIThreadClientInfo
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            AIThreadClientInfo.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for AIThreadClientInfo
+             * @function getTypeUrl
+             * @memberof BotMetadata.AIThreadInfo.AIThreadClientInfo
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            AIThreadClientInfo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/BotMetadata.AIThreadInfo.AIThreadClientInfo";
+            };
+
+            /**
+             * AIThreadType enum.
+             * @name BotMetadata.AIThreadInfo.AIThreadClientInfo.AIThreadType
+             * @enum {number}
+             * @property {number} UNKNOWN=0 UNKNOWN value
+             * @property {number} DEFAULT=1 DEFAULT value
+             * @property {number} INCOGNITO=2 INCOGNITO value
+             */
+            AIThreadClientInfo.AIThreadType = (function() {
+                var valuesById = {}, values = Object.create(valuesById);
+                values[valuesById[0] = "UNKNOWN"] = 0;
+                values[valuesById[1] = "DEFAULT"] = 1;
+                values[valuesById[2] = "INCOGNITO"] = 2;
+                return values;
+            })();
+
+            return AIThreadClientInfo;
+        })();
+
+        AIThreadInfo.AIThreadServerInfo = (function() {
+
+            /**
+             * Properties of a AIThreadServerInfo.
+             * @memberof BotMetadata.AIThreadInfo
+             * @interface IAIThreadServerInfo
+             * @property {string|null} [title] AIThreadServerInfo title
+             */
+
+            /**
+             * Constructs a new AIThreadServerInfo.
+             * @memberof BotMetadata.AIThreadInfo
+             * @classdesc Represents a AIThreadServerInfo.
+             * @implements IAIThreadServerInfo
+             * @constructor
+             * @param {BotMetadata.AIThreadInfo.IAIThreadServerInfo=} [properties] Properties to set
+             */
+            function AIThreadServerInfo(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * AIThreadServerInfo title.
+             * @member {string} title
+             * @memberof BotMetadata.AIThreadInfo.AIThreadServerInfo
+             * @instance
+             */
+            AIThreadServerInfo.prototype.title = "";
+
+            /**
+             * Creates a new AIThreadServerInfo instance using the specified properties.
+             * @function create
+             * @memberof BotMetadata.AIThreadInfo.AIThreadServerInfo
+             * @static
+             * @param {BotMetadata.AIThreadInfo.IAIThreadServerInfo=} [properties] Properties to set
+             * @returns {BotMetadata.AIThreadInfo.AIThreadServerInfo} AIThreadServerInfo instance
+             */
+            AIThreadServerInfo.create = function create(properties) {
+                return new AIThreadServerInfo(properties);
+            };
+
+            /**
+             * Encodes the specified AIThreadServerInfo message. Does not implicitly {@link BotMetadata.AIThreadInfo.AIThreadServerInfo.verify|verify} messages.
+             * @function encode
+             * @memberof BotMetadata.AIThreadInfo.AIThreadServerInfo
+             * @static
+             * @param {BotMetadata.AIThreadInfo.IAIThreadServerInfo} message AIThreadServerInfo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AIThreadServerInfo.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.title != null && Object.hasOwnProperty.call(message, "title"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.title);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified AIThreadServerInfo message, length delimited. Does not implicitly {@link BotMetadata.AIThreadInfo.AIThreadServerInfo.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof BotMetadata.AIThreadInfo.AIThreadServerInfo
+             * @static
+             * @param {BotMetadata.AIThreadInfo.IAIThreadServerInfo} message AIThreadServerInfo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AIThreadServerInfo.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a AIThreadServerInfo message from the specified reader or buffer.
+             * @function decode
+             * @memberof BotMetadata.AIThreadInfo.AIThreadServerInfo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {BotMetadata.AIThreadInfo.AIThreadServerInfo} AIThreadServerInfo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AIThreadServerInfo.decode = function decode(reader, length, error) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.BotMetadata.AIThreadInfo.AIThreadServerInfo();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    if (tag === error)
+                        break;
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.title = reader.string();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a AIThreadServerInfo message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof BotMetadata.AIThreadInfo.AIThreadServerInfo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {BotMetadata.AIThreadInfo.AIThreadServerInfo} AIThreadServerInfo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AIThreadServerInfo.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a AIThreadServerInfo message.
+             * @function verify
+             * @memberof BotMetadata.AIThreadInfo.AIThreadServerInfo
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            AIThreadServerInfo.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.title != null && message.hasOwnProperty("title"))
+                    if (!$util.isString(message.title))
+                        return "title: string expected";
+                return null;
+            };
+
+            /**
+             * Creates a AIThreadServerInfo message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof BotMetadata.AIThreadInfo.AIThreadServerInfo
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {BotMetadata.AIThreadInfo.AIThreadServerInfo} AIThreadServerInfo
+             */
+            AIThreadServerInfo.fromObject = function fromObject(object) {
+                if (object instanceof $root.BotMetadata.AIThreadInfo.AIThreadServerInfo)
+                    return object;
+                var message = new $root.BotMetadata.AIThreadInfo.AIThreadServerInfo();
+                if (object.title != null)
+                    message.title = String(object.title);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a AIThreadServerInfo message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof BotMetadata.AIThreadInfo.AIThreadServerInfo
+             * @static
+             * @param {BotMetadata.AIThreadInfo.AIThreadServerInfo} message AIThreadServerInfo
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            AIThreadServerInfo.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (options.defaults)
+                    object.title = "";
+                if (message.title != null && message.hasOwnProperty("title"))
+                    object.title = message.title;
+                return object;
+            };
+
+            /**
+             * Converts this AIThreadServerInfo to JSON.
+             * @function toJSON
+             * @memberof BotMetadata.AIThreadInfo.AIThreadServerInfo
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            AIThreadServerInfo.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for AIThreadServerInfo
+             * @function getTypeUrl
+             * @memberof BotMetadata.AIThreadInfo.AIThreadServerInfo
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            AIThreadServerInfo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/BotMetadata.AIThreadInfo.AIThreadServerInfo";
+            };
+
+            return AIThreadServerInfo;
+        })();
+
+        return AIThreadInfo;
     })();
 
     BotMetadata.BotUnifiedResponseMutation = (function() {
@@ -1515,20 +1763,6 @@ $root.BotMetadata = (function() {
          * @instance
          */
         BotUnifiedResponseMutation.prototype.sbsMetadata = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotUnifiedResponseMutation _sbsMetadata.
-         * @member {"sbsMetadata"|undefined} _sbsMetadata
-         * @memberof BotMetadata.BotUnifiedResponseMutation
-         * @instance
-         */
-        Object.defineProperty(BotUnifiedResponseMutation.prototype, "_sbsMetadata", {
-            get: $util.oneOfGetter($oneOfFields = ["sbsMetadata"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
 
         /**
          * Creates a new BotUnifiedResponseMutation instance using the specified properties.
@@ -1631,14 +1865,10 @@ $root.BotMetadata = (function() {
         BotUnifiedResponseMutation.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
             if (message.sbsMetadata != null && message.hasOwnProperty("sbsMetadata")) {
-                properties._sbsMetadata = 1;
-                {
-                    var error = $root.BotMetadata.BotUnifiedResponseMutation.SideBySideMetadata.verify(message.sbsMetadata);
-                    if (error)
-                        return "sbsMetadata." + error;
-                }
+                var error = $root.BotMetadata.BotUnifiedResponseMutation.SideBySideMetadata.verify(message.sbsMetadata);
+                if (error)
+                    return "sbsMetadata." + error;
             }
             return null;
         };
@@ -1676,11 +1906,10 @@ $root.BotMetadata = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (message.sbsMetadata != null && message.hasOwnProperty("sbsMetadata")) {
+            if (options.defaults)
+                object.sbsMetadata = null;
+            if (message.sbsMetadata != null && message.hasOwnProperty("sbsMetadata"))
                 object.sbsMetadata = $root.BotMetadata.BotUnifiedResponseMutation.SideBySideMetadata.toObject(message.sbsMetadata, options);
-                if (options.oneofs)
-                    object._sbsMetadata = "sbsMetadata";
-            }
             return object;
         };
 
@@ -1736,25 +1965,11 @@ $root.BotMetadata = (function() {
 
             /**
              * SideBySideMetadata primaryResponseId.
-             * @member {string|null|undefined} primaryResponseId
+             * @member {string} primaryResponseId
              * @memberof BotMetadata.BotUnifiedResponseMutation.SideBySideMetadata
              * @instance
              */
-            SideBySideMetadata.prototype.primaryResponseId = null;
-
-            // OneOf field names bound to virtual getters and setters
-            var $oneOfFields;
-
-            /**
-             * SideBySideMetadata _primaryResponseId.
-             * @member {"primaryResponseId"|undefined} _primaryResponseId
-             * @memberof BotMetadata.BotUnifiedResponseMutation.SideBySideMetadata
-             * @instance
-             */
-            Object.defineProperty(SideBySideMetadata.prototype, "_primaryResponseId", {
-                get: $util.oneOfGetter($oneOfFields = ["primaryResponseId"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
+            SideBySideMetadata.prototype.primaryResponseId = "";
 
             /**
              * Creates a new SideBySideMetadata instance using the specified properties.
@@ -1857,12 +2072,9 @@ $root.BotMetadata = (function() {
             SideBySideMetadata.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                var properties = {};
-                if (message.primaryResponseId != null && message.hasOwnProperty("primaryResponseId")) {
-                    properties._primaryResponseId = 1;
+                if (message.primaryResponseId != null && message.hasOwnProperty("primaryResponseId"))
                     if (!$util.isString(message.primaryResponseId))
                         return "primaryResponseId: string expected";
-                }
                 return null;
             };
 
@@ -1896,11 +2108,10 @@ $root.BotMetadata = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (message.primaryResponseId != null && message.hasOwnProperty("primaryResponseId")) {
+                if (options.defaults)
+                    object.primaryResponseId = "";
+                if (message.primaryResponseId != null && message.hasOwnProperty("primaryResponseId"))
                     object.primaryResponseId = message.primaryResponseId;
-                    if (options.oneofs)
-                        object._primaryResponseId = "primaryResponseId";
-                }
                 return object;
             };
 
@@ -1962,25 +2173,11 @@ $root.BotMetadata = (function() {
 
         /**
          * BotMessageOrigin type.
-         * @member {BotMetadata.BotMessageOrigin.BotMessageOriginType|null|undefined} type
+         * @member {BotMetadata.BotMessageOrigin.BotMessageOriginType} type
          * @memberof BotMetadata.BotMessageOrigin
          * @instance
          */
-        BotMessageOrigin.prototype.type = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotMessageOrigin _type.
-         * @member {"type"|undefined} _type
-         * @memberof BotMetadata.BotMessageOrigin
-         * @instance
-         */
-        Object.defineProperty(BotMessageOrigin.prototype, "_type", {
-            get: $util.oneOfGetter($oneOfFields = ["type"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotMessageOrigin.prototype.type = 0;
 
         /**
          * Creates a new BotMessageOrigin instance using the specified properties.
@@ -2083,16 +2280,13 @@ $root.BotMetadata = (function() {
         BotMessageOrigin.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
-            if (message.type != null && message.hasOwnProperty("type")) {
-                properties._type = 1;
+            if (message.type != null && message.hasOwnProperty("type"))
                 switch (message.type) {
                 default:
                     return "type: enum value expected";
                 case 0:
                     break;
                 }
-            }
             return null;
         };
 
@@ -2136,11 +2330,10 @@ $root.BotMetadata = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (message.type != null && message.hasOwnProperty("type")) {
+            if (options.defaults)
+                object.type = options.enums === String ? "BOT_MESSAGE_ORIGIN_TYPE_AI_INITIATED" : 0;
+            if (message.type != null && message.hasOwnProperty("type"))
                 object.type = options.enums === String ? $root.BotMetadata.BotMessageOrigin.BotMessageOriginType[message.type] === undefined ? message.type : $root.BotMetadata.BotMessageOrigin.BotMessageOriginType[message.type] : message.type;
-                if (options.oneofs)
-                    object._type = "type";
-            }
             return object;
         };
 
@@ -2455,91 +2648,91 @@ $root.BotMetadata = (function() {
 
         /**
          * InThreadSurveyMetadata tessaSessionId.
-         * @member {string|null|undefined} tessaSessionId
+         * @member {string} tessaSessionId
          * @memberof BotMetadata.InThreadSurveyMetadata
          * @instance
          */
-        InThreadSurveyMetadata.prototype.tessaSessionId = null;
+        InThreadSurveyMetadata.prototype.tessaSessionId = "";
 
         /**
          * InThreadSurveyMetadata simonSessionId.
-         * @member {string|null|undefined} simonSessionId
+         * @member {string} simonSessionId
          * @memberof BotMetadata.InThreadSurveyMetadata
          * @instance
          */
-        InThreadSurveyMetadata.prototype.simonSessionId = null;
+        InThreadSurveyMetadata.prototype.simonSessionId = "";
 
         /**
          * InThreadSurveyMetadata simonSurveyId.
-         * @member {string|null|undefined} simonSurveyId
+         * @member {string} simonSurveyId
          * @memberof BotMetadata.InThreadSurveyMetadata
          * @instance
          */
-        InThreadSurveyMetadata.prototype.simonSurveyId = null;
+        InThreadSurveyMetadata.prototype.simonSurveyId = "";
 
         /**
          * InThreadSurveyMetadata tessaRootId.
-         * @member {string|null|undefined} tessaRootId
+         * @member {string} tessaRootId
          * @memberof BotMetadata.InThreadSurveyMetadata
          * @instance
          */
-        InThreadSurveyMetadata.prototype.tessaRootId = null;
+        InThreadSurveyMetadata.prototype.tessaRootId = "";
 
         /**
          * InThreadSurveyMetadata requestId.
-         * @member {string|null|undefined} requestId
+         * @member {string} requestId
          * @memberof BotMetadata.InThreadSurveyMetadata
          * @instance
          */
-        InThreadSurveyMetadata.prototype.requestId = null;
+        InThreadSurveyMetadata.prototype.requestId = "";
 
         /**
          * InThreadSurveyMetadata tessaEvent.
-         * @member {string|null|undefined} tessaEvent
+         * @member {string} tessaEvent
          * @memberof BotMetadata.InThreadSurveyMetadata
          * @instance
          */
-        InThreadSurveyMetadata.prototype.tessaEvent = null;
+        InThreadSurveyMetadata.prototype.tessaEvent = "";
 
         /**
          * InThreadSurveyMetadata invitationHeaderText.
-         * @member {string|null|undefined} invitationHeaderText
+         * @member {string} invitationHeaderText
          * @memberof BotMetadata.InThreadSurveyMetadata
          * @instance
          */
-        InThreadSurveyMetadata.prototype.invitationHeaderText = null;
+        InThreadSurveyMetadata.prototype.invitationHeaderText = "";
 
         /**
          * InThreadSurveyMetadata invitationBodyText.
-         * @member {string|null|undefined} invitationBodyText
+         * @member {string} invitationBodyText
          * @memberof BotMetadata.InThreadSurveyMetadata
          * @instance
          */
-        InThreadSurveyMetadata.prototype.invitationBodyText = null;
+        InThreadSurveyMetadata.prototype.invitationBodyText = "";
 
         /**
          * InThreadSurveyMetadata invitationCtaText.
-         * @member {string|null|undefined} invitationCtaText
+         * @member {string} invitationCtaText
          * @memberof BotMetadata.InThreadSurveyMetadata
          * @instance
          */
-        InThreadSurveyMetadata.prototype.invitationCtaText = null;
+        InThreadSurveyMetadata.prototype.invitationCtaText = "";
 
         /**
          * InThreadSurveyMetadata invitationCtaUrl.
-         * @member {string|null|undefined} invitationCtaUrl
+         * @member {string} invitationCtaUrl
          * @memberof BotMetadata.InThreadSurveyMetadata
          * @instance
          */
-        InThreadSurveyMetadata.prototype.invitationCtaUrl = null;
+        InThreadSurveyMetadata.prototype.invitationCtaUrl = "";
 
         /**
          * InThreadSurveyMetadata surveyTitle.
-         * @member {string|null|undefined} surveyTitle
+         * @member {string} surveyTitle
          * @memberof BotMetadata.InThreadSurveyMetadata
          * @instance
          */
-        InThreadSurveyMetadata.prototype.surveyTitle = null;
+        InThreadSurveyMetadata.prototype.surveyTitle = "";
 
         /**
          * InThreadSurveyMetadata questions.
@@ -2551,27 +2744,27 @@ $root.BotMetadata = (function() {
 
         /**
          * InThreadSurveyMetadata surveyContinueButtonText.
-         * @member {string|null|undefined} surveyContinueButtonText
+         * @member {string} surveyContinueButtonText
          * @memberof BotMetadata.InThreadSurveyMetadata
          * @instance
          */
-        InThreadSurveyMetadata.prototype.surveyContinueButtonText = null;
+        InThreadSurveyMetadata.prototype.surveyContinueButtonText = "";
 
         /**
          * InThreadSurveyMetadata surveySubmitButtonText.
-         * @member {string|null|undefined} surveySubmitButtonText
+         * @member {string} surveySubmitButtonText
          * @memberof BotMetadata.InThreadSurveyMetadata
          * @instance
          */
-        InThreadSurveyMetadata.prototype.surveySubmitButtonText = null;
+        InThreadSurveyMetadata.prototype.surveySubmitButtonText = "";
 
         /**
          * InThreadSurveyMetadata privacyStatementFull.
-         * @member {string|null|undefined} privacyStatementFull
+         * @member {string} privacyStatementFull
          * @memberof BotMetadata.InThreadSurveyMetadata
          * @instance
          */
-        InThreadSurveyMetadata.prototype.privacyStatementFull = null;
+        InThreadSurveyMetadata.prototype.privacyStatementFull = "";
 
         /**
          * InThreadSurveyMetadata privacyStatementParts.
@@ -2583,179 +2776,11 @@ $root.BotMetadata = (function() {
 
         /**
          * InThreadSurveyMetadata feedbackToastText.
-         * @member {string|null|undefined} feedbackToastText
+         * @member {string} feedbackToastText
          * @memberof BotMetadata.InThreadSurveyMetadata
          * @instance
          */
-        InThreadSurveyMetadata.prototype.feedbackToastText = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * InThreadSurveyMetadata _tessaSessionId.
-         * @member {"tessaSessionId"|undefined} _tessaSessionId
-         * @memberof BotMetadata.InThreadSurveyMetadata
-         * @instance
-         */
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_tessaSessionId", {
-            get: $util.oneOfGetter($oneOfFields = ["tessaSessionId"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * InThreadSurveyMetadata _simonSessionId.
-         * @member {"simonSessionId"|undefined} _simonSessionId
-         * @memberof BotMetadata.InThreadSurveyMetadata
-         * @instance
-         */
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_simonSessionId", {
-            get: $util.oneOfGetter($oneOfFields = ["simonSessionId"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * InThreadSurveyMetadata _simonSurveyId.
-         * @member {"simonSurveyId"|undefined} _simonSurveyId
-         * @memberof BotMetadata.InThreadSurveyMetadata
-         * @instance
-         */
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_simonSurveyId", {
-            get: $util.oneOfGetter($oneOfFields = ["simonSurveyId"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * InThreadSurveyMetadata _tessaRootId.
-         * @member {"tessaRootId"|undefined} _tessaRootId
-         * @memberof BotMetadata.InThreadSurveyMetadata
-         * @instance
-         */
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_tessaRootId", {
-            get: $util.oneOfGetter($oneOfFields = ["tessaRootId"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * InThreadSurveyMetadata _requestId.
-         * @member {"requestId"|undefined} _requestId
-         * @memberof BotMetadata.InThreadSurveyMetadata
-         * @instance
-         */
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_requestId", {
-            get: $util.oneOfGetter($oneOfFields = ["requestId"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * InThreadSurveyMetadata _tessaEvent.
-         * @member {"tessaEvent"|undefined} _tessaEvent
-         * @memberof BotMetadata.InThreadSurveyMetadata
-         * @instance
-         */
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_tessaEvent", {
-            get: $util.oneOfGetter($oneOfFields = ["tessaEvent"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * InThreadSurveyMetadata _invitationHeaderText.
-         * @member {"invitationHeaderText"|undefined} _invitationHeaderText
-         * @memberof BotMetadata.InThreadSurveyMetadata
-         * @instance
-         */
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_invitationHeaderText", {
-            get: $util.oneOfGetter($oneOfFields = ["invitationHeaderText"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * InThreadSurveyMetadata _invitationBodyText.
-         * @member {"invitationBodyText"|undefined} _invitationBodyText
-         * @memberof BotMetadata.InThreadSurveyMetadata
-         * @instance
-         */
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_invitationBodyText", {
-            get: $util.oneOfGetter($oneOfFields = ["invitationBodyText"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * InThreadSurveyMetadata _invitationCtaText.
-         * @member {"invitationCtaText"|undefined} _invitationCtaText
-         * @memberof BotMetadata.InThreadSurveyMetadata
-         * @instance
-         */
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_invitationCtaText", {
-            get: $util.oneOfGetter($oneOfFields = ["invitationCtaText"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * InThreadSurveyMetadata _invitationCtaUrl.
-         * @member {"invitationCtaUrl"|undefined} _invitationCtaUrl
-         * @memberof BotMetadata.InThreadSurveyMetadata
-         * @instance
-         */
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_invitationCtaUrl", {
-            get: $util.oneOfGetter($oneOfFields = ["invitationCtaUrl"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * InThreadSurveyMetadata _surveyTitle.
-         * @member {"surveyTitle"|undefined} _surveyTitle
-         * @memberof BotMetadata.InThreadSurveyMetadata
-         * @instance
-         */
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_surveyTitle", {
-            get: $util.oneOfGetter($oneOfFields = ["surveyTitle"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * InThreadSurveyMetadata _surveyContinueButtonText.
-         * @member {"surveyContinueButtonText"|undefined} _surveyContinueButtonText
-         * @memberof BotMetadata.InThreadSurveyMetadata
-         * @instance
-         */
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_surveyContinueButtonText", {
-            get: $util.oneOfGetter($oneOfFields = ["surveyContinueButtonText"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * InThreadSurveyMetadata _surveySubmitButtonText.
-         * @member {"surveySubmitButtonText"|undefined} _surveySubmitButtonText
-         * @memberof BotMetadata.InThreadSurveyMetadata
-         * @instance
-         */
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_surveySubmitButtonText", {
-            get: $util.oneOfGetter($oneOfFields = ["surveySubmitButtonText"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * InThreadSurveyMetadata _privacyStatementFull.
-         * @member {"privacyStatementFull"|undefined} _privacyStatementFull
-         * @memberof BotMetadata.InThreadSurveyMetadata
-         * @instance
-         */
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_privacyStatementFull", {
-            get: $util.oneOfGetter($oneOfFields = ["privacyStatementFull"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * InThreadSurveyMetadata _feedbackToastText.
-         * @member {"feedbackToastText"|undefined} _feedbackToastText
-         * @memberof BotMetadata.InThreadSurveyMetadata
-         * @instance
-         */
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_feedbackToastText", {
-            get: $util.oneOfGetter($oneOfFields = ["feedbackToastText"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        InThreadSurveyMetadata.prototype.feedbackToastText = "";
 
         /**
          * Creates a new InThreadSurveyMetadata instance using the specified properties.
@@ -2960,62 +2985,39 @@ $root.BotMetadata = (function() {
         InThreadSurveyMetadata.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
-            if (message.tessaSessionId != null && message.hasOwnProperty("tessaSessionId")) {
-                properties._tessaSessionId = 1;
+            if (message.tessaSessionId != null && message.hasOwnProperty("tessaSessionId"))
                 if (!$util.isString(message.tessaSessionId))
                     return "tessaSessionId: string expected";
-            }
-            if (message.simonSessionId != null && message.hasOwnProperty("simonSessionId")) {
-                properties._simonSessionId = 1;
+            if (message.simonSessionId != null && message.hasOwnProperty("simonSessionId"))
                 if (!$util.isString(message.simonSessionId))
                     return "simonSessionId: string expected";
-            }
-            if (message.simonSurveyId != null && message.hasOwnProperty("simonSurveyId")) {
-                properties._simonSurveyId = 1;
+            if (message.simonSurveyId != null && message.hasOwnProperty("simonSurveyId"))
                 if (!$util.isString(message.simonSurveyId))
                     return "simonSurveyId: string expected";
-            }
-            if (message.tessaRootId != null && message.hasOwnProperty("tessaRootId")) {
-                properties._tessaRootId = 1;
+            if (message.tessaRootId != null && message.hasOwnProperty("tessaRootId"))
                 if (!$util.isString(message.tessaRootId))
                     return "tessaRootId: string expected";
-            }
-            if (message.requestId != null && message.hasOwnProperty("requestId")) {
-                properties._requestId = 1;
+            if (message.requestId != null && message.hasOwnProperty("requestId"))
                 if (!$util.isString(message.requestId))
                     return "requestId: string expected";
-            }
-            if (message.tessaEvent != null && message.hasOwnProperty("tessaEvent")) {
-                properties._tessaEvent = 1;
+            if (message.tessaEvent != null && message.hasOwnProperty("tessaEvent"))
                 if (!$util.isString(message.tessaEvent))
                     return "tessaEvent: string expected";
-            }
-            if (message.invitationHeaderText != null && message.hasOwnProperty("invitationHeaderText")) {
-                properties._invitationHeaderText = 1;
+            if (message.invitationHeaderText != null && message.hasOwnProperty("invitationHeaderText"))
                 if (!$util.isString(message.invitationHeaderText))
                     return "invitationHeaderText: string expected";
-            }
-            if (message.invitationBodyText != null && message.hasOwnProperty("invitationBodyText")) {
-                properties._invitationBodyText = 1;
+            if (message.invitationBodyText != null && message.hasOwnProperty("invitationBodyText"))
                 if (!$util.isString(message.invitationBodyText))
                     return "invitationBodyText: string expected";
-            }
-            if (message.invitationCtaText != null && message.hasOwnProperty("invitationCtaText")) {
-                properties._invitationCtaText = 1;
+            if (message.invitationCtaText != null && message.hasOwnProperty("invitationCtaText"))
                 if (!$util.isString(message.invitationCtaText))
                     return "invitationCtaText: string expected";
-            }
-            if (message.invitationCtaUrl != null && message.hasOwnProperty("invitationCtaUrl")) {
-                properties._invitationCtaUrl = 1;
+            if (message.invitationCtaUrl != null && message.hasOwnProperty("invitationCtaUrl"))
                 if (!$util.isString(message.invitationCtaUrl))
                     return "invitationCtaUrl: string expected";
-            }
-            if (message.surveyTitle != null && message.hasOwnProperty("surveyTitle")) {
-                properties._surveyTitle = 1;
+            if (message.surveyTitle != null && message.hasOwnProperty("surveyTitle"))
                 if (!$util.isString(message.surveyTitle))
                     return "surveyTitle: string expected";
-            }
             if (message.questions != null && message.hasOwnProperty("questions")) {
                 if (!Array.isArray(message.questions))
                     return "questions: array expected";
@@ -3025,21 +3027,15 @@ $root.BotMetadata = (function() {
                         return "questions." + error;
                 }
             }
-            if (message.surveyContinueButtonText != null && message.hasOwnProperty("surveyContinueButtonText")) {
-                properties._surveyContinueButtonText = 1;
+            if (message.surveyContinueButtonText != null && message.hasOwnProperty("surveyContinueButtonText"))
                 if (!$util.isString(message.surveyContinueButtonText))
                     return "surveyContinueButtonText: string expected";
-            }
-            if (message.surveySubmitButtonText != null && message.hasOwnProperty("surveySubmitButtonText")) {
-                properties._surveySubmitButtonText = 1;
+            if (message.surveySubmitButtonText != null && message.hasOwnProperty("surveySubmitButtonText"))
                 if (!$util.isString(message.surveySubmitButtonText))
                     return "surveySubmitButtonText: string expected";
-            }
-            if (message.privacyStatementFull != null && message.hasOwnProperty("privacyStatementFull")) {
-                properties._privacyStatementFull = 1;
+            if (message.privacyStatementFull != null && message.hasOwnProperty("privacyStatementFull"))
                 if (!$util.isString(message.privacyStatementFull))
                     return "privacyStatementFull: string expected";
-            }
             if (message.privacyStatementParts != null && message.hasOwnProperty("privacyStatementParts")) {
                 if (!Array.isArray(message.privacyStatementParts))
                     return "privacyStatementParts: array expected";
@@ -3049,11 +3045,9 @@ $root.BotMetadata = (function() {
                         return "privacyStatementParts." + error;
                 }
             }
-            if (message.feedbackToastText != null && message.hasOwnProperty("feedbackToastText")) {
-                properties._feedbackToastText = 1;
+            if (message.feedbackToastText != null && message.hasOwnProperty("feedbackToastText"))
                 if (!$util.isString(message.feedbackToastText))
                     return "feedbackToastText: string expected";
-            }
             return null;
         };
 
@@ -3139,91 +3133,63 @@ $root.BotMetadata = (function() {
                 object.questions = [];
                 object.privacyStatementParts = [];
             }
-            if (message.tessaSessionId != null && message.hasOwnProperty("tessaSessionId")) {
+            if (options.defaults) {
+                object.tessaSessionId = "";
+                object.simonSessionId = "";
+                object.simonSurveyId = "";
+                object.tessaRootId = "";
+                object.requestId = "";
+                object.tessaEvent = "";
+                object.invitationHeaderText = "";
+                object.invitationBodyText = "";
+                object.invitationCtaText = "";
+                object.invitationCtaUrl = "";
+                object.surveyTitle = "";
+                object.surveyContinueButtonText = "";
+                object.surveySubmitButtonText = "";
+                object.privacyStatementFull = "";
+                object.feedbackToastText = "";
+            }
+            if (message.tessaSessionId != null && message.hasOwnProperty("tessaSessionId"))
                 object.tessaSessionId = message.tessaSessionId;
-                if (options.oneofs)
-                    object._tessaSessionId = "tessaSessionId";
-            }
-            if (message.simonSessionId != null && message.hasOwnProperty("simonSessionId")) {
+            if (message.simonSessionId != null && message.hasOwnProperty("simonSessionId"))
                 object.simonSessionId = message.simonSessionId;
-                if (options.oneofs)
-                    object._simonSessionId = "simonSessionId";
-            }
-            if (message.simonSurveyId != null && message.hasOwnProperty("simonSurveyId")) {
+            if (message.simonSurveyId != null && message.hasOwnProperty("simonSurveyId"))
                 object.simonSurveyId = message.simonSurveyId;
-                if (options.oneofs)
-                    object._simonSurveyId = "simonSurveyId";
-            }
-            if (message.tessaRootId != null && message.hasOwnProperty("tessaRootId")) {
+            if (message.tessaRootId != null && message.hasOwnProperty("tessaRootId"))
                 object.tessaRootId = message.tessaRootId;
-                if (options.oneofs)
-                    object._tessaRootId = "tessaRootId";
-            }
-            if (message.requestId != null && message.hasOwnProperty("requestId")) {
+            if (message.requestId != null && message.hasOwnProperty("requestId"))
                 object.requestId = message.requestId;
-                if (options.oneofs)
-                    object._requestId = "requestId";
-            }
-            if (message.tessaEvent != null && message.hasOwnProperty("tessaEvent")) {
+            if (message.tessaEvent != null && message.hasOwnProperty("tessaEvent"))
                 object.tessaEvent = message.tessaEvent;
-                if (options.oneofs)
-                    object._tessaEvent = "tessaEvent";
-            }
-            if (message.invitationHeaderText != null && message.hasOwnProperty("invitationHeaderText")) {
+            if (message.invitationHeaderText != null && message.hasOwnProperty("invitationHeaderText"))
                 object.invitationHeaderText = message.invitationHeaderText;
-                if (options.oneofs)
-                    object._invitationHeaderText = "invitationHeaderText";
-            }
-            if (message.invitationBodyText != null && message.hasOwnProperty("invitationBodyText")) {
+            if (message.invitationBodyText != null && message.hasOwnProperty("invitationBodyText"))
                 object.invitationBodyText = message.invitationBodyText;
-                if (options.oneofs)
-                    object._invitationBodyText = "invitationBodyText";
-            }
-            if (message.invitationCtaText != null && message.hasOwnProperty("invitationCtaText")) {
+            if (message.invitationCtaText != null && message.hasOwnProperty("invitationCtaText"))
                 object.invitationCtaText = message.invitationCtaText;
-                if (options.oneofs)
-                    object._invitationCtaText = "invitationCtaText";
-            }
-            if (message.invitationCtaUrl != null && message.hasOwnProperty("invitationCtaUrl")) {
+            if (message.invitationCtaUrl != null && message.hasOwnProperty("invitationCtaUrl"))
                 object.invitationCtaUrl = message.invitationCtaUrl;
-                if (options.oneofs)
-                    object._invitationCtaUrl = "invitationCtaUrl";
-            }
-            if (message.surveyTitle != null && message.hasOwnProperty("surveyTitle")) {
+            if (message.surveyTitle != null && message.hasOwnProperty("surveyTitle"))
                 object.surveyTitle = message.surveyTitle;
-                if (options.oneofs)
-                    object._surveyTitle = "surveyTitle";
-            }
             if (message.questions && message.questions.length) {
                 object.questions = [];
                 for (var j = 0; j < message.questions.length; ++j)
                     object.questions[j] = $root.BotMetadata.InThreadSurveyMetadata.InThreadSurveyQuestion.toObject(message.questions[j], options);
             }
-            if (message.surveyContinueButtonText != null && message.hasOwnProperty("surveyContinueButtonText")) {
+            if (message.surveyContinueButtonText != null && message.hasOwnProperty("surveyContinueButtonText"))
                 object.surveyContinueButtonText = message.surveyContinueButtonText;
-                if (options.oneofs)
-                    object._surveyContinueButtonText = "surveyContinueButtonText";
-            }
-            if (message.surveySubmitButtonText != null && message.hasOwnProperty("surveySubmitButtonText")) {
+            if (message.surveySubmitButtonText != null && message.hasOwnProperty("surveySubmitButtonText"))
                 object.surveySubmitButtonText = message.surveySubmitButtonText;
-                if (options.oneofs)
-                    object._surveySubmitButtonText = "surveySubmitButtonText";
-            }
-            if (message.privacyStatementFull != null && message.hasOwnProperty("privacyStatementFull")) {
+            if (message.privacyStatementFull != null && message.hasOwnProperty("privacyStatementFull"))
                 object.privacyStatementFull = message.privacyStatementFull;
-                if (options.oneofs)
-                    object._privacyStatementFull = "privacyStatementFull";
-            }
             if (message.privacyStatementParts && message.privacyStatementParts.length) {
                 object.privacyStatementParts = [];
                 for (var j = 0; j < message.privacyStatementParts.length; ++j)
                     object.privacyStatementParts[j] = $root.BotMetadata.InThreadSurveyMetadata.InThreadSurveyPrivacyStatementPart.toObject(message.privacyStatementParts[j], options);
             }
-            if (message.feedbackToastText != null && message.hasOwnProperty("feedbackToastText")) {
+            if (message.feedbackToastText != null && message.hasOwnProperty("feedbackToastText"))
                 object.feedbackToastText = message.feedbackToastText;
-                if (options.oneofs)
-                    object._feedbackToastText = "feedbackToastText";
-            }
             return object;
         };
 
@@ -3281,63 +3247,27 @@ $root.BotMetadata = (function() {
 
             /**
              * InThreadSurveyOption stringValue.
-             * @member {string|null|undefined} stringValue
+             * @member {string} stringValue
              * @memberof BotMetadata.InThreadSurveyMetadata.InThreadSurveyOption
              * @instance
              */
-            InThreadSurveyOption.prototype.stringValue = null;
+            InThreadSurveyOption.prototype.stringValue = "";
 
             /**
              * InThreadSurveyOption numericValue.
-             * @member {number|null|undefined} numericValue
+             * @member {number} numericValue
              * @memberof BotMetadata.InThreadSurveyMetadata.InThreadSurveyOption
              * @instance
              */
-            InThreadSurveyOption.prototype.numericValue = null;
+            InThreadSurveyOption.prototype.numericValue = 0;
 
             /**
              * InThreadSurveyOption textTranslated.
-             * @member {string|null|undefined} textTranslated
+             * @member {string} textTranslated
              * @memberof BotMetadata.InThreadSurveyMetadata.InThreadSurveyOption
              * @instance
              */
-            InThreadSurveyOption.prototype.textTranslated = null;
-
-            // OneOf field names bound to virtual getters and setters
-            var $oneOfFields;
-
-            /**
-             * InThreadSurveyOption _stringValue.
-             * @member {"stringValue"|undefined} _stringValue
-             * @memberof BotMetadata.InThreadSurveyMetadata.InThreadSurveyOption
-             * @instance
-             */
-            Object.defineProperty(InThreadSurveyOption.prototype, "_stringValue", {
-                get: $util.oneOfGetter($oneOfFields = ["stringValue"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            /**
-             * InThreadSurveyOption _numericValue.
-             * @member {"numericValue"|undefined} _numericValue
-             * @memberof BotMetadata.InThreadSurveyMetadata.InThreadSurveyOption
-             * @instance
-             */
-            Object.defineProperty(InThreadSurveyOption.prototype, "_numericValue", {
-                get: $util.oneOfGetter($oneOfFields = ["numericValue"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            /**
-             * InThreadSurveyOption _textTranslated.
-             * @member {"textTranslated"|undefined} _textTranslated
-             * @memberof BotMetadata.InThreadSurveyMetadata.InThreadSurveyOption
-             * @instance
-             */
-            Object.defineProperty(InThreadSurveyOption.prototype, "_textTranslated", {
-                get: $util.oneOfGetter($oneOfFields = ["textTranslated"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
+            InThreadSurveyOption.prototype.textTranslated = "";
 
             /**
              * Creates a new InThreadSurveyOption instance using the specified properties.
@@ -3452,22 +3382,15 @@ $root.BotMetadata = (function() {
             InThreadSurveyOption.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                var properties = {};
-                if (message.stringValue != null && message.hasOwnProperty("stringValue")) {
-                    properties._stringValue = 1;
+                if (message.stringValue != null && message.hasOwnProperty("stringValue"))
                     if (!$util.isString(message.stringValue))
                         return "stringValue: string expected";
-                }
-                if (message.numericValue != null && message.hasOwnProperty("numericValue")) {
-                    properties._numericValue = 1;
+                if (message.numericValue != null && message.hasOwnProperty("numericValue"))
                     if (!$util.isInteger(message.numericValue))
                         return "numericValue: integer expected";
-                }
-                if (message.textTranslated != null && message.hasOwnProperty("textTranslated")) {
-                    properties._textTranslated = 1;
+                if (message.textTranslated != null && message.hasOwnProperty("textTranslated"))
                     if (!$util.isString(message.textTranslated))
                         return "textTranslated: string expected";
-                }
                 return null;
             };
 
@@ -3505,21 +3428,17 @@ $root.BotMetadata = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (message.stringValue != null && message.hasOwnProperty("stringValue")) {
+                if (options.defaults) {
+                    object.stringValue = "";
+                    object.numericValue = 0;
+                    object.textTranslated = "";
+                }
+                if (message.stringValue != null && message.hasOwnProperty("stringValue"))
                     object.stringValue = message.stringValue;
-                    if (options.oneofs)
-                        object._stringValue = "stringValue";
-                }
-                if (message.numericValue != null && message.hasOwnProperty("numericValue")) {
+                if (message.numericValue != null && message.hasOwnProperty("numericValue"))
                     object.numericValue = message.numericValue;
-                    if (options.oneofs)
-                        object._numericValue = "numericValue";
-                }
-                if (message.textTranslated != null && message.hasOwnProperty("textTranslated")) {
+                if (message.textTranslated != null && message.hasOwnProperty("textTranslated"))
                     object.textTranslated = message.textTranslated;
-                    if (options.oneofs)
-                        object._textTranslated = "textTranslated";
-                }
                 return object;
             };
 
@@ -3579,44 +3498,19 @@ $root.BotMetadata = (function() {
 
             /**
              * InThreadSurveyPrivacyStatementPart text.
-             * @member {string|null|undefined} text
+             * @member {string} text
              * @memberof BotMetadata.InThreadSurveyMetadata.InThreadSurveyPrivacyStatementPart
              * @instance
              */
-            InThreadSurveyPrivacyStatementPart.prototype.text = null;
+            InThreadSurveyPrivacyStatementPart.prototype.text = "";
 
             /**
              * InThreadSurveyPrivacyStatementPart url.
-             * @member {string|null|undefined} url
+             * @member {string} url
              * @memberof BotMetadata.InThreadSurveyMetadata.InThreadSurveyPrivacyStatementPart
              * @instance
              */
-            InThreadSurveyPrivacyStatementPart.prototype.url = null;
-
-            // OneOf field names bound to virtual getters and setters
-            var $oneOfFields;
-
-            /**
-             * InThreadSurveyPrivacyStatementPart _text.
-             * @member {"text"|undefined} _text
-             * @memberof BotMetadata.InThreadSurveyMetadata.InThreadSurveyPrivacyStatementPart
-             * @instance
-             */
-            Object.defineProperty(InThreadSurveyPrivacyStatementPart.prototype, "_text", {
-                get: $util.oneOfGetter($oneOfFields = ["text"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            /**
-             * InThreadSurveyPrivacyStatementPart _url.
-             * @member {"url"|undefined} _url
-             * @memberof BotMetadata.InThreadSurveyMetadata.InThreadSurveyPrivacyStatementPart
-             * @instance
-             */
-            Object.defineProperty(InThreadSurveyPrivacyStatementPart.prototype, "_url", {
-                get: $util.oneOfGetter($oneOfFields = ["url"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
+            InThreadSurveyPrivacyStatementPart.prototype.url = "";
 
             /**
              * Creates a new InThreadSurveyPrivacyStatementPart instance using the specified properties.
@@ -3725,17 +3619,12 @@ $root.BotMetadata = (function() {
             InThreadSurveyPrivacyStatementPart.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                var properties = {};
-                if (message.text != null && message.hasOwnProperty("text")) {
-                    properties._text = 1;
+                if (message.text != null && message.hasOwnProperty("text"))
                     if (!$util.isString(message.text))
                         return "text: string expected";
-                }
-                if (message.url != null && message.hasOwnProperty("url")) {
-                    properties._url = 1;
+                if (message.url != null && message.hasOwnProperty("url"))
                     if (!$util.isString(message.url))
                         return "url: string expected";
-                }
                 return null;
             };
 
@@ -3771,16 +3660,14 @@ $root.BotMetadata = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (message.text != null && message.hasOwnProperty("text")) {
+                if (options.defaults) {
+                    object.text = "";
+                    object.url = "";
+                }
+                if (message.text != null && message.hasOwnProperty("text"))
                     object.text = message.text;
-                    if (options.oneofs)
-                        object._text = "text";
-                }
-                if (message.url != null && message.hasOwnProperty("url")) {
+                if (message.url != null && message.hasOwnProperty("url"))
                     object.url = message.url;
-                    if (options.oneofs)
-                        object._url = "url";
-                }
                 return object;
             };
 
@@ -3842,19 +3729,19 @@ $root.BotMetadata = (function() {
 
             /**
              * InThreadSurveyQuestion questionText.
-             * @member {string|null|undefined} questionText
+             * @member {string} questionText
              * @memberof BotMetadata.InThreadSurveyMetadata.InThreadSurveyQuestion
              * @instance
              */
-            InThreadSurveyQuestion.prototype.questionText = null;
+            InThreadSurveyQuestion.prototype.questionText = "";
 
             /**
              * InThreadSurveyQuestion questionId.
-             * @member {string|null|undefined} questionId
+             * @member {string} questionId
              * @memberof BotMetadata.InThreadSurveyMetadata.InThreadSurveyQuestion
              * @instance
              */
-            InThreadSurveyQuestion.prototype.questionId = null;
+            InThreadSurveyQuestion.prototype.questionId = "";
 
             /**
              * InThreadSurveyQuestion questionOptions.
@@ -3863,31 +3750,6 @@ $root.BotMetadata = (function() {
              * @instance
              */
             InThreadSurveyQuestion.prototype.questionOptions = $util.emptyArray;
-
-            // OneOf field names bound to virtual getters and setters
-            var $oneOfFields;
-
-            /**
-             * InThreadSurveyQuestion _questionText.
-             * @member {"questionText"|undefined} _questionText
-             * @memberof BotMetadata.InThreadSurveyMetadata.InThreadSurveyQuestion
-             * @instance
-             */
-            Object.defineProperty(InThreadSurveyQuestion.prototype, "_questionText", {
-                get: $util.oneOfGetter($oneOfFields = ["questionText"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            /**
-             * InThreadSurveyQuestion _questionId.
-             * @member {"questionId"|undefined} _questionId
-             * @memberof BotMetadata.InThreadSurveyMetadata.InThreadSurveyQuestion
-             * @instance
-             */
-            Object.defineProperty(InThreadSurveyQuestion.prototype, "_questionId", {
-                get: $util.oneOfGetter($oneOfFields = ["questionId"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
 
             /**
              * Creates a new InThreadSurveyQuestion instance using the specified properties.
@@ -4005,17 +3867,12 @@ $root.BotMetadata = (function() {
             InThreadSurveyQuestion.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                var properties = {};
-                if (message.questionText != null && message.hasOwnProperty("questionText")) {
-                    properties._questionText = 1;
+                if (message.questionText != null && message.hasOwnProperty("questionText"))
                     if (!$util.isString(message.questionText))
                         return "questionText: string expected";
-                }
-                if (message.questionId != null && message.hasOwnProperty("questionId")) {
-                    properties._questionId = 1;
+                if (message.questionId != null && message.hasOwnProperty("questionId"))
                     if (!$util.isString(message.questionId))
                         return "questionId: string expected";
-                }
                 if (message.questionOptions != null && message.hasOwnProperty("questionOptions")) {
                     if (!Array.isArray(message.questionOptions))
                         return "questionOptions: array expected";
@@ -4072,16 +3929,14 @@ $root.BotMetadata = (function() {
                 var object = {};
                 if (options.arrays || options.defaults)
                     object.questionOptions = [];
-                if (message.questionText != null && message.hasOwnProperty("questionText")) {
+                if (options.defaults) {
+                    object.questionText = "";
+                    object.questionId = "";
+                }
+                if (message.questionText != null && message.hasOwnProperty("questionText"))
                     object.questionText = message.questionText;
-                    if (options.oneofs)
-                        object._questionText = "questionText";
-                }
-                if (message.questionId != null && message.hasOwnProperty("questionId")) {
+                if (message.questionId != null && message.hasOwnProperty("questionId"))
                     object.questionId = message.questionId;
-                    if (options.oneofs)
-                        object._questionId = "questionId";
-                }
                 if (message.questionOptions && message.questionOptions.length) {
                     object.questionOptions = [];
                     for (var j = 0; j < message.questionOptions.length; ++j)
@@ -4377,139 +4232,59 @@ $root.BotMetadata = (function() {
 
             /**
              * BotSourceItem provider.
-             * @member {BotMetadata.BotSourcesMetadata.BotSourceItem.SourceProvider|null|undefined} provider
+             * @member {BotMetadata.BotSourcesMetadata.BotSourceItem.SourceProvider} provider
              * @memberof BotMetadata.BotSourcesMetadata.BotSourceItem
              * @instance
              */
-            BotSourceItem.prototype.provider = null;
+            BotSourceItem.prototype.provider = 0;
 
             /**
              * BotSourceItem thumbnailCdnUrl.
-             * @member {string|null|undefined} thumbnailCdnUrl
+             * @member {string} thumbnailCdnUrl
              * @memberof BotMetadata.BotSourcesMetadata.BotSourceItem
              * @instance
              */
-            BotSourceItem.prototype.thumbnailCdnUrl = null;
+            BotSourceItem.prototype.thumbnailCdnUrl = "";
 
             /**
              * BotSourceItem sourceProviderUrl.
-             * @member {string|null|undefined} sourceProviderUrl
+             * @member {string} sourceProviderUrl
              * @memberof BotMetadata.BotSourcesMetadata.BotSourceItem
              * @instance
              */
-            BotSourceItem.prototype.sourceProviderUrl = null;
+            BotSourceItem.prototype.sourceProviderUrl = "";
 
             /**
              * BotSourceItem sourceQuery.
-             * @member {string|null|undefined} sourceQuery
+             * @member {string} sourceQuery
              * @memberof BotMetadata.BotSourcesMetadata.BotSourceItem
              * @instance
              */
-            BotSourceItem.prototype.sourceQuery = null;
+            BotSourceItem.prototype.sourceQuery = "";
 
             /**
              * BotSourceItem faviconCdnUrl.
-             * @member {string|null|undefined} faviconCdnUrl
+             * @member {string} faviconCdnUrl
              * @memberof BotMetadata.BotSourcesMetadata.BotSourceItem
              * @instance
              */
-            BotSourceItem.prototype.faviconCdnUrl = null;
+            BotSourceItem.prototype.faviconCdnUrl = "";
 
             /**
              * BotSourceItem citationNumber.
-             * @member {number|null|undefined} citationNumber
+             * @member {number} citationNumber
              * @memberof BotMetadata.BotSourcesMetadata.BotSourceItem
              * @instance
              */
-            BotSourceItem.prototype.citationNumber = null;
+            BotSourceItem.prototype.citationNumber = 0;
 
             /**
              * BotSourceItem sourceTitle.
-             * @member {string|null|undefined} sourceTitle
+             * @member {string} sourceTitle
              * @memberof BotMetadata.BotSourcesMetadata.BotSourceItem
              * @instance
              */
-            BotSourceItem.prototype.sourceTitle = null;
-
-            // OneOf field names bound to virtual getters and setters
-            var $oneOfFields;
-
-            /**
-             * BotSourceItem _provider.
-             * @member {"provider"|undefined} _provider
-             * @memberof BotMetadata.BotSourcesMetadata.BotSourceItem
-             * @instance
-             */
-            Object.defineProperty(BotSourceItem.prototype, "_provider", {
-                get: $util.oneOfGetter($oneOfFields = ["provider"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            /**
-             * BotSourceItem _thumbnailCdnUrl.
-             * @member {"thumbnailCdnUrl"|undefined} _thumbnailCdnUrl
-             * @memberof BotMetadata.BotSourcesMetadata.BotSourceItem
-             * @instance
-             */
-            Object.defineProperty(BotSourceItem.prototype, "_thumbnailCdnUrl", {
-                get: $util.oneOfGetter($oneOfFields = ["thumbnailCdnUrl"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            /**
-             * BotSourceItem _sourceProviderUrl.
-             * @member {"sourceProviderUrl"|undefined} _sourceProviderUrl
-             * @memberof BotMetadata.BotSourcesMetadata.BotSourceItem
-             * @instance
-             */
-            Object.defineProperty(BotSourceItem.prototype, "_sourceProviderUrl", {
-                get: $util.oneOfGetter($oneOfFields = ["sourceProviderUrl"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            /**
-             * BotSourceItem _sourceQuery.
-             * @member {"sourceQuery"|undefined} _sourceQuery
-             * @memberof BotMetadata.BotSourcesMetadata.BotSourceItem
-             * @instance
-             */
-            Object.defineProperty(BotSourceItem.prototype, "_sourceQuery", {
-                get: $util.oneOfGetter($oneOfFields = ["sourceQuery"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            /**
-             * BotSourceItem _faviconCdnUrl.
-             * @member {"faviconCdnUrl"|undefined} _faviconCdnUrl
-             * @memberof BotMetadata.BotSourcesMetadata.BotSourceItem
-             * @instance
-             */
-            Object.defineProperty(BotSourceItem.prototype, "_faviconCdnUrl", {
-                get: $util.oneOfGetter($oneOfFields = ["faviconCdnUrl"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            /**
-             * BotSourceItem _citationNumber.
-             * @member {"citationNumber"|undefined} _citationNumber
-             * @memberof BotMetadata.BotSourcesMetadata.BotSourceItem
-             * @instance
-             */
-            Object.defineProperty(BotSourceItem.prototype, "_citationNumber", {
-                get: $util.oneOfGetter($oneOfFields = ["citationNumber"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            /**
-             * BotSourceItem _sourceTitle.
-             * @member {"sourceTitle"|undefined} _sourceTitle
-             * @memberof BotMetadata.BotSourcesMetadata.BotSourceItem
-             * @instance
-             */
-            Object.defineProperty(BotSourceItem.prototype, "_sourceTitle", {
-                get: $util.oneOfGetter($oneOfFields = ["sourceTitle"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
+            BotSourceItem.prototype.sourceTitle = "";
 
             /**
              * Creates a new BotSourceItem instance using the specified properties.
@@ -4648,9 +4423,7 @@ $root.BotMetadata = (function() {
             BotSourceItem.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                var properties = {};
-                if (message.provider != null && message.hasOwnProperty("provider")) {
-                    properties._provider = 1;
+                if (message.provider != null && message.hasOwnProperty("provider"))
                     switch (message.provider) {
                     default:
                         return "provider: enum value expected";
@@ -4661,37 +4434,24 @@ $root.BotMetadata = (function() {
                     case 4:
                         break;
                     }
-                }
-                if (message.thumbnailCdnUrl != null && message.hasOwnProperty("thumbnailCdnUrl")) {
-                    properties._thumbnailCdnUrl = 1;
+                if (message.thumbnailCdnUrl != null && message.hasOwnProperty("thumbnailCdnUrl"))
                     if (!$util.isString(message.thumbnailCdnUrl))
                         return "thumbnailCdnUrl: string expected";
-                }
-                if (message.sourceProviderUrl != null && message.hasOwnProperty("sourceProviderUrl")) {
-                    properties._sourceProviderUrl = 1;
+                if (message.sourceProviderUrl != null && message.hasOwnProperty("sourceProviderUrl"))
                     if (!$util.isString(message.sourceProviderUrl))
                         return "sourceProviderUrl: string expected";
-                }
-                if (message.sourceQuery != null && message.hasOwnProperty("sourceQuery")) {
-                    properties._sourceQuery = 1;
+                if (message.sourceQuery != null && message.hasOwnProperty("sourceQuery"))
                     if (!$util.isString(message.sourceQuery))
                         return "sourceQuery: string expected";
-                }
-                if (message.faviconCdnUrl != null && message.hasOwnProperty("faviconCdnUrl")) {
-                    properties._faviconCdnUrl = 1;
+                if (message.faviconCdnUrl != null && message.hasOwnProperty("faviconCdnUrl"))
                     if (!$util.isString(message.faviconCdnUrl))
                         return "faviconCdnUrl: string expected";
-                }
-                if (message.citationNumber != null && message.hasOwnProperty("citationNumber")) {
-                    properties._citationNumber = 1;
+                if (message.citationNumber != null && message.hasOwnProperty("citationNumber"))
                     if (!$util.isInteger(message.citationNumber))
                         return "citationNumber: integer expected";
-                }
-                if (message.sourceTitle != null && message.hasOwnProperty("sourceTitle")) {
-                    properties._sourceTitle = 1;
+                if (message.sourceTitle != null && message.hasOwnProperty("sourceTitle"))
                     if (!$util.isString(message.sourceTitle))
                         return "sourceTitle: string expected";
-                }
                 return null;
             };
 
@@ -4763,41 +4523,29 @@ $root.BotMetadata = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (message.provider != null && message.hasOwnProperty("provider")) {
+                if (options.defaults) {
+                    object.provider = options.enums === String ? "UNKNOWN" : 0;
+                    object.thumbnailCdnUrl = "";
+                    object.sourceProviderUrl = "";
+                    object.sourceQuery = "";
+                    object.faviconCdnUrl = "";
+                    object.citationNumber = 0;
+                    object.sourceTitle = "";
+                }
+                if (message.provider != null && message.hasOwnProperty("provider"))
                     object.provider = options.enums === String ? $root.BotMetadata.BotSourcesMetadata.BotSourceItem.SourceProvider[message.provider] === undefined ? message.provider : $root.BotMetadata.BotSourcesMetadata.BotSourceItem.SourceProvider[message.provider] : message.provider;
-                    if (options.oneofs)
-                        object._provider = "provider";
-                }
-                if (message.thumbnailCdnUrl != null && message.hasOwnProperty("thumbnailCdnUrl")) {
+                if (message.thumbnailCdnUrl != null && message.hasOwnProperty("thumbnailCdnUrl"))
                     object.thumbnailCdnUrl = message.thumbnailCdnUrl;
-                    if (options.oneofs)
-                        object._thumbnailCdnUrl = "thumbnailCdnUrl";
-                }
-                if (message.sourceProviderUrl != null && message.hasOwnProperty("sourceProviderUrl")) {
+                if (message.sourceProviderUrl != null && message.hasOwnProperty("sourceProviderUrl"))
                     object.sourceProviderUrl = message.sourceProviderUrl;
-                    if (options.oneofs)
-                        object._sourceProviderUrl = "sourceProviderUrl";
-                }
-                if (message.sourceQuery != null && message.hasOwnProperty("sourceQuery")) {
+                if (message.sourceQuery != null && message.hasOwnProperty("sourceQuery"))
                     object.sourceQuery = message.sourceQuery;
-                    if (options.oneofs)
-                        object._sourceQuery = "sourceQuery";
-                }
-                if (message.faviconCdnUrl != null && message.hasOwnProperty("faviconCdnUrl")) {
+                if (message.faviconCdnUrl != null && message.hasOwnProperty("faviconCdnUrl"))
                     object.faviconCdnUrl = message.faviconCdnUrl;
-                    if (options.oneofs)
-                        object._faviconCdnUrl = "faviconCdnUrl";
-                }
-                if (message.citationNumber != null && message.hasOwnProperty("citationNumber")) {
+                if (message.citationNumber != null && message.hasOwnProperty("citationNumber"))
                     object.citationNumber = message.citationNumber;
-                    if (options.oneofs)
-                        object._citationNumber = "citationNumber";
-                }
-                if (message.sourceTitle != null && message.hasOwnProperty("sourceTitle")) {
+                if (message.sourceTitle != null && message.hasOwnProperty("sourceTitle"))
                     object.sourceTitle = message.sourceTitle;
-                    if (options.oneofs)
-                        object._sourceTitle = "sourceTitle";
-                }
                 return object;
             };
 
@@ -4880,44 +4628,19 @@ $root.BotMetadata = (function() {
 
         /**
          * BotAgeCollectionMetadata ageCollectionEligible.
-         * @member {boolean|null|undefined} ageCollectionEligible
+         * @member {boolean} ageCollectionEligible
          * @memberof BotMetadata.BotAgeCollectionMetadata
          * @instance
          */
-        BotAgeCollectionMetadata.prototype.ageCollectionEligible = null;
+        BotAgeCollectionMetadata.prototype.ageCollectionEligible = false;
 
         /**
          * BotAgeCollectionMetadata shouldTriggerAgeCollectionOnClient.
-         * @member {boolean|null|undefined} shouldTriggerAgeCollectionOnClient
+         * @member {boolean} shouldTriggerAgeCollectionOnClient
          * @memberof BotMetadata.BotAgeCollectionMetadata
          * @instance
          */
-        BotAgeCollectionMetadata.prototype.shouldTriggerAgeCollectionOnClient = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotAgeCollectionMetadata _ageCollectionEligible.
-         * @member {"ageCollectionEligible"|undefined} _ageCollectionEligible
-         * @memberof BotMetadata.BotAgeCollectionMetadata
-         * @instance
-         */
-        Object.defineProperty(BotAgeCollectionMetadata.prototype, "_ageCollectionEligible", {
-            get: $util.oneOfGetter($oneOfFields = ["ageCollectionEligible"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotAgeCollectionMetadata _shouldTriggerAgeCollectionOnClient.
-         * @member {"shouldTriggerAgeCollectionOnClient"|undefined} _shouldTriggerAgeCollectionOnClient
-         * @memberof BotMetadata.BotAgeCollectionMetadata
-         * @instance
-         */
-        Object.defineProperty(BotAgeCollectionMetadata.prototype, "_shouldTriggerAgeCollectionOnClient", {
-            get: $util.oneOfGetter($oneOfFields = ["shouldTriggerAgeCollectionOnClient"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotAgeCollectionMetadata.prototype.shouldTriggerAgeCollectionOnClient = false;
 
         /**
          * Creates a new BotAgeCollectionMetadata instance using the specified properties.
@@ -5026,17 +4749,12 @@ $root.BotMetadata = (function() {
         BotAgeCollectionMetadata.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
-            if (message.ageCollectionEligible != null && message.hasOwnProperty("ageCollectionEligible")) {
-                properties._ageCollectionEligible = 1;
+            if (message.ageCollectionEligible != null && message.hasOwnProperty("ageCollectionEligible"))
                 if (typeof message.ageCollectionEligible !== "boolean")
                     return "ageCollectionEligible: boolean expected";
-            }
-            if (message.shouldTriggerAgeCollectionOnClient != null && message.hasOwnProperty("shouldTriggerAgeCollectionOnClient")) {
-                properties._shouldTriggerAgeCollectionOnClient = 1;
+            if (message.shouldTriggerAgeCollectionOnClient != null && message.hasOwnProperty("shouldTriggerAgeCollectionOnClient"))
                 if (typeof message.shouldTriggerAgeCollectionOnClient !== "boolean")
                     return "shouldTriggerAgeCollectionOnClient: boolean expected";
-            }
             return null;
         };
 
@@ -5072,16 +4790,14 @@ $root.BotMetadata = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (message.ageCollectionEligible != null && message.hasOwnProperty("ageCollectionEligible")) {
+            if (options.defaults) {
+                object.ageCollectionEligible = false;
+                object.shouldTriggerAgeCollectionOnClient = false;
+            }
+            if (message.ageCollectionEligible != null && message.hasOwnProperty("ageCollectionEligible"))
                 object.ageCollectionEligible = message.ageCollectionEligible;
-                if (options.oneofs)
-                    object._ageCollectionEligible = "ageCollectionEligible";
-            }
-            if (message.shouldTriggerAgeCollectionOnClient != null && message.hasOwnProperty("shouldTriggerAgeCollectionOnClient")) {
+            if (message.shouldTriggerAgeCollectionOnClient != null && message.hasOwnProperty("shouldTriggerAgeCollectionOnClient"))
                 object.shouldTriggerAgeCollectionOnClient = message.shouldTriggerAgeCollectionOnClient;
-                if (options.oneofs)
-                    object._shouldTriggerAgeCollectionOnClient = "shouldTriggerAgeCollectionOnClient";
-            }
             return object;
         };
 
@@ -5140,25 +4856,11 @@ $root.BotMetadata = (function() {
 
         /**
          * BotImagineMetadata imagineType.
-         * @member {BotMetadata.BotImagineMetadata.ImagineType|null|undefined} imagineType
+         * @member {BotMetadata.BotImagineMetadata.ImagineType} imagineType
          * @memberof BotMetadata.BotImagineMetadata
          * @instance
          */
-        BotImagineMetadata.prototype.imagineType = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotImagineMetadata _imagineType.
-         * @member {"imagineType"|undefined} _imagineType
-         * @memberof BotMetadata.BotImagineMetadata
-         * @instance
-         */
-        Object.defineProperty(BotImagineMetadata.prototype, "_imagineType", {
-            get: $util.oneOfGetter($oneOfFields = ["imagineType"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotImagineMetadata.prototype.imagineType = 0;
 
         /**
          * Creates a new BotImagineMetadata instance using the specified properties.
@@ -5261,9 +4963,7 @@ $root.BotMetadata = (function() {
         BotImagineMetadata.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
-            if (message.imagineType != null && message.hasOwnProperty("imagineType")) {
-                properties._imagineType = 1;
+            if (message.imagineType != null && message.hasOwnProperty("imagineType"))
                 switch (message.imagineType) {
                 default:
                     return "imagineType: enum value expected";
@@ -5274,7 +4974,6 @@ $root.BotMetadata = (function() {
                 case 4:
                     break;
                 }
-            }
             return null;
         };
 
@@ -5334,11 +5033,10 @@ $root.BotMetadata = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (message.imagineType != null && message.hasOwnProperty("imagineType")) {
+            if (options.defaults)
+                object.imagineType = options.enums === String ? "UNKNOWN" : 0;
+            if (message.imagineType != null && message.hasOwnProperty("imagineType"))
                 object.imagineType = options.enums === String ? $root.BotMetadata.BotImagineMetadata.ImagineType[message.imagineType] === undefined ? message.imagineType : $root.BotMetadata.BotImagineMetadata.ImagineType[message.imagineType] : message.imagineType;
-                if (options.oneofs)
-                    object._imagineType = "imagineType";
-            }
             return object;
         };
 
@@ -5642,63 +5340,27 @@ $root.BotMetadata = (function() {
 
             /**
              * BotFeatureQuotaMetadata featureType.
-             * @member {BotMetadata.BotQuotaMetadata.BotFeatureQuotaMetadata.BotFeatureType|null|undefined} featureType
+             * @member {BotMetadata.BotQuotaMetadata.BotFeatureQuotaMetadata.BotFeatureType} featureType
              * @memberof BotMetadata.BotQuotaMetadata.BotFeatureQuotaMetadata
              * @instance
              */
-            BotFeatureQuotaMetadata.prototype.featureType = null;
+            BotFeatureQuotaMetadata.prototype.featureType = 0;
 
             /**
              * BotFeatureQuotaMetadata remainingQuota.
-             * @member {number|null|undefined} remainingQuota
+             * @member {number} remainingQuota
              * @memberof BotMetadata.BotQuotaMetadata.BotFeatureQuotaMetadata
              * @instance
              */
-            BotFeatureQuotaMetadata.prototype.remainingQuota = null;
+            BotFeatureQuotaMetadata.prototype.remainingQuota = 0;
 
             /**
              * BotFeatureQuotaMetadata expirationTimestamp.
-             * @member {number|Long|null|undefined} expirationTimestamp
+             * @member {number|Long} expirationTimestamp
              * @memberof BotMetadata.BotQuotaMetadata.BotFeatureQuotaMetadata
              * @instance
              */
-            BotFeatureQuotaMetadata.prototype.expirationTimestamp = null;
-
-            // OneOf field names bound to virtual getters and setters
-            var $oneOfFields;
-
-            /**
-             * BotFeatureQuotaMetadata _featureType.
-             * @member {"featureType"|undefined} _featureType
-             * @memberof BotMetadata.BotQuotaMetadata.BotFeatureQuotaMetadata
-             * @instance
-             */
-            Object.defineProperty(BotFeatureQuotaMetadata.prototype, "_featureType", {
-                get: $util.oneOfGetter($oneOfFields = ["featureType"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            /**
-             * BotFeatureQuotaMetadata _remainingQuota.
-             * @member {"remainingQuota"|undefined} _remainingQuota
-             * @memberof BotMetadata.BotQuotaMetadata.BotFeatureQuotaMetadata
-             * @instance
-             */
-            Object.defineProperty(BotFeatureQuotaMetadata.prototype, "_remainingQuota", {
-                get: $util.oneOfGetter($oneOfFields = ["remainingQuota"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            /**
-             * BotFeatureQuotaMetadata _expirationTimestamp.
-             * @member {"expirationTimestamp"|undefined} _expirationTimestamp
-             * @memberof BotMetadata.BotQuotaMetadata.BotFeatureQuotaMetadata
-             * @instance
-             */
-            Object.defineProperty(BotFeatureQuotaMetadata.prototype, "_expirationTimestamp", {
-                get: $util.oneOfGetter($oneOfFields = ["expirationTimestamp"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
+            BotFeatureQuotaMetadata.prototype.expirationTimestamp = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
 
             /**
              * Creates a new BotFeatureQuotaMetadata instance using the specified properties.
@@ -5813,9 +5475,7 @@ $root.BotMetadata = (function() {
             BotFeatureQuotaMetadata.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                var properties = {};
-                if (message.featureType != null && message.hasOwnProperty("featureType")) {
-                    properties._featureType = 1;
+                if (message.featureType != null && message.hasOwnProperty("featureType"))
                     switch (message.featureType) {
                     default:
                         return "featureType: enum value expected";
@@ -5823,17 +5483,12 @@ $root.BotMetadata = (function() {
                     case 1:
                         break;
                     }
-                }
-                if (message.remainingQuota != null && message.hasOwnProperty("remainingQuota")) {
-                    properties._remainingQuota = 1;
+                if (message.remainingQuota != null && message.hasOwnProperty("remainingQuota"))
                     if (!$util.isInteger(message.remainingQuota))
                         return "remainingQuota: integer expected";
-                }
-                if (message.expirationTimestamp != null && message.hasOwnProperty("expirationTimestamp")) {
-                    properties._expirationTimestamp = 1;
+                if (message.expirationTimestamp != null && message.hasOwnProperty("expirationTimestamp"))
                     if (!$util.isInteger(message.expirationTimestamp) && !(message.expirationTimestamp && $util.isInteger(message.expirationTimestamp.low) && $util.isInteger(message.expirationTimestamp.high)))
                         return "expirationTimestamp: integer|Long expected";
-                }
                 return null;
             };
 
@@ -5892,24 +5547,24 @@ $root.BotMetadata = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (message.featureType != null && message.hasOwnProperty("featureType")) {
+                if (options.defaults) {
+                    object.featureType = options.enums === String ? "UNKNOWN_FEATURE" : 0;
+                    object.remainingQuota = 0;
+                    if ($util.Long) {
+                        var long = new $util.Long(0, 0, true);
+                        object.expirationTimestamp = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                    } else
+                        object.expirationTimestamp = options.longs === String ? "0" : 0;
+                }
+                if (message.featureType != null && message.hasOwnProperty("featureType"))
                     object.featureType = options.enums === String ? $root.BotMetadata.BotQuotaMetadata.BotFeatureQuotaMetadata.BotFeatureType[message.featureType] === undefined ? message.featureType : $root.BotMetadata.BotQuotaMetadata.BotFeatureQuotaMetadata.BotFeatureType[message.featureType] : message.featureType;
-                    if (options.oneofs)
-                        object._featureType = "featureType";
-                }
-                if (message.remainingQuota != null && message.hasOwnProperty("remainingQuota")) {
+                if (message.remainingQuota != null && message.hasOwnProperty("remainingQuota"))
                     object.remainingQuota = message.remainingQuota;
-                    if (options.oneofs)
-                        object._remainingQuota = "remainingQuota";
-                }
-                if (message.expirationTimestamp != null && message.hasOwnProperty("expirationTimestamp")) {
+                if (message.expirationTimestamp != null && message.hasOwnProperty("expirationTimestamp"))
                     if (typeof message.expirationTimestamp === "number")
                         object.expirationTimestamp = options.longs === String ? String(message.expirationTimestamp) : message.expirationTimestamp;
                     else
                         object.expirationTimestamp = options.longs === String ? $util.Long.prototype.toString.call(message.expirationTimestamp) : options.longs === Number ? new $util.LongBits(message.expirationTimestamp.low >>> 0, message.expirationTimestamp.high >>> 0).toNumber(true) : message.expirationTimestamp;
-                    if (options.oneofs)
-                        object._expirationTimestamp = "expirationTimestamp";
-                }
                 return object;
             };
 
@@ -6016,12 +5671,9 @@ $root.BotMetadata = (function() {
         BotModeSelectionMetadata.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.mode != null && message.mode.length) {
-                writer.uint32(/* id 1, wireType 2 =*/10).fork();
+            if (message.mode != null && message.mode.length)
                 for (var i = 0; i < message.mode.length; ++i)
-                    writer.int32(message.mode[i]);
-                writer.ldelim();
-            }
+                    writer.uint32(/* id 1, wireType 0 =*/8).int32(message.mode[i]);
             return writer;
         };
 
@@ -6278,12 +5930,9 @@ $root.BotMetadata = (function() {
         BotCapabilityMetadata.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.capabilities != null && message.capabilities.length) {
-                writer.uint32(/* id 1, wireType 2 =*/10).fork();
+            if (message.capabilities != null && message.capabilities.length)
                 for (var i = 0; i < message.capabilities.length; ++i)
-                    writer.int32(message.capabilities[i]);
-                writer.ldelim();
-            }
+                    writer.uint32(/* id 1, wireType 0 =*/8).int32(message.capabilities[i]);
             return writer;
         };
 
@@ -6412,6 +6061,10 @@ $root.BotMetadata = (function() {
                     case 36:
                     case 37:
                     case 38:
+                    case 39:
+                    case 40:
+                    case 41:
+                    case 42:
                         break;
                     }
             }
@@ -6597,6 +6250,22 @@ $root.BotMetadata = (function() {
                     case 38:
                         message.capabilities[i] = 38;
                         break;
+                    case "RICH_RESPONSE_UNIFIED_TEXT_COMPONENT":
+                    case 39:
+                        message.capabilities[i] = 39;
+                        break;
+                    case "AI_SHARED_MEMORY":
+                    case 40:
+                        message.capabilities[i] = 40;
+                        break;
+                    case "RICH_RESPONSE_UNIFIED_SOURCES":
+                    case 41:
+                        message.capabilities[i] = 41;
+                        break;
+                    case "RICH_RESPONSE_UNIFIED_DOMAIN_CITATIONS":
+                    case 42:
+                        message.capabilities[i] = 42;
+                        break;
                     }
             }
             return message;
@@ -6694,6 +6363,10 @@ $root.BotMetadata = (function() {
          * @property {number} SIMPLIFIED_PROFILE_PAGE=36 SIMPLIFIED_PROFILE_PAGE value
          * @property {number} RICH_RESPONSE_SOURCES_IN_MESSAGE=37 RICH_RESPONSE_SOURCES_IN_MESSAGE value
          * @property {number} RICH_RESPONSE_SIDE_BY_SIDE_SURVEY=38 RICH_RESPONSE_SIDE_BY_SIDE_SURVEY value
+         * @property {number} RICH_RESPONSE_UNIFIED_TEXT_COMPONENT=39 RICH_RESPONSE_UNIFIED_TEXT_COMPONENT value
+         * @property {number} AI_SHARED_MEMORY=40 AI_SHARED_MEMORY value
+         * @property {number} RICH_RESPONSE_UNIFIED_SOURCES=41 RICH_RESPONSE_UNIFIED_SOURCES value
+         * @property {number} RICH_RESPONSE_UNIFIED_DOMAIN_CITATIONS=42 RICH_RESPONSE_UNIFIED_DOMAIN_CITATIONS value
          */
         BotCapabilityMetadata.BotCapabilityType = (function() {
             var valuesById = {}, values = Object.create(valuesById);
@@ -6736,6 +6409,10 @@ $root.BotMetadata = (function() {
             values[valuesById[36] = "SIMPLIFIED_PROFILE_PAGE"] = 36;
             values[valuesById[37] = "RICH_RESPONSE_SOURCES_IN_MESSAGE"] = 37;
             values[valuesById[38] = "RICH_RESPONSE_SIDE_BY_SIDE_SURVEY"] = 38;
+            values[valuesById[39] = "RICH_RESPONSE_UNIFIED_TEXT_COMPONENT"] = 39;
+            values[valuesById[40] = "AI_SHARED_MEMORY"] = 40;
+            values[valuesById[41] = "RICH_RESPONSE_UNIFIED_SOURCES"] = 41;
+            values[valuesById[42] = "RICH_RESPONSE_UNIFIED_DOMAIN_CITATIONS"] = 42;
             return values;
         })();
 
@@ -6770,11 +6447,11 @@ $root.BotMetadata = (function() {
 
         /**
          * BotProgressIndicatorMetadata progressDescription.
-         * @member {string|null|undefined} progressDescription
+         * @member {string} progressDescription
          * @memberof BotMetadata.BotProgressIndicatorMetadata
          * @instance
          */
-        BotProgressIndicatorMetadata.prototype.progressDescription = null;
+        BotProgressIndicatorMetadata.prototype.progressDescription = "";
 
         /**
          * BotProgressIndicatorMetadata stepsMetadata.
@@ -6783,20 +6460,6 @@ $root.BotMetadata = (function() {
          * @instance
          */
         BotProgressIndicatorMetadata.prototype.stepsMetadata = $util.emptyArray;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotProgressIndicatorMetadata _progressDescription.
-         * @member {"progressDescription"|undefined} _progressDescription
-         * @memberof BotMetadata.BotProgressIndicatorMetadata
-         * @instance
-         */
-        Object.defineProperty(BotProgressIndicatorMetadata.prototype, "_progressDescription", {
-            get: $util.oneOfGetter($oneOfFields = ["progressDescription"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
 
         /**
          * Creates a new BotProgressIndicatorMetadata instance using the specified properties.
@@ -6908,12 +6571,9 @@ $root.BotMetadata = (function() {
         BotProgressIndicatorMetadata.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
-            if (message.progressDescription != null && message.hasOwnProperty("progressDescription")) {
-                properties._progressDescription = 1;
+            if (message.progressDescription != null && message.hasOwnProperty("progressDescription"))
                 if (!$util.isString(message.progressDescription))
                     return "progressDescription: string expected";
-            }
             if (message.stepsMetadata != null && message.hasOwnProperty("stepsMetadata")) {
                 if (!Array.isArray(message.stepsMetadata))
                     return "stepsMetadata: array expected";
@@ -6968,11 +6628,10 @@ $root.BotMetadata = (function() {
             var object = {};
             if (options.arrays || options.defaults)
                 object.stepsMetadata = [];
-            if (message.progressDescription != null && message.hasOwnProperty("progressDescription")) {
+            if (options.defaults)
+                object.progressDescription = "";
+            if (message.progressDescription != null && message.hasOwnProperty("progressDescription"))
                 object.progressDescription = message.progressDescription;
-                if (options.oneofs)
-                    object._progressDescription = "progressDescription";
-            }
             if (message.stepsMetadata && message.stepsMetadata.length) {
                 object.stepsMetadata = [];
                 for (var j = 0; j < message.stepsMetadata.length; ++j)
@@ -7041,19 +6700,19 @@ $root.BotMetadata = (function() {
 
             /**
              * BotPlanningStepMetadata statusTitle.
-             * @member {string|null|undefined} statusTitle
+             * @member {string} statusTitle
              * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata
              * @instance
              */
-            BotPlanningStepMetadata.prototype.statusTitle = null;
+            BotPlanningStepMetadata.prototype.statusTitle = "";
 
             /**
              * BotPlanningStepMetadata statusBody.
-             * @member {string|null|undefined} statusBody
+             * @member {string} statusBody
              * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata
              * @instance
              */
-            BotPlanningStepMetadata.prototype.statusBody = null;
+            BotPlanningStepMetadata.prototype.statusBody = "";
 
             /**
              * BotPlanningStepMetadata sourcesMetadata.
@@ -7065,27 +6724,27 @@ $root.BotMetadata = (function() {
 
             /**
              * BotPlanningStepMetadata status.
-             * @member {BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.PlanningStepStatus|null|undefined} status
+             * @member {BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.PlanningStepStatus} status
              * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata
              * @instance
              */
-            BotPlanningStepMetadata.prototype.status = null;
+            BotPlanningStepMetadata.prototype.status = 0;
 
             /**
              * BotPlanningStepMetadata isReasoning.
-             * @member {boolean|null|undefined} isReasoning
+             * @member {boolean} isReasoning
              * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata
              * @instance
              */
-            BotPlanningStepMetadata.prototype.isReasoning = null;
+            BotPlanningStepMetadata.prototype.isReasoning = false;
 
             /**
              * BotPlanningStepMetadata isEnhancedSearch.
-             * @member {boolean|null|undefined} isEnhancedSearch
+             * @member {boolean} isEnhancedSearch
              * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata
              * @instance
              */
-            BotPlanningStepMetadata.prototype.isEnhancedSearch = null;
+            BotPlanningStepMetadata.prototype.isEnhancedSearch = false;
 
             /**
              * BotPlanningStepMetadata sections.
@@ -7094,64 +6753,6 @@ $root.BotMetadata = (function() {
              * @instance
              */
             BotPlanningStepMetadata.prototype.sections = $util.emptyArray;
-
-            // OneOf field names bound to virtual getters and setters
-            var $oneOfFields;
-
-            /**
-             * BotPlanningStepMetadata _statusTitle.
-             * @member {"statusTitle"|undefined} _statusTitle
-             * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata
-             * @instance
-             */
-            Object.defineProperty(BotPlanningStepMetadata.prototype, "_statusTitle", {
-                get: $util.oneOfGetter($oneOfFields = ["statusTitle"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            /**
-             * BotPlanningStepMetadata _statusBody.
-             * @member {"statusBody"|undefined} _statusBody
-             * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata
-             * @instance
-             */
-            Object.defineProperty(BotPlanningStepMetadata.prototype, "_statusBody", {
-                get: $util.oneOfGetter($oneOfFields = ["statusBody"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            /**
-             * BotPlanningStepMetadata _status.
-             * @member {"status"|undefined} _status
-             * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata
-             * @instance
-             */
-            Object.defineProperty(BotPlanningStepMetadata.prototype, "_status", {
-                get: $util.oneOfGetter($oneOfFields = ["status"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            /**
-             * BotPlanningStepMetadata _isReasoning.
-             * @member {"isReasoning"|undefined} _isReasoning
-             * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata
-             * @instance
-             */
-            Object.defineProperty(BotPlanningStepMetadata.prototype, "_isReasoning", {
-                get: $util.oneOfGetter($oneOfFields = ["isReasoning"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            /**
-             * BotPlanningStepMetadata _isEnhancedSearch.
-             * @member {"isEnhancedSearch"|undefined} _isEnhancedSearch
-             * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata
-             * @instance
-             */
-            Object.defineProperty(BotPlanningStepMetadata.prototype, "_isEnhancedSearch", {
-                get: $util.oneOfGetter($oneOfFields = ["isEnhancedSearch"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
 
             /**
              * Creates a new BotPlanningStepMetadata instance using the specified properties.
@@ -7296,17 +6897,12 @@ $root.BotMetadata = (function() {
             BotPlanningStepMetadata.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                var properties = {};
-                if (message.statusTitle != null && message.hasOwnProperty("statusTitle")) {
-                    properties._statusTitle = 1;
+                if (message.statusTitle != null && message.hasOwnProperty("statusTitle"))
                     if (!$util.isString(message.statusTitle))
                         return "statusTitle: string expected";
-                }
-                if (message.statusBody != null && message.hasOwnProperty("statusBody")) {
-                    properties._statusBody = 1;
+                if (message.statusBody != null && message.hasOwnProperty("statusBody"))
                     if (!$util.isString(message.statusBody))
                         return "statusBody: string expected";
-                }
                 if (message.sourcesMetadata != null && message.hasOwnProperty("sourcesMetadata")) {
                     if (!Array.isArray(message.sourcesMetadata))
                         return "sourcesMetadata: array expected";
@@ -7316,8 +6912,7 @@ $root.BotMetadata = (function() {
                             return "sourcesMetadata." + error;
                     }
                 }
-                if (message.status != null && message.hasOwnProperty("status")) {
-                    properties._status = 1;
+                if (message.status != null && message.hasOwnProperty("status"))
                     switch (message.status) {
                     default:
                         return "status: enum value expected";
@@ -7327,17 +6922,12 @@ $root.BotMetadata = (function() {
                     case 3:
                         break;
                     }
-                }
-                if (message.isReasoning != null && message.hasOwnProperty("isReasoning")) {
-                    properties._isReasoning = 1;
+                if (message.isReasoning != null && message.hasOwnProperty("isReasoning"))
                     if (typeof message.isReasoning !== "boolean")
                         return "isReasoning: boolean expected";
-                }
-                if (message.isEnhancedSearch != null && message.hasOwnProperty("isEnhancedSearch")) {
-                    properties._isEnhancedSearch = 1;
+                if (message.isEnhancedSearch != null && message.hasOwnProperty("isEnhancedSearch"))
                     if (typeof message.isEnhancedSearch !== "boolean")
                         return "isEnhancedSearch: boolean expected";
-                }
                 if (message.sections != null && message.hasOwnProperty("sections")) {
                     if (!Array.isArray(message.sections))
                         return "sections: array expected";
@@ -7434,36 +7024,28 @@ $root.BotMetadata = (function() {
                     object.sourcesMetadata = [];
                     object.sections = [];
                 }
-                if (message.statusTitle != null && message.hasOwnProperty("statusTitle")) {
+                if (options.defaults) {
+                    object.statusTitle = "";
+                    object.statusBody = "";
+                    object.status = options.enums === String ? "UNKNOWN" : 0;
+                    object.isReasoning = false;
+                    object.isEnhancedSearch = false;
+                }
+                if (message.statusTitle != null && message.hasOwnProperty("statusTitle"))
                     object.statusTitle = message.statusTitle;
-                    if (options.oneofs)
-                        object._statusTitle = "statusTitle";
-                }
-                if (message.statusBody != null && message.hasOwnProperty("statusBody")) {
+                if (message.statusBody != null && message.hasOwnProperty("statusBody"))
                     object.statusBody = message.statusBody;
-                    if (options.oneofs)
-                        object._statusBody = "statusBody";
-                }
                 if (message.sourcesMetadata && message.sourcesMetadata.length) {
                     object.sourcesMetadata = [];
                     for (var j = 0; j < message.sourcesMetadata.length; ++j)
                         object.sourcesMetadata[j] = $root.BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourcesMetadata.toObject(message.sourcesMetadata[j], options);
                 }
-                if (message.status != null && message.hasOwnProperty("status")) {
+                if (message.status != null && message.hasOwnProperty("status"))
                     object.status = options.enums === String ? $root.BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.PlanningStepStatus[message.status] === undefined ? message.status : $root.BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.PlanningStepStatus[message.status] : message.status;
-                    if (options.oneofs)
-                        object._status = "status";
-                }
-                if (message.isReasoning != null && message.hasOwnProperty("isReasoning")) {
+                if (message.isReasoning != null && message.hasOwnProperty("isReasoning"))
                     object.isReasoning = message.isReasoning;
-                    if (options.oneofs)
-                        object._isReasoning = "isReasoning";
-                }
-                if (message.isEnhancedSearch != null && message.hasOwnProperty("isEnhancedSearch")) {
+                if (message.isEnhancedSearch != null && message.hasOwnProperty("isEnhancedSearch"))
                     object.isEnhancedSearch = message.isEnhancedSearch;
-                    if (options.oneofs)
-                        object._isEnhancedSearch = "isEnhancedSearch";
-                }
                 if (message.sections && message.sections.length) {
                     object.sections = [];
                     for (var j = 0; j < message.sections.length; ++j)
@@ -7527,82 +7109,35 @@ $root.BotMetadata = (function() {
 
                 /**
                  * BotPlanningSearchSourceMetadata title.
-                 * @member {string|null|undefined} title
+                 * @member {string} title
                  * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourceMetadata
                  * @instance
                  */
-                BotPlanningSearchSourceMetadata.prototype.title = null;
+                BotPlanningSearchSourceMetadata.prototype.title = "";
 
                 /**
                  * BotPlanningSearchSourceMetadata provider.
-                 * @member {BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotSearchSourceProvider|null|undefined} provider
+                 * @member {BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotSearchSourceProvider} provider
                  * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourceMetadata
                  * @instance
                  */
-                BotPlanningSearchSourceMetadata.prototype.provider = null;
+                BotPlanningSearchSourceMetadata.prototype.provider = 0;
 
                 /**
                  * BotPlanningSearchSourceMetadata sourceUrl.
-                 * @member {string|null|undefined} sourceUrl
+                 * @member {string} sourceUrl
                  * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourceMetadata
                  * @instance
                  */
-                BotPlanningSearchSourceMetadata.prototype.sourceUrl = null;
+                BotPlanningSearchSourceMetadata.prototype.sourceUrl = "";
 
                 /**
                  * BotPlanningSearchSourceMetadata favIconUrl.
-                 * @member {string|null|undefined} favIconUrl
+                 * @member {string} favIconUrl
                  * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourceMetadata
                  * @instance
                  */
-                BotPlanningSearchSourceMetadata.prototype.favIconUrl = null;
-
-                // OneOf field names bound to virtual getters and setters
-                var $oneOfFields;
-
-                /**
-                 * BotPlanningSearchSourceMetadata _title.
-                 * @member {"title"|undefined} _title
-                 * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourceMetadata
-                 * @instance
-                 */
-                Object.defineProperty(BotPlanningSearchSourceMetadata.prototype, "_title", {
-                    get: $util.oneOfGetter($oneOfFields = ["title"]),
-                    set: $util.oneOfSetter($oneOfFields)
-                });
-
-                /**
-                 * BotPlanningSearchSourceMetadata _provider.
-                 * @member {"provider"|undefined} _provider
-                 * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourceMetadata
-                 * @instance
-                 */
-                Object.defineProperty(BotPlanningSearchSourceMetadata.prototype, "_provider", {
-                    get: $util.oneOfGetter($oneOfFields = ["provider"]),
-                    set: $util.oneOfSetter($oneOfFields)
-                });
-
-                /**
-                 * BotPlanningSearchSourceMetadata _sourceUrl.
-                 * @member {"sourceUrl"|undefined} _sourceUrl
-                 * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourceMetadata
-                 * @instance
-                 */
-                Object.defineProperty(BotPlanningSearchSourceMetadata.prototype, "_sourceUrl", {
-                    get: $util.oneOfGetter($oneOfFields = ["sourceUrl"]),
-                    set: $util.oneOfSetter($oneOfFields)
-                });
-
-                /**
-                 * BotPlanningSearchSourceMetadata _favIconUrl.
-                 * @member {"favIconUrl"|undefined} _favIconUrl
-                 * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourceMetadata
-                 * @instance
-                 */
-                Object.defineProperty(BotPlanningSearchSourceMetadata.prototype, "_favIconUrl", {
-                    get: $util.oneOfGetter($oneOfFields = ["favIconUrl"]),
-                    set: $util.oneOfSetter($oneOfFields)
-                });
+                BotPlanningSearchSourceMetadata.prototype.favIconUrl = "";
 
                 /**
                  * Creates a new BotPlanningSearchSourceMetadata instance using the specified properties.
@@ -7723,14 +7258,10 @@ $root.BotMetadata = (function() {
                 BotPlanningSearchSourceMetadata.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    var properties = {};
-                    if (message.title != null && message.hasOwnProperty("title")) {
-                        properties._title = 1;
+                    if (message.title != null && message.hasOwnProperty("title"))
                         if (!$util.isString(message.title))
                             return "title: string expected";
-                    }
-                    if (message.provider != null && message.hasOwnProperty("provider")) {
-                        properties._provider = 1;
+                    if (message.provider != null && message.hasOwnProperty("provider"))
                         switch (message.provider) {
                         default:
                             return "provider: enum value expected";
@@ -7740,17 +7271,12 @@ $root.BotMetadata = (function() {
                         case 3:
                             break;
                         }
-                    }
-                    if (message.sourceUrl != null && message.hasOwnProperty("sourceUrl")) {
-                        properties._sourceUrl = 1;
+                    if (message.sourceUrl != null && message.hasOwnProperty("sourceUrl"))
                         if (!$util.isString(message.sourceUrl))
                             return "sourceUrl: string expected";
-                    }
-                    if (message.favIconUrl != null && message.hasOwnProperty("favIconUrl")) {
-                        properties._favIconUrl = 1;
+                    if (message.favIconUrl != null && message.hasOwnProperty("favIconUrl"))
                         if (!$util.isString(message.favIconUrl))
                             return "favIconUrl: string expected";
-                    }
                     return null;
                 };
 
@@ -7812,26 +7338,20 @@ $root.BotMetadata = (function() {
                     if (!options)
                         options = {};
                     var object = {};
-                    if (message.title != null && message.hasOwnProperty("title")) {
+                    if (options.defaults) {
+                        object.title = "";
+                        object.provider = options.enums === String ? "UNKNOWN_PROVIDER" : 0;
+                        object.sourceUrl = "";
+                        object.favIconUrl = "";
+                    }
+                    if (message.title != null && message.hasOwnProperty("title"))
                         object.title = message.title;
-                        if (options.oneofs)
-                            object._title = "title";
-                    }
-                    if (message.provider != null && message.hasOwnProperty("provider")) {
+                    if (message.provider != null && message.hasOwnProperty("provider"))
                         object.provider = options.enums === String ? $root.BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotSearchSourceProvider[message.provider] === undefined ? message.provider : $root.BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotSearchSourceProvider[message.provider] : message.provider;
-                        if (options.oneofs)
-                            object._provider = "provider";
-                    }
-                    if (message.sourceUrl != null && message.hasOwnProperty("sourceUrl")) {
+                    if (message.sourceUrl != null && message.hasOwnProperty("sourceUrl"))
                         object.sourceUrl = message.sourceUrl;
-                        if (options.oneofs)
-                            object._sourceUrl = "sourceUrl";
-                    }
-                    if (message.favIconUrl != null && message.hasOwnProperty("favIconUrl")) {
+                    if (message.favIconUrl != null && message.hasOwnProperty("favIconUrl"))
                         object.favIconUrl = message.favIconUrl;
-                        if (options.oneofs)
-                            object._favIconUrl = "favIconUrl";
-                    }
                     return object;
                 };
 
@@ -7892,63 +7412,27 @@ $root.BotMetadata = (function() {
 
                 /**
                  * BotPlanningSearchSourcesMetadata sourceTitle.
-                 * @member {string|null|undefined} sourceTitle
+                 * @member {string} sourceTitle
                  * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourcesMetadata
                  * @instance
                  */
-                BotPlanningSearchSourcesMetadata.prototype.sourceTitle = null;
+                BotPlanningSearchSourcesMetadata.prototype.sourceTitle = "";
 
                 /**
                  * BotPlanningSearchSourcesMetadata provider.
-                 * @member {BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourcesMetadata.BotPlanningSearchSourceProvider|null|undefined} provider
+                 * @member {BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourcesMetadata.BotPlanningSearchSourceProvider} provider
                  * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourcesMetadata
                  * @instance
                  */
-                BotPlanningSearchSourcesMetadata.prototype.provider = null;
+                BotPlanningSearchSourcesMetadata.prototype.provider = 0;
 
                 /**
                  * BotPlanningSearchSourcesMetadata sourceUrl.
-                 * @member {string|null|undefined} sourceUrl
+                 * @member {string} sourceUrl
                  * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourcesMetadata
                  * @instance
                  */
-                BotPlanningSearchSourcesMetadata.prototype.sourceUrl = null;
-
-                // OneOf field names bound to virtual getters and setters
-                var $oneOfFields;
-
-                /**
-                 * BotPlanningSearchSourcesMetadata _sourceTitle.
-                 * @member {"sourceTitle"|undefined} _sourceTitle
-                 * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourcesMetadata
-                 * @instance
-                 */
-                Object.defineProperty(BotPlanningSearchSourcesMetadata.prototype, "_sourceTitle", {
-                    get: $util.oneOfGetter($oneOfFields = ["sourceTitle"]),
-                    set: $util.oneOfSetter($oneOfFields)
-                });
-
-                /**
-                 * BotPlanningSearchSourcesMetadata _provider.
-                 * @member {"provider"|undefined} _provider
-                 * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourcesMetadata
-                 * @instance
-                 */
-                Object.defineProperty(BotPlanningSearchSourcesMetadata.prototype, "_provider", {
-                    get: $util.oneOfGetter($oneOfFields = ["provider"]),
-                    set: $util.oneOfSetter($oneOfFields)
-                });
-
-                /**
-                 * BotPlanningSearchSourcesMetadata _sourceUrl.
-                 * @member {"sourceUrl"|undefined} _sourceUrl
-                 * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourcesMetadata
-                 * @instance
-                 */
-                Object.defineProperty(BotPlanningSearchSourcesMetadata.prototype, "_sourceUrl", {
-                    get: $util.oneOfGetter($oneOfFields = ["sourceUrl"]),
-                    set: $util.oneOfSetter($oneOfFields)
-                });
+                BotPlanningSearchSourcesMetadata.prototype.sourceUrl = "";
 
                 /**
                  * Creates a new BotPlanningSearchSourcesMetadata instance using the specified properties.
@@ -8063,14 +7547,10 @@ $root.BotMetadata = (function() {
                 BotPlanningSearchSourcesMetadata.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    var properties = {};
-                    if (message.sourceTitle != null && message.hasOwnProperty("sourceTitle")) {
-                        properties._sourceTitle = 1;
+                    if (message.sourceTitle != null && message.hasOwnProperty("sourceTitle"))
                         if (!$util.isString(message.sourceTitle))
                             return "sourceTitle: string expected";
-                    }
-                    if (message.provider != null && message.hasOwnProperty("provider")) {
-                        properties._provider = 1;
+                    if (message.provider != null && message.hasOwnProperty("provider"))
                         switch (message.provider) {
                         default:
                             return "provider: enum value expected";
@@ -8080,12 +7560,9 @@ $root.BotMetadata = (function() {
                         case 3:
                             break;
                         }
-                    }
-                    if (message.sourceUrl != null && message.hasOwnProperty("sourceUrl")) {
-                        properties._sourceUrl = 1;
+                    if (message.sourceUrl != null && message.hasOwnProperty("sourceUrl"))
                         if (!$util.isString(message.sourceUrl))
                             return "sourceUrl: string expected";
-                    }
                     return null;
                 };
 
@@ -8145,21 +7622,17 @@ $root.BotMetadata = (function() {
                     if (!options)
                         options = {};
                     var object = {};
-                    if (message.sourceTitle != null && message.hasOwnProperty("sourceTitle")) {
+                    if (options.defaults) {
+                        object.sourceTitle = "";
+                        object.provider = options.enums === String ? "UNKNOWN" : 0;
+                        object.sourceUrl = "";
+                    }
+                    if (message.sourceTitle != null && message.hasOwnProperty("sourceTitle"))
                         object.sourceTitle = message.sourceTitle;
-                        if (options.oneofs)
-                            object._sourceTitle = "sourceTitle";
-                    }
-                    if (message.provider != null && message.hasOwnProperty("provider")) {
+                    if (message.provider != null && message.hasOwnProperty("provider"))
                         object.provider = options.enums === String ? $root.BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourcesMetadata.BotPlanningSearchSourceProvider[message.provider] === undefined ? message.provider : $root.BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourcesMetadata.BotPlanningSearchSourceProvider[message.provider] : message.provider;
-                        if (options.oneofs)
-                            object._provider = "provider";
-                    }
-                    if (message.sourceUrl != null && message.hasOwnProperty("sourceUrl")) {
+                    if (message.sourceUrl != null && message.hasOwnProperty("sourceUrl"))
                         object.sourceUrl = message.sourceUrl;
-                        if (options.oneofs)
-                            object._sourceUrl = "sourceUrl";
-                    }
                     return object;
                 };
 
@@ -8239,19 +7712,19 @@ $root.BotMetadata = (function() {
 
                 /**
                  * BotPlanningStepSectionMetadata sectionTitle.
-                 * @member {string|null|undefined} sectionTitle
+                 * @member {string} sectionTitle
                  * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningStepSectionMetadata
                  * @instance
                  */
-                BotPlanningStepSectionMetadata.prototype.sectionTitle = null;
+                BotPlanningStepSectionMetadata.prototype.sectionTitle = "";
 
                 /**
                  * BotPlanningStepSectionMetadata sectionBody.
-                 * @member {string|null|undefined} sectionBody
+                 * @member {string} sectionBody
                  * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningStepSectionMetadata
                  * @instance
                  */
-                BotPlanningStepSectionMetadata.prototype.sectionBody = null;
+                BotPlanningStepSectionMetadata.prototype.sectionBody = "";
 
                 /**
                  * BotPlanningStepSectionMetadata sourcesMetadata.
@@ -8260,31 +7733,6 @@ $root.BotMetadata = (function() {
                  * @instance
                  */
                 BotPlanningStepSectionMetadata.prototype.sourcesMetadata = $util.emptyArray;
-
-                // OneOf field names bound to virtual getters and setters
-                var $oneOfFields;
-
-                /**
-                 * BotPlanningStepSectionMetadata _sectionTitle.
-                 * @member {"sectionTitle"|undefined} _sectionTitle
-                 * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningStepSectionMetadata
-                 * @instance
-                 */
-                Object.defineProperty(BotPlanningStepSectionMetadata.prototype, "_sectionTitle", {
-                    get: $util.oneOfGetter($oneOfFields = ["sectionTitle"]),
-                    set: $util.oneOfSetter($oneOfFields)
-                });
-
-                /**
-                 * BotPlanningStepSectionMetadata _sectionBody.
-                 * @member {"sectionBody"|undefined} _sectionBody
-                 * @memberof BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningStepSectionMetadata
-                 * @instance
-                 */
-                Object.defineProperty(BotPlanningStepSectionMetadata.prototype, "_sectionBody", {
-                    get: $util.oneOfGetter($oneOfFields = ["sectionBody"]),
-                    set: $util.oneOfSetter($oneOfFields)
-                });
 
                 /**
                  * Creates a new BotPlanningStepSectionMetadata instance using the specified properties.
@@ -8402,17 +7850,12 @@ $root.BotMetadata = (function() {
                 BotPlanningStepSectionMetadata.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    var properties = {};
-                    if (message.sectionTitle != null && message.hasOwnProperty("sectionTitle")) {
-                        properties._sectionTitle = 1;
+                    if (message.sectionTitle != null && message.hasOwnProperty("sectionTitle"))
                         if (!$util.isString(message.sectionTitle))
                             return "sectionTitle: string expected";
-                    }
-                    if (message.sectionBody != null && message.hasOwnProperty("sectionBody")) {
-                        properties._sectionBody = 1;
+                    if (message.sectionBody != null && message.hasOwnProperty("sectionBody"))
                         if (!$util.isString(message.sectionBody))
                             return "sectionBody: string expected";
-                    }
                     if (message.sourcesMetadata != null && message.hasOwnProperty("sourcesMetadata")) {
                         if (!Array.isArray(message.sourcesMetadata))
                             return "sourcesMetadata: array expected";
@@ -8469,16 +7912,14 @@ $root.BotMetadata = (function() {
                     var object = {};
                     if (options.arrays || options.defaults)
                         object.sourcesMetadata = [];
-                    if (message.sectionTitle != null && message.hasOwnProperty("sectionTitle")) {
+                    if (options.defaults) {
+                        object.sectionTitle = "";
+                        object.sectionBody = "";
+                    }
+                    if (message.sectionTitle != null && message.hasOwnProperty("sectionTitle"))
                         object.sectionTitle = message.sectionTitle;
-                        if (options.oneofs)
-                            object._sectionTitle = "sectionTitle";
-                    }
-                    if (message.sectionBody != null && message.hasOwnProperty("sectionBody")) {
+                    if (message.sectionBody != null && message.hasOwnProperty("sectionBody"))
                         object.sectionBody = message.sectionBody;
-                        if (options.oneofs)
-                            object._sectionBody = "sectionBody";
-                    }
                     if (message.sourcesMetadata && message.sourcesMetadata.length) {
                         object.sourcesMetadata = [];
                         for (var j = 0; j < message.sourcesMetadata.length; ++j)
@@ -8585,44 +8026,19 @@ $root.BotMetadata = (function() {
 
         /**
          * BotModelMetadata modelType.
-         * @member {BotMetadata.BotModelMetadata.ModelType|null|undefined} modelType
+         * @member {BotMetadata.BotModelMetadata.ModelType} modelType
          * @memberof BotMetadata.BotModelMetadata
          * @instance
          */
-        BotModelMetadata.prototype.modelType = null;
+        BotModelMetadata.prototype.modelType = 0;
 
         /**
          * BotModelMetadata premiumModelStatus.
-         * @member {BotMetadata.BotModelMetadata.PremiumModelStatus|null|undefined} premiumModelStatus
+         * @member {BotMetadata.BotModelMetadata.PremiumModelStatus} premiumModelStatus
          * @memberof BotMetadata.BotModelMetadata
          * @instance
          */
-        BotModelMetadata.prototype.premiumModelStatus = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotModelMetadata _modelType.
-         * @member {"modelType"|undefined} _modelType
-         * @memberof BotMetadata.BotModelMetadata
-         * @instance
-         */
-        Object.defineProperty(BotModelMetadata.prototype, "_modelType", {
-            get: $util.oneOfGetter($oneOfFields = ["modelType"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotModelMetadata _premiumModelStatus.
-         * @member {"premiumModelStatus"|undefined} _premiumModelStatus
-         * @memberof BotMetadata.BotModelMetadata
-         * @instance
-         */
-        Object.defineProperty(BotModelMetadata.prototype, "_premiumModelStatus", {
-            get: $util.oneOfGetter($oneOfFields = ["premiumModelStatus"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotModelMetadata.prototype.premiumModelStatus = 0;
 
         /**
          * Creates a new BotModelMetadata instance using the specified properties.
@@ -8731,9 +8147,7 @@ $root.BotMetadata = (function() {
         BotModelMetadata.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
-            if (message.modelType != null && message.hasOwnProperty("modelType")) {
-                properties._modelType = 1;
+            if (message.modelType != null && message.hasOwnProperty("modelType"))
                 switch (message.modelType) {
                 default:
                     return "modelType: enum value expected";
@@ -8742,9 +8156,7 @@ $root.BotMetadata = (function() {
                 case 2:
                     break;
                 }
-            }
-            if (message.premiumModelStatus != null && message.hasOwnProperty("premiumModelStatus")) {
-                properties._premiumModelStatus = 1;
+            if (message.premiumModelStatus != null && message.hasOwnProperty("premiumModelStatus"))
                 switch (message.premiumModelStatus) {
                 default:
                     return "premiumModelStatus: enum value expected";
@@ -8753,7 +8165,6 @@ $root.BotMetadata = (function() {
                 case 2:
                     break;
                 }
-            }
             return null;
         };
 
@@ -8825,16 +8236,14 @@ $root.BotMetadata = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (message.modelType != null && message.hasOwnProperty("modelType")) {
+            if (options.defaults) {
+                object.modelType = options.enums === String ? "UNKNOWN_TYPE" : 0;
+                object.premiumModelStatus = options.enums === String ? "UNKNOWN_STATUS" : 0;
+            }
+            if (message.modelType != null && message.hasOwnProperty("modelType"))
                 object.modelType = options.enums === String ? $root.BotMetadata.BotModelMetadata.ModelType[message.modelType] === undefined ? message.modelType : $root.BotMetadata.BotModelMetadata.ModelType[message.modelType] : message.modelType;
-                if (options.oneofs)
-                    object._modelType = "modelType";
-            }
-            if (message.premiumModelStatus != null && message.hasOwnProperty("premiumModelStatus")) {
+            if (message.premiumModelStatus != null && message.hasOwnProperty("premiumModelStatus"))
                 object.premiumModelStatus = options.enums === String ? $root.BotMetadata.BotModelMetadata.PremiumModelStatus[message.premiumModelStatus] === undefined ? message.premiumModelStatus : $root.BotMetadata.BotModelMetadata.PremiumModelStatus[message.premiumModelStatus] : message.premiumModelStatus;
-                if (options.oneofs)
-                    object._premiumModelStatus = "premiumModelStatus";
-            }
             return object;
         };
 
@@ -8937,93 +8346,35 @@ $root.BotMetadata = (function() {
 
         /**
          * BotReminderMetadata action.
-         * @member {BotMetadata.BotReminderMetadata.ReminderAction|null|undefined} action
+         * @member {BotMetadata.BotReminderMetadata.ReminderAction} action
          * @memberof BotMetadata.BotReminderMetadata
          * @instance
          */
-        BotReminderMetadata.prototype.action = null;
+        BotReminderMetadata.prototype.action = 1;
 
         /**
          * BotReminderMetadata name.
-         * @member {string|null|undefined} name
+         * @member {string} name
          * @memberof BotMetadata.BotReminderMetadata
          * @instance
          */
-        BotReminderMetadata.prototype.name = null;
+        BotReminderMetadata.prototype.name = "";
 
         /**
          * BotReminderMetadata nextTriggerTimestamp.
-         * @member {number|Long|null|undefined} nextTriggerTimestamp
+         * @member {number|Long} nextTriggerTimestamp
          * @memberof BotMetadata.BotReminderMetadata
          * @instance
          */
-        BotReminderMetadata.prototype.nextTriggerTimestamp = null;
+        BotReminderMetadata.prototype.nextTriggerTimestamp = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
 
         /**
          * BotReminderMetadata frequency.
-         * @member {BotMetadata.BotReminderMetadata.ReminderFrequency|null|undefined} frequency
+         * @member {BotMetadata.BotReminderMetadata.ReminderFrequency} frequency
          * @memberof BotMetadata.BotReminderMetadata
          * @instance
          */
-        BotReminderMetadata.prototype.frequency = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotReminderMetadata _requestMessageKey.
-         * @member {"requestMessageKey"|undefined} _requestMessageKey
-         * @memberof BotMetadata.BotReminderMetadata
-         * @instance
-         */
-        Object.defineProperty(BotReminderMetadata.prototype, "_requestMessageKey", {
-            get: $util.oneOfGetter($oneOfFields = ["requestMessageKey"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotReminderMetadata _action.
-         * @member {"action"|undefined} _action
-         * @memberof BotMetadata.BotReminderMetadata
-         * @instance
-         */
-        Object.defineProperty(BotReminderMetadata.prototype, "_action", {
-            get: $util.oneOfGetter($oneOfFields = ["action"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotReminderMetadata _name.
-         * @member {"name"|undefined} _name
-         * @memberof BotMetadata.BotReminderMetadata
-         * @instance
-         */
-        Object.defineProperty(BotReminderMetadata.prototype, "_name", {
-            get: $util.oneOfGetter($oneOfFields = ["name"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotReminderMetadata _nextTriggerTimestamp.
-         * @member {"nextTriggerTimestamp"|undefined} _nextTriggerTimestamp
-         * @memberof BotMetadata.BotReminderMetadata
-         * @instance
-         */
-        Object.defineProperty(BotReminderMetadata.prototype, "_nextTriggerTimestamp", {
-            get: $util.oneOfGetter($oneOfFields = ["nextTriggerTimestamp"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotReminderMetadata _frequency.
-         * @member {"frequency"|undefined} _frequency
-         * @memberof BotMetadata.BotReminderMetadata
-         * @instance
-         */
-        Object.defineProperty(BotReminderMetadata.prototype, "_frequency", {
-            get: $util.oneOfGetter($oneOfFields = ["frequency"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotReminderMetadata.prototype.frequency = 1;
 
         /**
          * Creates a new BotReminderMetadata instance using the specified properties.
@@ -9150,17 +8501,12 @@ $root.BotMetadata = (function() {
         BotReminderMetadata.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
             if (message.requestMessageKey != null && message.hasOwnProperty("requestMessageKey")) {
-                properties._requestMessageKey = 1;
-                {
-                    var error = $root.Protocol.MessageKey.verify(message.requestMessageKey);
-                    if (error)
-                        return "requestMessageKey." + error;
-                }
+                var error = $root.Protocol.MessageKey.verify(message.requestMessageKey);
+                if (error)
+                    return "requestMessageKey." + error;
             }
-            if (message.action != null && message.hasOwnProperty("action")) {
-                properties._action = 1;
+            if (message.action != null && message.hasOwnProperty("action"))
                 switch (message.action) {
                 default:
                     return "action: enum value expected";
@@ -9170,19 +8516,13 @@ $root.BotMetadata = (function() {
                 case 4:
                     break;
                 }
-            }
-            if (message.name != null && message.hasOwnProperty("name")) {
-                properties._name = 1;
+            if (message.name != null && message.hasOwnProperty("name"))
                 if (!$util.isString(message.name))
                     return "name: string expected";
-            }
-            if (message.nextTriggerTimestamp != null && message.hasOwnProperty("nextTriggerTimestamp")) {
-                properties._nextTriggerTimestamp = 1;
+            if (message.nextTriggerTimestamp != null && message.hasOwnProperty("nextTriggerTimestamp"))
                 if (!$util.isInteger(message.nextTriggerTimestamp) && !(message.nextTriggerTimestamp && $util.isInteger(message.nextTriggerTimestamp.low) && $util.isInteger(message.nextTriggerTimestamp.high)))
                     return "nextTriggerTimestamp: integer|Long expected";
-            }
-            if (message.frequency != null && message.hasOwnProperty("frequency")) {
-                properties._frequency = 1;
+            if (message.frequency != null && message.hasOwnProperty("frequency"))
                 switch (message.frequency) {
                 default:
                     return "frequency: enum value expected";
@@ -9193,7 +8533,6 @@ $root.BotMetadata = (function() {
                 case 5:
                     break;
                 }
-            }
             return null;
         };
 
@@ -9293,34 +8632,30 @@ $root.BotMetadata = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (message.requestMessageKey != null && message.hasOwnProperty("requestMessageKey")) {
+            if (options.defaults) {
+                object.requestMessageKey = null;
+                object.action = options.enums === String ? "NOTIFY" : 1;
+                object.name = "";
+                if ($util.Long) {
+                    var long = new $util.Long(0, 0, true);
+                    object.nextTriggerTimestamp = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                } else
+                    object.nextTriggerTimestamp = options.longs === String ? "0" : 0;
+                object.frequency = options.enums === String ? "ONCE" : 1;
+            }
+            if (message.requestMessageKey != null && message.hasOwnProperty("requestMessageKey"))
                 object.requestMessageKey = $root.Protocol.MessageKey.toObject(message.requestMessageKey, options);
-                if (options.oneofs)
-                    object._requestMessageKey = "requestMessageKey";
-            }
-            if (message.action != null && message.hasOwnProperty("action")) {
+            if (message.action != null && message.hasOwnProperty("action"))
                 object.action = options.enums === String ? $root.BotMetadata.BotReminderMetadata.ReminderAction[message.action] === undefined ? message.action : $root.BotMetadata.BotReminderMetadata.ReminderAction[message.action] : message.action;
-                if (options.oneofs)
-                    object._action = "action";
-            }
-            if (message.name != null && message.hasOwnProperty("name")) {
+            if (message.name != null && message.hasOwnProperty("name"))
                 object.name = message.name;
-                if (options.oneofs)
-                    object._name = "name";
-            }
-            if (message.nextTriggerTimestamp != null && message.hasOwnProperty("nextTriggerTimestamp")) {
+            if (message.nextTriggerTimestamp != null && message.hasOwnProperty("nextTriggerTimestamp"))
                 if (typeof message.nextTriggerTimestamp === "number")
                     object.nextTriggerTimestamp = options.longs === String ? String(message.nextTriggerTimestamp) : message.nextTriggerTimestamp;
                 else
                     object.nextTriggerTimestamp = options.longs === String ? $util.Long.prototype.toString.call(message.nextTriggerTimestamp) : options.longs === Number ? new $util.LongBits(message.nextTriggerTimestamp.low >>> 0, message.nextTriggerTimestamp.high >>> 0).toNumber(true) : message.nextTriggerTimestamp;
-                if (options.oneofs)
-                    object._nextTriggerTimestamp = "nextTriggerTimestamp";
-            }
-            if (message.frequency != null && message.hasOwnProperty("frequency")) {
+            if (message.frequency != null && message.hasOwnProperty("frequency"))
                 object.frequency = options.enums === String ? $root.BotMetadata.BotReminderMetadata.ReminderFrequency[message.frequency] === undefined ? message.frequency : $root.BotMetadata.BotReminderMetadata.ReminderFrequency[message.frequency] : message.frequency;
-                if (options.oneofs)
-                    object._frequency = "frequency";
-            }
             return object;
         };
 
@@ -9649,139 +8984,59 @@ $root.BotMetadata = (function() {
 
         /**
          * BotMediaMetadata fileSha256.
-         * @member {string|null|undefined} fileSha256
+         * @member {string} fileSha256
          * @memberof BotMetadata.BotMediaMetadata
          * @instance
          */
-        BotMediaMetadata.prototype.fileSha256 = null;
+        BotMediaMetadata.prototype.fileSha256 = "";
 
         /**
          * BotMediaMetadata mediaKey.
-         * @member {string|null|undefined} mediaKey
+         * @member {string} mediaKey
          * @memberof BotMetadata.BotMediaMetadata
          * @instance
          */
-        BotMediaMetadata.prototype.mediaKey = null;
+        BotMediaMetadata.prototype.mediaKey = "";
 
         /**
          * BotMediaMetadata fileEncSha256.
-         * @member {string|null|undefined} fileEncSha256
+         * @member {string} fileEncSha256
          * @memberof BotMetadata.BotMediaMetadata
          * @instance
          */
-        BotMediaMetadata.prototype.fileEncSha256 = null;
+        BotMediaMetadata.prototype.fileEncSha256 = "";
 
         /**
          * BotMediaMetadata directPath.
-         * @member {string|null|undefined} directPath
+         * @member {string} directPath
          * @memberof BotMetadata.BotMediaMetadata
          * @instance
          */
-        BotMediaMetadata.prototype.directPath = null;
+        BotMediaMetadata.prototype.directPath = "";
 
         /**
          * BotMediaMetadata mediaKeyTimestamp.
-         * @member {number|Long|null|undefined} mediaKeyTimestamp
+         * @member {number|Long} mediaKeyTimestamp
          * @memberof BotMetadata.BotMediaMetadata
          * @instance
          */
-        BotMediaMetadata.prototype.mediaKeyTimestamp = null;
+        BotMediaMetadata.prototype.mediaKeyTimestamp = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
 
         /**
          * BotMediaMetadata mimetype.
-         * @member {string|null|undefined} mimetype
+         * @member {string} mimetype
          * @memberof BotMetadata.BotMediaMetadata
          * @instance
          */
-        BotMediaMetadata.prototype.mimetype = null;
+        BotMediaMetadata.prototype.mimetype = "";
 
         /**
          * BotMediaMetadata orientationType.
-         * @member {BotMetadata.BotMediaMetadata.OrientationType|null|undefined} orientationType
+         * @member {BotMetadata.BotMediaMetadata.OrientationType} orientationType
          * @memberof BotMetadata.BotMediaMetadata
          * @instance
          */
-        BotMediaMetadata.prototype.orientationType = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotMediaMetadata _fileSha256.
-         * @member {"fileSha256"|undefined} _fileSha256
-         * @memberof BotMetadata.BotMediaMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMediaMetadata.prototype, "_fileSha256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileSha256"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMediaMetadata _mediaKey.
-         * @member {"mediaKey"|undefined} _mediaKey
-         * @memberof BotMetadata.BotMediaMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMediaMetadata.prototype, "_mediaKey", {
-            get: $util.oneOfGetter($oneOfFields = ["mediaKey"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMediaMetadata _fileEncSha256.
-         * @member {"fileEncSha256"|undefined} _fileEncSha256
-         * @memberof BotMetadata.BotMediaMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMediaMetadata.prototype, "_fileEncSha256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMediaMetadata _directPath.
-         * @member {"directPath"|undefined} _directPath
-         * @memberof BotMetadata.BotMediaMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMediaMetadata.prototype, "_directPath", {
-            get: $util.oneOfGetter($oneOfFields = ["directPath"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMediaMetadata _mediaKeyTimestamp.
-         * @member {"mediaKeyTimestamp"|undefined} _mediaKeyTimestamp
-         * @memberof BotMetadata.BotMediaMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMediaMetadata.prototype, "_mediaKeyTimestamp", {
-            get: $util.oneOfGetter($oneOfFields = ["mediaKeyTimestamp"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMediaMetadata _mimetype.
-         * @member {"mimetype"|undefined} _mimetype
-         * @memberof BotMetadata.BotMediaMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMediaMetadata.prototype, "_mimetype", {
-            get: $util.oneOfGetter($oneOfFields = ["mimetype"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMediaMetadata _orientationType.
-         * @member {"orientationType"|undefined} _orientationType
-         * @memberof BotMetadata.BotMediaMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMediaMetadata.prototype, "_orientationType", {
-            get: $util.oneOfGetter($oneOfFields = ["orientationType"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotMediaMetadata.prototype.orientationType = 1;
 
         /**
          * Creates a new BotMediaMetadata instance using the specified properties.
@@ -9920,39 +9175,25 @@ $root.BotMetadata = (function() {
         BotMediaMetadata.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
-            if (message.fileSha256 != null && message.hasOwnProperty("fileSha256")) {
-                properties._fileSha256 = 1;
+            if (message.fileSha256 != null && message.hasOwnProperty("fileSha256"))
                 if (!$util.isString(message.fileSha256))
                     return "fileSha256: string expected";
-            }
-            if (message.mediaKey != null && message.hasOwnProperty("mediaKey")) {
-                properties._mediaKey = 1;
+            if (message.mediaKey != null && message.hasOwnProperty("mediaKey"))
                 if (!$util.isString(message.mediaKey))
                     return "mediaKey: string expected";
-            }
-            if (message.fileEncSha256 != null && message.hasOwnProperty("fileEncSha256")) {
-                properties._fileEncSha256 = 1;
+            if (message.fileEncSha256 != null && message.hasOwnProperty("fileEncSha256"))
                 if (!$util.isString(message.fileEncSha256))
                     return "fileEncSha256: string expected";
-            }
-            if (message.directPath != null && message.hasOwnProperty("directPath")) {
-                properties._directPath = 1;
+            if (message.directPath != null && message.hasOwnProperty("directPath"))
                 if (!$util.isString(message.directPath))
                     return "directPath: string expected";
-            }
-            if (message.mediaKeyTimestamp != null && message.hasOwnProperty("mediaKeyTimestamp")) {
-                properties._mediaKeyTimestamp = 1;
+            if (message.mediaKeyTimestamp != null && message.hasOwnProperty("mediaKeyTimestamp"))
                 if (!$util.isInteger(message.mediaKeyTimestamp) && !(message.mediaKeyTimestamp && $util.isInteger(message.mediaKeyTimestamp.low) && $util.isInteger(message.mediaKeyTimestamp.high)))
                     return "mediaKeyTimestamp: integer|Long expected";
-            }
-            if (message.mimetype != null && message.hasOwnProperty("mimetype")) {
-                properties._mimetype = 1;
+            if (message.mimetype != null && message.hasOwnProperty("mimetype"))
                 if (!$util.isString(message.mimetype))
                     return "mimetype: string expected";
-            }
-            if (message.orientationType != null && message.hasOwnProperty("orientationType")) {
-                properties._orientationType = 1;
+            if (message.orientationType != null && message.hasOwnProperty("orientationType"))
                 switch (message.orientationType) {
                 default:
                     return "orientationType: enum value expected";
@@ -9961,7 +9202,6 @@ $root.BotMetadata = (function() {
                 case 3:
                     break;
                 }
-            }
             return null;
         };
 
@@ -10032,44 +9272,36 @@ $root.BotMetadata = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (message.fileSha256 != null && message.hasOwnProperty("fileSha256")) {
+            if (options.defaults) {
+                object.fileSha256 = "";
+                object.mediaKey = "";
+                object.fileEncSha256 = "";
+                object.directPath = "";
+                if ($util.Long) {
+                    var long = new $util.Long(0, 0, false);
+                    object.mediaKeyTimestamp = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                } else
+                    object.mediaKeyTimestamp = options.longs === String ? "0" : 0;
+                object.mimetype = "";
+                object.orientationType = options.enums === String ? "CENTER" : 1;
+            }
+            if (message.fileSha256 != null && message.hasOwnProperty("fileSha256"))
                 object.fileSha256 = message.fileSha256;
-                if (options.oneofs)
-                    object._fileSha256 = "fileSha256";
-            }
-            if (message.mediaKey != null && message.hasOwnProperty("mediaKey")) {
+            if (message.mediaKey != null && message.hasOwnProperty("mediaKey"))
                 object.mediaKey = message.mediaKey;
-                if (options.oneofs)
-                    object._mediaKey = "mediaKey";
-            }
-            if (message.fileEncSha256 != null && message.hasOwnProperty("fileEncSha256")) {
+            if (message.fileEncSha256 != null && message.hasOwnProperty("fileEncSha256"))
                 object.fileEncSha256 = message.fileEncSha256;
-                if (options.oneofs)
-                    object._fileEncSha256 = "fileEncSha256";
-            }
-            if (message.directPath != null && message.hasOwnProperty("directPath")) {
+            if (message.directPath != null && message.hasOwnProperty("directPath"))
                 object.directPath = message.directPath;
-                if (options.oneofs)
-                    object._directPath = "directPath";
-            }
-            if (message.mediaKeyTimestamp != null && message.hasOwnProperty("mediaKeyTimestamp")) {
+            if (message.mediaKeyTimestamp != null && message.hasOwnProperty("mediaKeyTimestamp"))
                 if (typeof message.mediaKeyTimestamp === "number")
                     object.mediaKeyTimestamp = options.longs === String ? String(message.mediaKeyTimestamp) : message.mediaKeyTimestamp;
                 else
                     object.mediaKeyTimestamp = options.longs === String ? $util.Long.prototype.toString.call(message.mediaKeyTimestamp) : options.longs === Number ? new $util.LongBits(message.mediaKeyTimestamp.low >>> 0, message.mediaKeyTimestamp.high >>> 0).toNumber() : message.mediaKeyTimestamp;
-                if (options.oneofs)
-                    object._mediaKeyTimestamp = "mediaKeyTimestamp";
-            }
-            if (message.mimetype != null && message.hasOwnProperty("mimetype")) {
+            if (message.mimetype != null && message.hasOwnProperty("mimetype"))
                 object.mimetype = message.mimetype;
-                if (options.oneofs)
-                    object._mimetype = "mimetype";
-            }
-            if (message.orientationType != null && message.hasOwnProperty("orientationType")) {
+            if (message.orientationType != null && message.hasOwnProperty("orientationType"))
                 object.orientationType = options.enums === String ? $root.BotMetadata.BotMediaMetadata.OrientationType[message.orientationType] === undefined ? message.orientationType : $root.BotMetadata.BotMediaMetadata.OrientationType[message.orientationType] : message.orientationType;
-                if (options.oneofs)
-                    object._orientationType = "orientationType";
-            }
             return object;
         };
 
@@ -10145,44 +9377,19 @@ $root.BotMetadata = (function() {
 
         /**
          * BotSessionMetadata sessionId.
-         * @member {string|null|undefined} sessionId
+         * @member {string} sessionId
          * @memberof BotMetadata.BotSessionMetadata
          * @instance
          */
-        BotSessionMetadata.prototype.sessionId = null;
+        BotSessionMetadata.prototype.sessionId = "";
 
         /**
          * BotSessionMetadata sessionSource.
-         * @member {BotMetadata.BotSessionSource|null|undefined} sessionSource
+         * @member {BotMetadata.BotSessionSource} sessionSource
          * @memberof BotMetadata.BotSessionMetadata
          * @instance
          */
-        BotSessionMetadata.prototype.sessionSource = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotSessionMetadata _sessionId.
-         * @member {"sessionId"|undefined} _sessionId
-         * @memberof BotMetadata.BotSessionMetadata
-         * @instance
-         */
-        Object.defineProperty(BotSessionMetadata.prototype, "_sessionId", {
-            get: $util.oneOfGetter($oneOfFields = ["sessionId"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotSessionMetadata _sessionSource.
-         * @member {"sessionSource"|undefined} _sessionSource
-         * @memberof BotMetadata.BotSessionMetadata
-         * @instance
-         */
-        Object.defineProperty(BotSessionMetadata.prototype, "_sessionSource", {
-            get: $util.oneOfGetter($oneOfFields = ["sessionSource"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotSessionMetadata.prototype.sessionSource = 0;
 
         /**
          * Creates a new BotSessionMetadata instance using the specified properties.
@@ -10291,14 +9498,10 @@ $root.BotMetadata = (function() {
         BotSessionMetadata.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
-            if (message.sessionId != null && message.hasOwnProperty("sessionId")) {
-                properties._sessionId = 1;
+            if (message.sessionId != null && message.hasOwnProperty("sessionId"))
                 if (!$util.isString(message.sessionId))
                     return "sessionId: string expected";
-            }
-            if (message.sessionSource != null && message.hasOwnProperty("sessionSource")) {
-                properties._sessionSource = 1;
+            if (message.sessionSource != null && message.hasOwnProperty("sessionSource"))
                 switch (message.sessionSource) {
                 default:
                     return "sessionSource: enum value expected";
@@ -10311,7 +9514,6 @@ $root.BotMetadata = (function() {
                 case 6:
                     break;
                 }
-            }
             return null;
         };
 
@@ -10381,16 +9583,14 @@ $root.BotMetadata = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (message.sessionId != null && message.hasOwnProperty("sessionId")) {
+            if (options.defaults) {
+                object.sessionId = "";
+                object.sessionSource = options.enums === String ? "NONE" : 0;
+            }
+            if (message.sessionId != null && message.hasOwnProperty("sessionId"))
                 object.sessionId = message.sessionId;
-                if (options.oneofs)
-                    object._sessionId = "sessionId";
-            }
-            if (message.sessionSource != null && message.hasOwnProperty("sessionSource")) {
+            if (message.sessionSource != null && message.hasOwnProperty("sessionSource"))
                 object.sessionSource = options.enums === String ? $root.BotMetadata.BotSessionSource[message.sessionSource] === undefined ? message.sessionSource : $root.BotMetadata.BotSessionSource[message.sessionSource] : message.sessionSource;
-                if (options.oneofs)
-                    object._sessionSource = "sessionSource";
-            }
             return object;
         };
 
@@ -10451,63 +9651,27 @@ $root.BotMetadata = (function() {
 
         /**
          * BotMetricsMetadata destinationId.
-         * @member {string|null|undefined} destinationId
+         * @member {string} destinationId
          * @memberof BotMetadata.BotMetricsMetadata
          * @instance
          */
-        BotMetricsMetadata.prototype.destinationId = null;
+        BotMetricsMetadata.prototype.destinationId = "";
 
         /**
          * BotMetricsMetadata destinationEntryPoint.
-         * @member {BotMetadata.BotMetricsEntryPoint|null|undefined} destinationEntryPoint
+         * @member {BotMetadata.BotMetricsEntryPoint} destinationEntryPoint
          * @memberof BotMetadata.BotMetricsMetadata
          * @instance
          */
-        BotMetricsMetadata.prototype.destinationEntryPoint = null;
+        BotMetricsMetadata.prototype.destinationEntryPoint = 1;
 
         /**
          * BotMetricsMetadata threadOrigin.
-         * @member {BotMetadata.BotMetricsThreadEntryPoint|null|undefined} threadOrigin
+         * @member {BotMetadata.BotMetricsThreadEntryPoint} threadOrigin
          * @memberof BotMetadata.BotMetricsMetadata
          * @instance
          */
-        BotMetricsMetadata.prototype.threadOrigin = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotMetricsMetadata _destinationId.
-         * @member {"destinationId"|undefined} _destinationId
-         * @memberof BotMetadata.BotMetricsMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetricsMetadata.prototype, "_destinationId", {
-            get: $util.oneOfGetter($oneOfFields = ["destinationId"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetricsMetadata _destinationEntryPoint.
-         * @member {"destinationEntryPoint"|undefined} _destinationEntryPoint
-         * @memberof BotMetadata.BotMetricsMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetricsMetadata.prototype, "_destinationEntryPoint", {
-            get: $util.oneOfGetter($oneOfFields = ["destinationEntryPoint"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMetricsMetadata _threadOrigin.
-         * @member {"threadOrigin"|undefined} _threadOrigin
-         * @memberof BotMetadata.BotMetricsMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMetricsMetadata.prototype, "_threadOrigin", {
-            get: $util.oneOfGetter($oneOfFields = ["threadOrigin"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotMetricsMetadata.prototype.threadOrigin = 1;
 
         /**
          * Creates a new BotMetricsMetadata instance using the specified properties.
@@ -10622,14 +9786,10 @@ $root.BotMetadata = (function() {
         BotMetricsMetadata.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
-            if (message.destinationId != null && message.hasOwnProperty("destinationId")) {
-                properties._destinationId = 1;
+            if (message.destinationId != null && message.hasOwnProperty("destinationId"))
                 if (!$util.isString(message.destinationId))
                     return "destinationId: string expected";
-            }
-            if (message.destinationEntryPoint != null && message.hasOwnProperty("destinationEntryPoint")) {
-                properties._destinationEntryPoint = 1;
+            if (message.destinationEntryPoint != null && message.hasOwnProperty("destinationEntryPoint"))
                 switch (message.destinationEntryPoint) {
                 default:
                     return "destinationEntryPoint: enum value expected";
@@ -10666,9 +9826,7 @@ $root.BotMetadata = (function() {
                 case 31:
                     break;
                 }
-            }
-            if (message.threadOrigin != null && message.hasOwnProperty("threadOrigin")) {
-                properties._threadOrigin = 1;
+            if (message.threadOrigin != null && message.hasOwnProperty("threadOrigin"))
                 switch (message.threadOrigin) {
                 default:
                     return "threadOrigin: enum value expected";
@@ -10679,7 +9837,6 @@ $root.BotMetadata = (function() {
                 case 5:
                     break;
                 }
-            }
             return null;
         };
 
@@ -10873,21 +10030,17 @@ $root.BotMetadata = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (message.destinationId != null && message.hasOwnProperty("destinationId")) {
+            if (options.defaults) {
+                object.destinationId = "";
+                object.destinationEntryPoint = options.enums === String ? "FAVICON" : 1;
+                object.threadOrigin = options.enums === String ? "AI_TAB_THREAD" : 1;
+            }
+            if (message.destinationId != null && message.hasOwnProperty("destinationId"))
                 object.destinationId = message.destinationId;
-                if (options.oneofs)
-                    object._destinationId = "destinationId";
-            }
-            if (message.destinationEntryPoint != null && message.hasOwnProperty("destinationEntryPoint")) {
+            if (message.destinationEntryPoint != null && message.hasOwnProperty("destinationEntryPoint"))
                 object.destinationEntryPoint = options.enums === String ? $root.BotMetadata.BotMetricsEntryPoint[message.destinationEntryPoint] === undefined ? message.destinationEntryPoint : $root.BotMetadata.BotMetricsEntryPoint[message.destinationEntryPoint] : message.destinationEntryPoint;
-                if (options.oneofs)
-                    object._destinationEntryPoint = "destinationEntryPoint";
-            }
-            if (message.threadOrigin != null && message.hasOwnProperty("threadOrigin")) {
+            if (message.threadOrigin != null && message.hasOwnProperty("threadOrigin"))
                 object.threadOrigin = options.enums === String ? $root.BotMetadata.BotMetricsThreadEntryPoint[message.threadOrigin] === undefined ? message.threadOrigin : $root.BotMetadata.BotMetricsThreadEntryPoint[message.threadOrigin] : message.threadOrigin;
-                if (options.oneofs)
-                    object._threadOrigin = "threadOrigin";
-            }
             return object;
         };
 
@@ -11171,11 +10324,11 @@ $root.BotMetadata = (function() {
 
             /**
              * Keyword value.
-             * @member {string|null|undefined} value
+             * @member {string} value
              * @memberof BotMetadata.BotRenderingMetadata.Keyword
              * @instance
              */
-            Keyword.prototype.value = null;
+            Keyword.prototype.value = "";
 
             /**
              * Keyword associatedPrompts.
@@ -11184,20 +10337,6 @@ $root.BotMetadata = (function() {
              * @instance
              */
             Keyword.prototype.associatedPrompts = $util.emptyArray;
-
-            // OneOf field names bound to virtual getters and setters
-            var $oneOfFields;
-
-            /**
-             * Keyword _value.
-             * @member {"value"|undefined} _value
-             * @memberof BotMetadata.BotRenderingMetadata.Keyword
-             * @instance
-             */
-            Object.defineProperty(Keyword.prototype, "_value", {
-                get: $util.oneOfGetter($oneOfFields = ["value"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
 
             /**
              * Creates a new Keyword instance using the specified properties.
@@ -11309,12 +10448,9 @@ $root.BotMetadata = (function() {
             Keyword.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                var properties = {};
-                if (message.value != null && message.hasOwnProperty("value")) {
-                    properties._value = 1;
+                if (message.value != null && message.hasOwnProperty("value"))
                     if (!$util.isString(message.value))
                         return "value: string expected";
-                }
                 if (message.associatedPrompts != null && message.hasOwnProperty("associatedPrompts")) {
                     if (!Array.isArray(message.associatedPrompts))
                         return "associatedPrompts: array expected";
@@ -11364,11 +10500,10 @@ $root.BotMetadata = (function() {
                 var object = {};
                 if (options.arrays || options.defaults)
                     object.associatedPrompts = [];
-                if (message.value != null && message.hasOwnProperty("value")) {
+                if (options.defaults)
+                    object.value = "";
+                if (message.value != null && message.hasOwnProperty("value"))
                     object.value = message.value;
-                    if (options.oneofs)
-                        object._value = "value";
-                }
                 if (message.associatedPrompts && message.associatedPrompts.length) {
                     object.associatedPrompts = [];
                     for (var j = 0; j < message.associatedPrompts.length; ++j)
@@ -11436,44 +10571,19 @@ $root.BotMetadata = (function() {
 
         /**
          * BotPromotionMessageMetadata promotionType.
-         * @member {BotMetadata.BotPromotionMessageMetadata.BotPromotionType|null|undefined} promotionType
+         * @member {BotMetadata.BotPromotionMessageMetadata.BotPromotionType} promotionType
          * @memberof BotMetadata.BotPromotionMessageMetadata
          * @instance
          */
-        BotPromotionMessageMetadata.prototype.promotionType = null;
+        BotPromotionMessageMetadata.prototype.promotionType = 0;
 
         /**
          * BotPromotionMessageMetadata buttonTitle.
-         * @member {string|null|undefined} buttonTitle
+         * @member {string} buttonTitle
          * @memberof BotMetadata.BotPromotionMessageMetadata
          * @instance
          */
-        BotPromotionMessageMetadata.prototype.buttonTitle = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotPromotionMessageMetadata _promotionType.
-         * @member {"promotionType"|undefined} _promotionType
-         * @memberof BotMetadata.BotPromotionMessageMetadata
-         * @instance
-         */
-        Object.defineProperty(BotPromotionMessageMetadata.prototype, "_promotionType", {
-            get: $util.oneOfGetter($oneOfFields = ["promotionType"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotPromotionMessageMetadata _buttonTitle.
-         * @member {"buttonTitle"|undefined} _buttonTitle
-         * @memberof BotMetadata.BotPromotionMessageMetadata
-         * @instance
-         */
-        Object.defineProperty(BotPromotionMessageMetadata.prototype, "_buttonTitle", {
-            get: $util.oneOfGetter($oneOfFields = ["buttonTitle"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotPromotionMessageMetadata.prototype.buttonTitle = "";
 
         /**
          * Creates a new BotPromotionMessageMetadata instance using the specified properties.
@@ -11582,9 +10692,7 @@ $root.BotMetadata = (function() {
         BotPromotionMessageMetadata.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
-            if (message.promotionType != null && message.hasOwnProperty("promotionType")) {
-                properties._promotionType = 1;
+            if (message.promotionType != null && message.hasOwnProperty("promotionType"))
                 switch (message.promotionType) {
                 default:
                     return "promotionType: enum value expected";
@@ -11593,12 +10701,9 @@ $root.BotMetadata = (function() {
                 case 2:
                     break;
                 }
-            }
-            if (message.buttonTitle != null && message.hasOwnProperty("buttonTitle")) {
-                properties._buttonTitle = 1;
+            if (message.buttonTitle != null && message.hasOwnProperty("buttonTitle"))
                 if (!$util.isString(message.buttonTitle))
                     return "buttonTitle: string expected";
-            }
             return null;
         };
 
@@ -11652,16 +10757,14 @@ $root.BotMetadata = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (message.promotionType != null && message.hasOwnProperty("promotionType")) {
+            if (options.defaults) {
+                object.promotionType = options.enums === String ? "UNKNOWN_TYPE" : 0;
+                object.buttonTitle = "";
+            }
+            if (message.promotionType != null && message.hasOwnProperty("promotionType"))
                 object.promotionType = options.enums === String ? $root.BotMetadata.BotPromotionMessageMetadata.BotPromotionType[message.promotionType] === undefined ? message.promotionType : $root.BotMetadata.BotPromotionMessageMetadata.BotPromotionType[message.promotionType] : message.promotionType;
-                if (options.oneofs)
-                    object._promotionType = "promotionType";
-            }
-            if (message.buttonTitle != null && message.hasOwnProperty("buttonTitle")) {
+            if (message.buttonTitle != null && message.hasOwnProperty("buttonTitle"))
                 object.buttonTitle = message.buttonTitle;
-                if (options.oneofs)
-                    object._buttonTitle = "buttonTitle";
-            }
             return object;
         };
 
@@ -11739,82 +10842,35 @@ $root.BotMetadata = (function() {
 
         /**
          * BotSignatureVerificationUseCaseProof version.
-         * @member {number|null|undefined} version
+         * @member {number} version
          * @memberof BotMetadata.BotSignatureVerificationUseCaseProof
          * @instance
          */
-        BotSignatureVerificationUseCaseProof.prototype.version = null;
+        BotSignatureVerificationUseCaseProof.prototype.version = 0;
 
         /**
          * BotSignatureVerificationUseCaseProof useCase.
-         * @member {BotMetadata.BotSignatureVerificationUseCaseProof.BotSignatureUseCase|null|undefined} useCase
+         * @member {BotMetadata.BotSignatureVerificationUseCaseProof.BotSignatureUseCase} useCase
          * @memberof BotMetadata.BotSignatureVerificationUseCaseProof
          * @instance
          */
-        BotSignatureVerificationUseCaseProof.prototype.useCase = null;
+        BotSignatureVerificationUseCaseProof.prototype.useCase = 0;
 
         /**
          * BotSignatureVerificationUseCaseProof signature.
-         * @member {Uint8Array|null|undefined} signature
+         * @member {Uint8Array} signature
          * @memberof BotMetadata.BotSignatureVerificationUseCaseProof
          * @instance
          */
-        BotSignatureVerificationUseCaseProof.prototype.signature = null;
+        BotSignatureVerificationUseCaseProof.prototype.signature = $util.newBuffer([]);
 
         /**
          * BotSignatureVerificationUseCaseProof certificateChain.
-         * @member {Uint8Array|null|undefined} certificateChain
+         * @member {Uint8Array} certificateChain
          * @memberof BotMetadata.BotSignatureVerificationUseCaseProof
          * @instance
          */
-        BotSignatureVerificationUseCaseProof.prototype.certificateChain = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotSignatureVerificationUseCaseProof _version.
-         * @member {"version"|undefined} _version
-         * @memberof BotMetadata.BotSignatureVerificationUseCaseProof
-         * @instance
-         */
-        Object.defineProperty(BotSignatureVerificationUseCaseProof.prototype, "_version", {
-            get: $util.oneOfGetter($oneOfFields = ["version"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotSignatureVerificationUseCaseProof _useCase.
-         * @member {"useCase"|undefined} _useCase
-         * @memberof BotMetadata.BotSignatureVerificationUseCaseProof
-         * @instance
-         */
-        Object.defineProperty(BotSignatureVerificationUseCaseProof.prototype, "_useCase", {
-            get: $util.oneOfGetter($oneOfFields = ["useCase"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotSignatureVerificationUseCaseProof _signature.
-         * @member {"signature"|undefined} _signature
-         * @memberof BotMetadata.BotSignatureVerificationUseCaseProof
-         * @instance
-         */
-        Object.defineProperty(BotSignatureVerificationUseCaseProof.prototype, "_signature", {
-            get: $util.oneOfGetter($oneOfFields = ["signature"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotSignatureVerificationUseCaseProof _certificateChain.
-         * @member {"certificateChain"|undefined} _certificateChain
-         * @memberof BotMetadata.BotSignatureVerificationUseCaseProof
-         * @instance
-         */
-        Object.defineProperty(BotSignatureVerificationUseCaseProof.prototype, "_certificateChain", {
-            get: $util.oneOfGetter($oneOfFields = ["certificateChain"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotSignatureVerificationUseCaseProof.prototype.certificateChain = $util.newBuffer([]);
 
         /**
          * Creates a new BotSignatureVerificationUseCaseProof instance using the specified properties.
@@ -11935,31 +10991,22 @@ $root.BotMetadata = (function() {
         BotSignatureVerificationUseCaseProof.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
-            if (message.version != null && message.hasOwnProperty("version")) {
-                properties._version = 1;
+            if (message.version != null && message.hasOwnProperty("version"))
                 if (!$util.isInteger(message.version))
                     return "version: integer expected";
-            }
-            if (message.useCase != null && message.hasOwnProperty("useCase")) {
-                properties._useCase = 1;
+            if (message.useCase != null && message.hasOwnProperty("useCase"))
                 switch (message.useCase) {
                 default:
                     return "useCase: enum value expected";
                 case 0:
                     break;
                 }
-            }
-            if (message.signature != null && message.hasOwnProperty("signature")) {
-                properties._signature = 1;
+            if (message.signature != null && message.hasOwnProperty("signature"))
                 if (!(message.signature && typeof message.signature.length === "number" || $util.isString(message.signature)))
                     return "signature: buffer expected";
-            }
-            if (message.certificateChain != null && message.hasOwnProperty("certificateChain")) {
-                properties._certificateChain = 1;
+            if (message.certificateChain != null && message.hasOwnProperty("certificateChain"))
                 if (!(message.certificateChain && typeof message.certificateChain.length === "number" || $util.isString(message.certificateChain)))
                     return "certificateChain: buffer expected";
-            }
             return null;
         };
 
@@ -12015,26 +11062,32 @@ $root.BotMetadata = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (message.version != null && message.hasOwnProperty("version")) {
+            if (options.defaults) {
+                object.version = 0;
+                object.useCase = options.enums === String ? "WA_BOT_MSG" : 0;
+                if (options.bytes === String)
+                    object.signature = "";
+                else {
+                    object.signature = [];
+                    if (options.bytes !== Array)
+                        object.signature = $util.newBuffer(object.signature);
+                }
+                if (options.bytes === String)
+                    object.certificateChain = "";
+                else {
+                    object.certificateChain = [];
+                    if (options.bytes !== Array)
+                        object.certificateChain = $util.newBuffer(object.certificateChain);
+                }
+            }
+            if (message.version != null && message.hasOwnProperty("version"))
                 object.version = message.version;
-                if (options.oneofs)
-                    object._version = "version";
-            }
-            if (message.useCase != null && message.hasOwnProperty("useCase")) {
+            if (message.useCase != null && message.hasOwnProperty("useCase"))
                 object.useCase = options.enums === String ? $root.BotMetadata.BotSignatureVerificationUseCaseProof.BotSignatureUseCase[message.useCase] === undefined ? message.useCase : $root.BotMetadata.BotSignatureVerificationUseCaseProof.BotSignatureUseCase[message.useCase] : message.useCase;
-                if (options.oneofs)
-                    object._useCase = "useCase";
-            }
-            if (message.signature != null && message.hasOwnProperty("signature")) {
+            if (message.signature != null && message.hasOwnProperty("signature"))
                 object.signature = options.bytes === String ? $util.base64.encode(message.signature, 0, message.signature.length) : options.bytes === Array ? Array.prototype.slice.call(message.signature) : message.signature;
-                if (options.oneofs)
-                    object._signature = "signature";
-            }
-            if (message.certificateChain != null && message.hasOwnProperty("certificateChain")) {
+            if (message.certificateChain != null && message.hasOwnProperty("certificateChain"))
                 object.certificateChain = options.bytes === String ? $util.base64.encode(message.certificateChain, 0, message.certificateChain.length) : options.bytes === Array ? Array.prototype.slice.call(message.certificateChain) : message.certificateChain;
-                if (options.oneofs)
-                    object._certificateChain = "certificateChain";
-            }
             return object;
         };
 
@@ -12332,44 +11385,19 @@ $root.BotMetadata = (function() {
 
         /**
          * BotMemoryFact fact.
-         * @member {string|null|undefined} fact
+         * @member {string} fact
          * @memberof BotMetadata.BotMemoryFact
          * @instance
          */
-        BotMemoryFact.prototype.fact = null;
+        BotMemoryFact.prototype.fact = "";
 
         /**
          * BotMemoryFact factId.
-         * @member {string|null|undefined} factId
+         * @member {string} factId
          * @memberof BotMetadata.BotMemoryFact
          * @instance
          */
-        BotMemoryFact.prototype.factId = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotMemoryFact _fact.
-         * @member {"fact"|undefined} _fact
-         * @memberof BotMetadata.BotMemoryFact
-         * @instance
-         */
-        Object.defineProperty(BotMemoryFact.prototype, "_fact", {
-            get: $util.oneOfGetter($oneOfFields = ["fact"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotMemoryFact _factId.
-         * @member {"factId"|undefined} _factId
-         * @memberof BotMetadata.BotMemoryFact
-         * @instance
-         */
-        Object.defineProperty(BotMemoryFact.prototype, "_factId", {
-            get: $util.oneOfGetter($oneOfFields = ["factId"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotMemoryFact.prototype.factId = "";
 
         /**
          * Creates a new BotMemoryFact instance using the specified properties.
@@ -12478,17 +11506,12 @@ $root.BotMetadata = (function() {
         BotMemoryFact.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
-            if (message.fact != null && message.hasOwnProperty("fact")) {
-                properties._fact = 1;
+            if (message.fact != null && message.hasOwnProperty("fact"))
                 if (!$util.isString(message.fact))
                     return "fact: string expected";
-            }
-            if (message.factId != null && message.hasOwnProperty("factId")) {
-                properties._factId = 1;
+            if (message.factId != null && message.hasOwnProperty("factId"))
                 if (!$util.isString(message.factId))
                     return "factId: string expected";
-            }
             return null;
         };
 
@@ -12524,16 +11547,14 @@ $root.BotMetadata = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (message.fact != null && message.hasOwnProperty("fact")) {
+            if (options.defaults) {
+                object.fact = "";
+                object.factId = "";
+            }
+            if (message.fact != null && message.hasOwnProperty("fact"))
                 object.fact = message.fact;
-                if (options.oneofs)
-                    object._fact = "fact";
-            }
-            if (message.factId != null && message.hasOwnProperty("factId")) {
+            if (message.factId != null && message.hasOwnProperty("factId"))
                 object.factId = message.factId;
-                if (options.oneofs)
-                    object._factId = "factId";
-            }
             return object;
         };
 
@@ -12612,25 +11633,11 @@ $root.BotMetadata = (function() {
 
         /**
          * BotMemoryMetadata disclaimer.
-         * @member {string|null|undefined} disclaimer
+         * @member {string} disclaimer
          * @memberof BotMetadata.BotMemoryMetadata
          * @instance
          */
-        BotMemoryMetadata.prototype.disclaimer = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotMemoryMetadata _disclaimer.
-         * @member {"disclaimer"|undefined} _disclaimer
-         * @memberof BotMetadata.BotMemoryMetadata
-         * @instance
-         */
-        Object.defineProperty(BotMemoryMetadata.prototype, "_disclaimer", {
-            get: $util.oneOfGetter($oneOfFields = ["disclaimer"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotMemoryMetadata.prototype.disclaimer = "";
 
         /**
          * Creates a new BotMemoryMetadata instance using the specified properties.
@@ -12751,7 +11758,6 @@ $root.BotMetadata = (function() {
         BotMemoryMetadata.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
             if (message.addedFacts != null && message.hasOwnProperty("addedFacts")) {
                 if (!Array.isArray(message.addedFacts))
                     return "addedFacts: array expected";
@@ -12770,11 +11776,9 @@ $root.BotMetadata = (function() {
                         return "removedFacts." + error;
                 }
             }
-            if (message.disclaimer != null && message.hasOwnProperty("disclaimer")) {
-                properties._disclaimer = 1;
+            if (message.disclaimer != null && message.hasOwnProperty("disclaimer"))
                 if (!$util.isString(message.disclaimer))
                     return "disclaimer: string expected";
-            }
             return null;
         };
 
@@ -12832,6 +11836,8 @@ $root.BotMetadata = (function() {
                 object.addedFacts = [];
                 object.removedFacts = [];
             }
+            if (options.defaults)
+                object.disclaimer = "";
             if (message.addedFacts && message.addedFacts.length) {
                 object.addedFacts = [];
                 for (var j = 0; j < message.addedFacts.length; ++j)
@@ -12842,11 +11848,8 @@ $root.BotMetadata = (function() {
                 for (var j = 0; j < message.removedFacts.length; ++j)
                     object.removedFacts[j] = $root.BotMetadata.BotMemoryFact.toObject(message.removedFacts[j], options);
             }
-            if (message.disclaimer != null && message.hasOwnProperty("disclaimer")) {
+            if (message.disclaimer != null && message.hasOwnProperty("disclaimer"))
                 object.disclaimer = message.disclaimer;
-                if (options.oneofs)
-                    object._disclaimer = "disclaimer";
-            }
             return object;
         };
 
@@ -12905,25 +11908,11 @@ $root.BotMetadata = (function() {
 
         /**
          * BotLinkedAccount type.
-         * @member {BotMetadata.BotLinkedAccount.BotLinkedAccountType|null|undefined} type
+         * @member {BotMetadata.BotLinkedAccount.BotLinkedAccountType} type
          * @memberof BotMetadata.BotLinkedAccount
          * @instance
          */
-        BotLinkedAccount.prototype.type = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotLinkedAccount _type.
-         * @member {"type"|undefined} _type
-         * @memberof BotMetadata.BotLinkedAccount
-         * @instance
-         */
-        Object.defineProperty(BotLinkedAccount.prototype, "_type", {
-            get: $util.oneOfGetter($oneOfFields = ["type"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotLinkedAccount.prototype.type = 0;
 
         /**
          * Creates a new BotLinkedAccount instance using the specified properties.
@@ -13026,16 +12015,13 @@ $root.BotMetadata = (function() {
         BotLinkedAccount.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
-            if (message.type != null && message.hasOwnProperty("type")) {
-                properties._type = 1;
+            if (message.type != null && message.hasOwnProperty("type"))
                 switch (message.type) {
                 default:
                     return "type: enum value expected";
                 case 0:
                     break;
                 }
-            }
             return null;
         };
 
@@ -13079,11 +12065,10 @@ $root.BotMetadata = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (message.type != null && message.hasOwnProperty("type")) {
+            if (options.defaults)
+                object.type = options.enums === String ? "BOT_LINKED_ACCOUNT_TYPE_1P" : 0;
+            if (message.type != null && message.hasOwnProperty("type"))
                 object.type = options.enums === String ? $root.BotMetadata.BotLinkedAccount.BotLinkedAccountType[message.type] === undefined ? message.type : $root.BotMetadata.BotLinkedAccount.BotLinkedAccountType[message.type] : message.type;
-                if (options.oneofs)
-                    object._type = "type";
-            }
             return object;
         };
 
@@ -13165,44 +12150,19 @@ $root.BotMetadata = (function() {
 
         /**
          * BotLinkedAccountsMetadata acAuthTokens.
-         * @member {Uint8Array|null|undefined} acAuthTokens
+         * @member {Uint8Array} acAuthTokens
          * @memberof BotMetadata.BotLinkedAccountsMetadata
          * @instance
          */
-        BotLinkedAccountsMetadata.prototype.acAuthTokens = null;
+        BotLinkedAccountsMetadata.prototype.acAuthTokens = $util.newBuffer([]);
 
         /**
          * BotLinkedAccountsMetadata acErrorCode.
-         * @member {number|null|undefined} acErrorCode
+         * @member {number} acErrorCode
          * @memberof BotMetadata.BotLinkedAccountsMetadata
          * @instance
          */
-        BotLinkedAccountsMetadata.prototype.acErrorCode = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotLinkedAccountsMetadata _acAuthTokens.
-         * @member {"acAuthTokens"|undefined} _acAuthTokens
-         * @memberof BotMetadata.BotLinkedAccountsMetadata
-         * @instance
-         */
-        Object.defineProperty(BotLinkedAccountsMetadata.prototype, "_acAuthTokens", {
-            get: $util.oneOfGetter($oneOfFields = ["acAuthTokens"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotLinkedAccountsMetadata _acErrorCode.
-         * @member {"acErrorCode"|undefined} _acErrorCode
-         * @memberof BotMetadata.BotLinkedAccountsMetadata
-         * @instance
-         */
-        Object.defineProperty(BotLinkedAccountsMetadata.prototype, "_acErrorCode", {
-            get: $util.oneOfGetter($oneOfFields = ["acErrorCode"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotLinkedAccountsMetadata.prototype.acErrorCode = 0;
 
         /**
          * Creates a new BotLinkedAccountsMetadata instance using the specified properties.
@@ -13320,7 +12280,6 @@ $root.BotMetadata = (function() {
         BotLinkedAccountsMetadata.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
             if (message.accounts != null && message.hasOwnProperty("accounts")) {
                 if (!Array.isArray(message.accounts))
                     return "accounts: array expected";
@@ -13330,16 +12289,12 @@ $root.BotMetadata = (function() {
                         return "accounts." + error;
                 }
             }
-            if (message.acAuthTokens != null && message.hasOwnProperty("acAuthTokens")) {
-                properties._acAuthTokens = 1;
+            if (message.acAuthTokens != null && message.hasOwnProperty("acAuthTokens"))
                 if (!(message.acAuthTokens && typeof message.acAuthTokens.length === "number" || $util.isString(message.acAuthTokens)))
                     return "acAuthTokens: buffer expected";
-            }
-            if (message.acErrorCode != null && message.hasOwnProperty("acErrorCode")) {
-                properties._acErrorCode = 1;
+            if (message.acErrorCode != null && message.hasOwnProperty("acErrorCode"))
                 if (!$util.isInteger(message.acErrorCode))
                     return "acErrorCode: integer expected";
-            }
             return null;
         };
 
@@ -13390,21 +12345,25 @@ $root.BotMetadata = (function() {
             var object = {};
             if (options.arrays || options.defaults)
                 object.accounts = [];
+            if (options.defaults) {
+                if (options.bytes === String)
+                    object.acAuthTokens = "";
+                else {
+                    object.acAuthTokens = [];
+                    if (options.bytes !== Array)
+                        object.acAuthTokens = $util.newBuffer(object.acAuthTokens);
+                }
+                object.acErrorCode = 0;
+            }
             if (message.accounts && message.accounts.length) {
                 object.accounts = [];
                 for (var j = 0; j < message.accounts.length; ++j)
                     object.accounts[j] = $root.BotMetadata.BotLinkedAccount.toObject(message.accounts[j], options);
             }
-            if (message.acAuthTokens != null && message.hasOwnProperty("acAuthTokens")) {
+            if (message.acAuthTokens != null && message.hasOwnProperty("acAuthTokens"))
                 object.acAuthTokens = options.bytes === String ? $util.base64.encode(message.acAuthTokens, 0, message.acAuthTokens.length) : options.bytes === Array ? Array.prototype.slice.call(message.acAuthTokens) : message.acAuthTokens;
-                if (options.oneofs)
-                    object._acAuthTokens = "acAuthTokens";
-            }
-            if (message.acErrorCode != null && message.hasOwnProperty("acErrorCode")) {
+            if (message.acErrorCode != null && message.hasOwnProperty("acErrorCode"))
                 object.acErrorCode = message.acErrorCode;
-                if (options.oneofs)
-                    object._acErrorCode = "acErrorCode";
-            }
             return object;
         };
 
@@ -13464,44 +12423,19 @@ $root.BotMetadata = (function() {
 
         /**
          * BotPromptSuggestion prompt.
-         * @member {string|null|undefined} prompt
+         * @member {string} prompt
          * @memberof BotMetadata.BotPromptSuggestion
          * @instance
          */
-        BotPromptSuggestion.prototype.prompt = null;
+        BotPromptSuggestion.prototype.prompt = "";
 
         /**
          * BotPromptSuggestion promptId.
-         * @member {string|null|undefined} promptId
+         * @member {string} promptId
          * @memberof BotMetadata.BotPromptSuggestion
          * @instance
          */
-        BotPromptSuggestion.prototype.promptId = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotPromptSuggestion _prompt.
-         * @member {"prompt"|undefined} _prompt
-         * @memberof BotMetadata.BotPromptSuggestion
-         * @instance
-         */
-        Object.defineProperty(BotPromptSuggestion.prototype, "_prompt", {
-            get: $util.oneOfGetter($oneOfFields = ["prompt"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotPromptSuggestion _promptId.
-         * @member {"promptId"|undefined} _promptId
-         * @memberof BotMetadata.BotPromptSuggestion
-         * @instance
-         */
-        Object.defineProperty(BotPromptSuggestion.prototype, "_promptId", {
-            get: $util.oneOfGetter($oneOfFields = ["promptId"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotPromptSuggestion.prototype.promptId = "";
 
         /**
          * Creates a new BotPromptSuggestion instance using the specified properties.
@@ -13610,17 +12544,12 @@ $root.BotMetadata = (function() {
         BotPromptSuggestion.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
-            if (message.prompt != null && message.hasOwnProperty("prompt")) {
-                properties._prompt = 1;
+            if (message.prompt != null && message.hasOwnProperty("prompt"))
                 if (!$util.isString(message.prompt))
                     return "prompt: string expected";
-            }
-            if (message.promptId != null && message.hasOwnProperty("promptId")) {
-                properties._promptId = 1;
+            if (message.promptId != null && message.hasOwnProperty("promptId"))
                 if (!$util.isString(message.promptId))
                     return "promptId: string expected";
-            }
             return null;
         };
 
@@ -13656,16 +12585,14 @@ $root.BotMetadata = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (message.prompt != null && message.hasOwnProperty("prompt")) {
+            if (options.defaults) {
+                object.prompt = "";
+                object.promptId = "";
+            }
+            if (message.prompt != null && message.hasOwnProperty("prompt"))
                 object.prompt = message.prompt;
-                if (options.oneofs)
-                    object._prompt = "prompt";
-            }
-            if (message.promptId != null && message.hasOwnProperty("promptId")) {
+            if (message.promptId != null && message.hasOwnProperty("promptId"))
                 object.promptId = message.promptId;
-                if (options.oneofs)
-                    object._promptId = "promptId";
-            }
             return object;
         };
 
@@ -13962,11 +12889,11 @@ $root.BotMetadata = (function() {
 
         /**
          * BotSuggestedPromptMetadata selectedPromptIndex.
-         * @member {number|null|undefined} selectedPromptIndex
+         * @member {number} selectedPromptIndex
          * @memberof BotMetadata.BotSuggestedPromptMetadata
          * @instance
          */
-        BotSuggestedPromptMetadata.prototype.selectedPromptIndex = null;
+        BotSuggestedPromptMetadata.prototype.selectedPromptIndex = 0;
 
         /**
          * BotSuggestedPromptMetadata promptSuggestions.
@@ -13978,47 +12905,11 @@ $root.BotMetadata = (function() {
 
         /**
          * BotSuggestedPromptMetadata selectedPromptId.
-         * @member {string|null|undefined} selectedPromptId
+         * @member {string} selectedPromptId
          * @memberof BotMetadata.BotSuggestedPromptMetadata
          * @instance
          */
-        BotSuggestedPromptMetadata.prototype.selectedPromptId = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotSuggestedPromptMetadata _selectedPromptIndex.
-         * @member {"selectedPromptIndex"|undefined} _selectedPromptIndex
-         * @memberof BotMetadata.BotSuggestedPromptMetadata
-         * @instance
-         */
-        Object.defineProperty(BotSuggestedPromptMetadata.prototype, "_selectedPromptIndex", {
-            get: $util.oneOfGetter($oneOfFields = ["selectedPromptIndex"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotSuggestedPromptMetadata _promptSuggestions.
-         * @member {"promptSuggestions"|undefined} _promptSuggestions
-         * @memberof BotMetadata.BotSuggestedPromptMetadata
-         * @instance
-         */
-        Object.defineProperty(BotSuggestedPromptMetadata.prototype, "_promptSuggestions", {
-            get: $util.oneOfGetter($oneOfFields = ["promptSuggestions"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotSuggestedPromptMetadata _selectedPromptId.
-         * @member {"selectedPromptId"|undefined} _selectedPromptId
-         * @memberof BotMetadata.BotSuggestedPromptMetadata
-         * @instance
-         */
-        Object.defineProperty(BotSuggestedPromptMetadata.prototype, "_selectedPromptId", {
-            get: $util.oneOfGetter($oneOfFields = ["selectedPromptId"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotSuggestedPromptMetadata.prototype.selectedPromptId = "";
 
         /**
          * Creates a new BotSuggestedPromptMetadata instance using the specified properties.
@@ -14142,7 +13033,6 @@ $root.BotMetadata = (function() {
         BotSuggestedPromptMetadata.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
             if (message.suggestedPrompts != null && message.hasOwnProperty("suggestedPrompts")) {
                 if (!Array.isArray(message.suggestedPrompts))
                     return "suggestedPrompts: array expected";
@@ -14150,24 +13040,17 @@ $root.BotMetadata = (function() {
                     if (!$util.isString(message.suggestedPrompts[i]))
                         return "suggestedPrompts: string[] expected";
             }
-            if (message.selectedPromptIndex != null && message.hasOwnProperty("selectedPromptIndex")) {
-                properties._selectedPromptIndex = 1;
+            if (message.selectedPromptIndex != null && message.hasOwnProperty("selectedPromptIndex"))
                 if (!$util.isInteger(message.selectedPromptIndex))
                     return "selectedPromptIndex: integer expected";
-            }
             if (message.promptSuggestions != null && message.hasOwnProperty("promptSuggestions")) {
-                properties._promptSuggestions = 1;
-                {
-                    var error = $root.BotMetadata.BotPromptSuggestions.verify(message.promptSuggestions);
-                    if (error)
-                        return "promptSuggestions." + error;
-                }
+                var error = $root.BotMetadata.BotPromptSuggestions.verify(message.promptSuggestions);
+                if (error)
+                    return "promptSuggestions." + error;
             }
-            if (message.selectedPromptId != null && message.hasOwnProperty("selectedPromptId")) {
-                properties._selectedPromptId = 1;
+            if (message.selectedPromptId != null && message.hasOwnProperty("selectedPromptId"))
                 if (!$util.isString(message.selectedPromptId))
                     return "selectedPromptId: string expected";
-            }
             return null;
         };
 
@@ -14217,26 +13100,22 @@ $root.BotMetadata = (function() {
             var object = {};
             if (options.arrays || options.defaults)
                 object.suggestedPrompts = [];
+            if (options.defaults) {
+                object.selectedPromptIndex = 0;
+                object.promptSuggestions = null;
+                object.selectedPromptId = "";
+            }
             if (message.suggestedPrompts && message.suggestedPrompts.length) {
                 object.suggestedPrompts = [];
                 for (var j = 0; j < message.suggestedPrompts.length; ++j)
                     object.suggestedPrompts[j] = message.suggestedPrompts[j];
             }
-            if (message.selectedPromptIndex != null && message.hasOwnProperty("selectedPromptIndex")) {
+            if (message.selectedPromptIndex != null && message.hasOwnProperty("selectedPromptIndex"))
                 object.selectedPromptIndex = message.selectedPromptIndex;
-                if (options.oneofs)
-                    object._selectedPromptIndex = "selectedPromptIndex";
-            }
-            if (message.promptSuggestions != null && message.hasOwnProperty("promptSuggestions")) {
+            if (message.promptSuggestions != null && message.hasOwnProperty("promptSuggestions"))
                 object.promptSuggestions = $root.BotMetadata.BotPromptSuggestions.toObject(message.promptSuggestions, options);
-                if (options.oneofs)
-                    object._promptSuggestions = "promptSuggestions";
-            }
-            if (message.selectedPromptId != null && message.hasOwnProperty("selectedPromptId")) {
+            if (message.selectedPromptId != null && message.hasOwnProperty("selectedPromptId"))
                 object.selectedPromptId = message.selectedPromptId;
-                if (options.oneofs)
-                    object._selectedPromptId = "selectedPromptId";
-            }
             return object;
         };
 
@@ -14306,67 +13185,67 @@ $root.BotMetadata = (function() {
 
         /**
          * BotPluginMetadata provider.
-         * @member {BotMetadata.BotPluginMetadata.SearchProvider|null|undefined} provider
+         * @member {BotMetadata.BotPluginMetadata.SearchProvider} provider
          * @memberof BotMetadata.BotPluginMetadata
          * @instance
          */
-        BotPluginMetadata.prototype.provider = null;
+        BotPluginMetadata.prototype.provider = 0;
 
         /**
          * BotPluginMetadata pluginType.
-         * @member {BotMetadata.BotPluginMetadata.PluginType|null|undefined} pluginType
+         * @member {BotMetadata.BotPluginMetadata.PluginType} pluginType
          * @memberof BotMetadata.BotPluginMetadata
          * @instance
          */
-        BotPluginMetadata.prototype.pluginType = null;
+        BotPluginMetadata.prototype.pluginType = 0;
 
         /**
          * BotPluginMetadata thumbnailCdnUrl.
-         * @member {string|null|undefined} thumbnailCdnUrl
+         * @member {string} thumbnailCdnUrl
          * @memberof BotMetadata.BotPluginMetadata
          * @instance
          */
-        BotPluginMetadata.prototype.thumbnailCdnUrl = null;
+        BotPluginMetadata.prototype.thumbnailCdnUrl = "";
 
         /**
          * BotPluginMetadata profilePhotoCdnUrl.
-         * @member {string|null|undefined} profilePhotoCdnUrl
+         * @member {string} profilePhotoCdnUrl
          * @memberof BotMetadata.BotPluginMetadata
          * @instance
          */
-        BotPluginMetadata.prototype.profilePhotoCdnUrl = null;
+        BotPluginMetadata.prototype.profilePhotoCdnUrl = "";
 
         /**
          * BotPluginMetadata searchProviderUrl.
-         * @member {string|null|undefined} searchProviderUrl
+         * @member {string} searchProviderUrl
          * @memberof BotMetadata.BotPluginMetadata
          * @instance
          */
-        BotPluginMetadata.prototype.searchProviderUrl = null;
+        BotPluginMetadata.prototype.searchProviderUrl = "";
 
         /**
          * BotPluginMetadata referenceIndex.
-         * @member {number|null|undefined} referenceIndex
+         * @member {number} referenceIndex
          * @memberof BotMetadata.BotPluginMetadata
          * @instance
          */
-        BotPluginMetadata.prototype.referenceIndex = null;
+        BotPluginMetadata.prototype.referenceIndex = 0;
 
         /**
          * BotPluginMetadata expectedLinksCount.
-         * @member {number|null|undefined} expectedLinksCount
+         * @member {number} expectedLinksCount
          * @memberof BotMetadata.BotPluginMetadata
          * @instance
          */
-        BotPluginMetadata.prototype.expectedLinksCount = null;
+        BotPluginMetadata.prototype.expectedLinksCount = 0;
 
         /**
          * BotPluginMetadata searchQuery.
-         * @member {string|null|undefined} searchQuery
+         * @member {string} searchQuery
          * @memberof BotMetadata.BotPluginMetadata
          * @instance
          */
-        BotPluginMetadata.prototype.searchQuery = null;
+        BotPluginMetadata.prototype.searchQuery = "";
 
         /**
          * BotPluginMetadata parentPluginMessageKey.
@@ -14378,162 +13257,27 @@ $root.BotMetadata = (function() {
 
         /**
          * BotPluginMetadata deprecatedField.
-         * @member {BotMetadata.BotPluginMetadata.PluginType|null|undefined} deprecatedField
+         * @member {BotMetadata.BotPluginMetadata.PluginType} deprecatedField
          * @memberof BotMetadata.BotPluginMetadata
          * @instance
          */
-        BotPluginMetadata.prototype.deprecatedField = null;
+        BotPluginMetadata.prototype.deprecatedField = 0;
 
         /**
          * BotPluginMetadata parentPluginType.
-         * @member {BotMetadata.BotPluginMetadata.PluginType|null|undefined} parentPluginType
+         * @member {BotMetadata.BotPluginMetadata.PluginType} parentPluginType
          * @memberof BotMetadata.BotPluginMetadata
          * @instance
          */
-        BotPluginMetadata.prototype.parentPluginType = null;
+        BotPluginMetadata.prototype.parentPluginType = 0;
 
         /**
          * BotPluginMetadata faviconCdnUrl.
-         * @member {string|null|undefined} faviconCdnUrl
+         * @member {string} faviconCdnUrl
          * @memberof BotMetadata.BotPluginMetadata
          * @instance
          */
-        BotPluginMetadata.prototype.faviconCdnUrl = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotPluginMetadata _provider.
-         * @member {"provider"|undefined} _provider
-         * @memberof BotMetadata.BotPluginMetadata
-         * @instance
-         */
-        Object.defineProperty(BotPluginMetadata.prototype, "_provider", {
-            get: $util.oneOfGetter($oneOfFields = ["provider"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotPluginMetadata _pluginType.
-         * @member {"pluginType"|undefined} _pluginType
-         * @memberof BotMetadata.BotPluginMetadata
-         * @instance
-         */
-        Object.defineProperty(BotPluginMetadata.prototype, "_pluginType", {
-            get: $util.oneOfGetter($oneOfFields = ["pluginType"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotPluginMetadata _thumbnailCdnUrl.
-         * @member {"thumbnailCdnUrl"|undefined} _thumbnailCdnUrl
-         * @memberof BotMetadata.BotPluginMetadata
-         * @instance
-         */
-        Object.defineProperty(BotPluginMetadata.prototype, "_thumbnailCdnUrl", {
-            get: $util.oneOfGetter($oneOfFields = ["thumbnailCdnUrl"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotPluginMetadata _profilePhotoCdnUrl.
-         * @member {"profilePhotoCdnUrl"|undefined} _profilePhotoCdnUrl
-         * @memberof BotMetadata.BotPluginMetadata
-         * @instance
-         */
-        Object.defineProperty(BotPluginMetadata.prototype, "_profilePhotoCdnUrl", {
-            get: $util.oneOfGetter($oneOfFields = ["profilePhotoCdnUrl"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotPluginMetadata _searchProviderUrl.
-         * @member {"searchProviderUrl"|undefined} _searchProviderUrl
-         * @memberof BotMetadata.BotPluginMetadata
-         * @instance
-         */
-        Object.defineProperty(BotPluginMetadata.prototype, "_searchProviderUrl", {
-            get: $util.oneOfGetter($oneOfFields = ["searchProviderUrl"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotPluginMetadata _referenceIndex.
-         * @member {"referenceIndex"|undefined} _referenceIndex
-         * @memberof BotMetadata.BotPluginMetadata
-         * @instance
-         */
-        Object.defineProperty(BotPluginMetadata.prototype, "_referenceIndex", {
-            get: $util.oneOfGetter($oneOfFields = ["referenceIndex"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotPluginMetadata _expectedLinksCount.
-         * @member {"expectedLinksCount"|undefined} _expectedLinksCount
-         * @memberof BotMetadata.BotPluginMetadata
-         * @instance
-         */
-        Object.defineProperty(BotPluginMetadata.prototype, "_expectedLinksCount", {
-            get: $util.oneOfGetter($oneOfFields = ["expectedLinksCount"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotPluginMetadata _searchQuery.
-         * @member {"searchQuery"|undefined} _searchQuery
-         * @memberof BotMetadata.BotPluginMetadata
-         * @instance
-         */
-        Object.defineProperty(BotPluginMetadata.prototype, "_searchQuery", {
-            get: $util.oneOfGetter($oneOfFields = ["searchQuery"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotPluginMetadata _parentPluginMessageKey.
-         * @member {"parentPluginMessageKey"|undefined} _parentPluginMessageKey
-         * @memberof BotMetadata.BotPluginMetadata
-         * @instance
-         */
-        Object.defineProperty(BotPluginMetadata.prototype, "_parentPluginMessageKey", {
-            get: $util.oneOfGetter($oneOfFields = ["parentPluginMessageKey"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotPluginMetadata _deprecatedField.
-         * @member {"deprecatedField"|undefined} _deprecatedField
-         * @memberof BotMetadata.BotPluginMetadata
-         * @instance
-         */
-        Object.defineProperty(BotPluginMetadata.prototype, "_deprecatedField", {
-            get: $util.oneOfGetter($oneOfFields = ["deprecatedField"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotPluginMetadata _parentPluginType.
-         * @member {"parentPluginType"|undefined} _parentPluginType
-         * @memberof BotMetadata.BotPluginMetadata
-         * @instance
-         */
-        Object.defineProperty(BotPluginMetadata.prototype, "_parentPluginType", {
-            get: $util.oneOfGetter($oneOfFields = ["parentPluginType"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotPluginMetadata _faviconCdnUrl.
-         * @member {"faviconCdnUrl"|undefined} _faviconCdnUrl
-         * @memberof BotMetadata.BotPluginMetadata
-         * @instance
-         */
-        Object.defineProperty(BotPluginMetadata.prototype, "_faviconCdnUrl", {
-            get: $util.oneOfGetter($oneOfFields = ["faviconCdnUrl"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotPluginMetadata.prototype.faviconCdnUrl = "";
 
         /**
          * Creates a new BotPluginMetadata instance using the specified properties.
@@ -14702,9 +13446,7 @@ $root.BotMetadata = (function() {
         BotPluginMetadata.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
-            if (message.provider != null && message.hasOwnProperty("provider")) {
-                properties._provider = 1;
+            if (message.provider != null && message.hasOwnProperty("provider"))
                 switch (message.provider) {
                 default:
                     return "provider: enum value expected";
@@ -14714,9 +13456,7 @@ $root.BotMetadata = (function() {
                 case 3:
                     break;
                 }
-            }
-            if (message.pluginType != null && message.hasOwnProperty("pluginType")) {
-                properties._pluginType = 1;
+            if (message.pluginType != null && message.hasOwnProperty("pluginType"))
                 switch (message.pluginType) {
                 default:
                     return "pluginType: enum value expected";
@@ -14725,47 +13465,30 @@ $root.BotMetadata = (function() {
                 case 2:
                     break;
                 }
-            }
-            if (message.thumbnailCdnUrl != null && message.hasOwnProperty("thumbnailCdnUrl")) {
-                properties._thumbnailCdnUrl = 1;
+            if (message.thumbnailCdnUrl != null && message.hasOwnProperty("thumbnailCdnUrl"))
                 if (!$util.isString(message.thumbnailCdnUrl))
                     return "thumbnailCdnUrl: string expected";
-            }
-            if (message.profilePhotoCdnUrl != null && message.hasOwnProperty("profilePhotoCdnUrl")) {
-                properties._profilePhotoCdnUrl = 1;
+            if (message.profilePhotoCdnUrl != null && message.hasOwnProperty("profilePhotoCdnUrl"))
                 if (!$util.isString(message.profilePhotoCdnUrl))
                     return "profilePhotoCdnUrl: string expected";
-            }
-            if (message.searchProviderUrl != null && message.hasOwnProperty("searchProviderUrl")) {
-                properties._searchProviderUrl = 1;
+            if (message.searchProviderUrl != null && message.hasOwnProperty("searchProviderUrl"))
                 if (!$util.isString(message.searchProviderUrl))
                     return "searchProviderUrl: string expected";
-            }
-            if (message.referenceIndex != null && message.hasOwnProperty("referenceIndex")) {
-                properties._referenceIndex = 1;
+            if (message.referenceIndex != null && message.hasOwnProperty("referenceIndex"))
                 if (!$util.isInteger(message.referenceIndex))
                     return "referenceIndex: integer expected";
-            }
-            if (message.expectedLinksCount != null && message.hasOwnProperty("expectedLinksCount")) {
-                properties._expectedLinksCount = 1;
+            if (message.expectedLinksCount != null && message.hasOwnProperty("expectedLinksCount"))
                 if (!$util.isInteger(message.expectedLinksCount))
                     return "expectedLinksCount: integer expected";
-            }
-            if (message.searchQuery != null && message.hasOwnProperty("searchQuery")) {
-                properties._searchQuery = 1;
+            if (message.searchQuery != null && message.hasOwnProperty("searchQuery"))
                 if (!$util.isString(message.searchQuery))
                     return "searchQuery: string expected";
-            }
             if (message.parentPluginMessageKey != null && message.hasOwnProperty("parentPluginMessageKey")) {
-                properties._parentPluginMessageKey = 1;
-                {
-                    var error = $root.Protocol.MessageKey.verify(message.parentPluginMessageKey);
-                    if (error)
-                        return "parentPluginMessageKey." + error;
-                }
+                var error = $root.Protocol.MessageKey.verify(message.parentPluginMessageKey);
+                if (error)
+                    return "parentPluginMessageKey." + error;
             }
-            if (message.deprecatedField != null && message.hasOwnProperty("deprecatedField")) {
-                properties._deprecatedField = 1;
+            if (message.deprecatedField != null && message.hasOwnProperty("deprecatedField"))
                 switch (message.deprecatedField) {
                 default:
                     return "deprecatedField: enum value expected";
@@ -14774,9 +13497,7 @@ $root.BotMetadata = (function() {
                 case 2:
                     break;
                 }
-            }
-            if (message.parentPluginType != null && message.hasOwnProperty("parentPluginType")) {
-                properties._parentPluginType = 1;
+            if (message.parentPluginType != null && message.hasOwnProperty("parentPluginType"))
                 switch (message.parentPluginType) {
                 default:
                     return "parentPluginType: enum value expected";
@@ -14785,12 +13506,9 @@ $root.BotMetadata = (function() {
                 case 2:
                     break;
                 }
-            }
-            if (message.faviconCdnUrl != null && message.hasOwnProperty("faviconCdnUrl")) {
-                properties._faviconCdnUrl = 1;
+            if (message.faviconCdnUrl != null && message.hasOwnProperty("faviconCdnUrl"))
                 if (!$util.isString(message.faviconCdnUrl))
                     return "faviconCdnUrl: string expected";
-            }
             return null;
         };
 
@@ -14925,66 +13643,44 @@ $root.BotMetadata = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (message.provider != null && message.hasOwnProperty("provider")) {
+            if (options.defaults) {
+                object.provider = options.enums === String ? "UNKNOWN" : 0;
+                object.pluginType = options.enums === String ? "UNKNOWN_PLUGIN" : 0;
+                object.thumbnailCdnUrl = "";
+                object.profilePhotoCdnUrl = "";
+                object.searchProviderUrl = "";
+                object.referenceIndex = 0;
+                object.expectedLinksCount = 0;
+                object.searchQuery = "";
+                object.parentPluginMessageKey = null;
+                object.deprecatedField = options.enums === String ? "UNKNOWN_PLUGIN" : 0;
+                object.parentPluginType = options.enums === String ? "UNKNOWN_PLUGIN" : 0;
+                object.faviconCdnUrl = "";
+            }
+            if (message.provider != null && message.hasOwnProperty("provider"))
                 object.provider = options.enums === String ? $root.BotMetadata.BotPluginMetadata.SearchProvider[message.provider] === undefined ? message.provider : $root.BotMetadata.BotPluginMetadata.SearchProvider[message.provider] : message.provider;
-                if (options.oneofs)
-                    object._provider = "provider";
-            }
-            if (message.pluginType != null && message.hasOwnProperty("pluginType")) {
+            if (message.pluginType != null && message.hasOwnProperty("pluginType"))
                 object.pluginType = options.enums === String ? $root.BotMetadata.BotPluginMetadata.PluginType[message.pluginType] === undefined ? message.pluginType : $root.BotMetadata.BotPluginMetadata.PluginType[message.pluginType] : message.pluginType;
-                if (options.oneofs)
-                    object._pluginType = "pluginType";
-            }
-            if (message.thumbnailCdnUrl != null && message.hasOwnProperty("thumbnailCdnUrl")) {
+            if (message.thumbnailCdnUrl != null && message.hasOwnProperty("thumbnailCdnUrl"))
                 object.thumbnailCdnUrl = message.thumbnailCdnUrl;
-                if (options.oneofs)
-                    object._thumbnailCdnUrl = "thumbnailCdnUrl";
-            }
-            if (message.profilePhotoCdnUrl != null && message.hasOwnProperty("profilePhotoCdnUrl")) {
+            if (message.profilePhotoCdnUrl != null && message.hasOwnProperty("profilePhotoCdnUrl"))
                 object.profilePhotoCdnUrl = message.profilePhotoCdnUrl;
-                if (options.oneofs)
-                    object._profilePhotoCdnUrl = "profilePhotoCdnUrl";
-            }
-            if (message.searchProviderUrl != null && message.hasOwnProperty("searchProviderUrl")) {
+            if (message.searchProviderUrl != null && message.hasOwnProperty("searchProviderUrl"))
                 object.searchProviderUrl = message.searchProviderUrl;
-                if (options.oneofs)
-                    object._searchProviderUrl = "searchProviderUrl";
-            }
-            if (message.referenceIndex != null && message.hasOwnProperty("referenceIndex")) {
+            if (message.referenceIndex != null && message.hasOwnProperty("referenceIndex"))
                 object.referenceIndex = message.referenceIndex;
-                if (options.oneofs)
-                    object._referenceIndex = "referenceIndex";
-            }
-            if (message.expectedLinksCount != null && message.hasOwnProperty("expectedLinksCount")) {
+            if (message.expectedLinksCount != null && message.hasOwnProperty("expectedLinksCount"))
                 object.expectedLinksCount = message.expectedLinksCount;
-                if (options.oneofs)
-                    object._expectedLinksCount = "expectedLinksCount";
-            }
-            if (message.searchQuery != null && message.hasOwnProperty("searchQuery")) {
+            if (message.searchQuery != null && message.hasOwnProperty("searchQuery"))
                 object.searchQuery = message.searchQuery;
-                if (options.oneofs)
-                    object._searchQuery = "searchQuery";
-            }
-            if (message.parentPluginMessageKey != null && message.hasOwnProperty("parentPluginMessageKey")) {
+            if (message.parentPluginMessageKey != null && message.hasOwnProperty("parentPluginMessageKey"))
                 object.parentPluginMessageKey = $root.Protocol.MessageKey.toObject(message.parentPluginMessageKey, options);
-                if (options.oneofs)
-                    object._parentPluginMessageKey = "parentPluginMessageKey";
-            }
-            if (message.deprecatedField != null && message.hasOwnProperty("deprecatedField")) {
+            if (message.deprecatedField != null && message.hasOwnProperty("deprecatedField"))
                 object.deprecatedField = options.enums === String ? $root.BotMetadata.BotPluginMetadata.PluginType[message.deprecatedField] === undefined ? message.deprecatedField : $root.BotMetadata.BotPluginMetadata.PluginType[message.deprecatedField] : message.deprecatedField;
-                if (options.oneofs)
-                    object._deprecatedField = "deprecatedField";
-            }
-            if (message.parentPluginType != null && message.hasOwnProperty("parentPluginType")) {
+            if (message.parentPluginType != null && message.hasOwnProperty("parentPluginType"))
                 object.parentPluginType = options.enums === String ? $root.BotMetadata.BotPluginMetadata.PluginType[message.parentPluginType] === undefined ? message.parentPluginType : $root.BotMetadata.BotPluginMetadata.PluginType[message.parentPluginType] : message.parentPluginType;
-                if (options.oneofs)
-                    object._parentPluginType = "parentPluginType";
-            }
-            if (message.faviconCdnUrl != null && message.hasOwnProperty("faviconCdnUrl")) {
+            if (message.faviconCdnUrl != null && message.hasOwnProperty("faviconCdnUrl"))
                 object.faviconCdnUrl = message.faviconCdnUrl;
-                if (options.oneofs)
-                    object._faviconCdnUrl = "faviconCdnUrl";
-            }
             return object;
         };
 
@@ -15081,101 +13777,43 @@ $root.BotMetadata = (function() {
 
         /**
          * BotAvatarMetadata sentiment.
-         * @member {number|null|undefined} sentiment
+         * @member {number} sentiment
          * @memberof BotMetadata.BotAvatarMetadata
          * @instance
          */
-        BotAvatarMetadata.prototype.sentiment = null;
+        BotAvatarMetadata.prototype.sentiment = 0;
 
         /**
          * BotAvatarMetadata behaviorGraph.
-         * @member {string|null|undefined} behaviorGraph
+         * @member {string} behaviorGraph
          * @memberof BotMetadata.BotAvatarMetadata
          * @instance
          */
-        BotAvatarMetadata.prototype.behaviorGraph = null;
+        BotAvatarMetadata.prototype.behaviorGraph = "";
 
         /**
          * BotAvatarMetadata action.
-         * @member {number|null|undefined} action
+         * @member {number} action
          * @memberof BotMetadata.BotAvatarMetadata
          * @instance
          */
-        BotAvatarMetadata.prototype.action = null;
+        BotAvatarMetadata.prototype.action = 0;
 
         /**
          * BotAvatarMetadata intensity.
-         * @member {number|null|undefined} intensity
+         * @member {number} intensity
          * @memberof BotMetadata.BotAvatarMetadata
          * @instance
          */
-        BotAvatarMetadata.prototype.intensity = null;
+        BotAvatarMetadata.prototype.intensity = 0;
 
         /**
          * BotAvatarMetadata wordCount.
-         * @member {number|null|undefined} wordCount
+         * @member {number} wordCount
          * @memberof BotMetadata.BotAvatarMetadata
          * @instance
          */
-        BotAvatarMetadata.prototype.wordCount = null;
-
-        // OneOf field names bound to virtual getters and setters
-        var $oneOfFields;
-
-        /**
-         * BotAvatarMetadata _sentiment.
-         * @member {"sentiment"|undefined} _sentiment
-         * @memberof BotMetadata.BotAvatarMetadata
-         * @instance
-         */
-        Object.defineProperty(BotAvatarMetadata.prototype, "_sentiment", {
-            get: $util.oneOfGetter($oneOfFields = ["sentiment"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotAvatarMetadata _behaviorGraph.
-         * @member {"behaviorGraph"|undefined} _behaviorGraph
-         * @memberof BotMetadata.BotAvatarMetadata
-         * @instance
-         */
-        Object.defineProperty(BotAvatarMetadata.prototype, "_behaviorGraph", {
-            get: $util.oneOfGetter($oneOfFields = ["behaviorGraph"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotAvatarMetadata _action.
-         * @member {"action"|undefined} _action
-         * @memberof BotMetadata.BotAvatarMetadata
-         * @instance
-         */
-        Object.defineProperty(BotAvatarMetadata.prototype, "_action", {
-            get: $util.oneOfGetter($oneOfFields = ["action"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotAvatarMetadata _intensity.
-         * @member {"intensity"|undefined} _intensity
-         * @memberof BotMetadata.BotAvatarMetadata
-         * @instance
-         */
-        Object.defineProperty(BotAvatarMetadata.prototype, "_intensity", {
-            get: $util.oneOfGetter($oneOfFields = ["intensity"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        /**
-         * BotAvatarMetadata _wordCount.
-         * @member {"wordCount"|undefined} _wordCount
-         * @memberof BotMetadata.BotAvatarMetadata
-         * @instance
-         */
-        Object.defineProperty(BotAvatarMetadata.prototype, "_wordCount", {
-            get: $util.oneOfGetter($oneOfFields = ["wordCount"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        BotAvatarMetadata.prototype.wordCount = 0;
 
         /**
          * Creates a new BotAvatarMetadata instance using the specified properties.
@@ -15302,32 +13940,21 @@ $root.BotMetadata = (function() {
         BotAvatarMetadata.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            var properties = {};
-            if (message.sentiment != null && message.hasOwnProperty("sentiment")) {
-                properties._sentiment = 1;
+            if (message.sentiment != null && message.hasOwnProperty("sentiment"))
                 if (!$util.isInteger(message.sentiment))
                     return "sentiment: integer expected";
-            }
-            if (message.behaviorGraph != null && message.hasOwnProperty("behaviorGraph")) {
-                properties._behaviorGraph = 1;
+            if (message.behaviorGraph != null && message.hasOwnProperty("behaviorGraph"))
                 if (!$util.isString(message.behaviorGraph))
                     return "behaviorGraph: string expected";
-            }
-            if (message.action != null && message.hasOwnProperty("action")) {
-                properties._action = 1;
+            if (message.action != null && message.hasOwnProperty("action"))
                 if (!$util.isInteger(message.action))
                     return "action: integer expected";
-            }
-            if (message.intensity != null && message.hasOwnProperty("intensity")) {
-                properties._intensity = 1;
+            if (message.intensity != null && message.hasOwnProperty("intensity"))
                 if (!$util.isInteger(message.intensity))
                     return "intensity: integer expected";
-            }
-            if (message.wordCount != null && message.hasOwnProperty("wordCount")) {
-                properties._wordCount = 1;
+            if (message.wordCount != null && message.hasOwnProperty("wordCount"))
                 if (!$util.isInteger(message.wordCount))
                     return "wordCount: integer expected";
-            }
             return null;
         };
 
@@ -15369,31 +13996,23 @@ $root.BotMetadata = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (message.sentiment != null && message.hasOwnProperty("sentiment")) {
+            if (options.defaults) {
+                object.sentiment = 0;
+                object.behaviorGraph = "";
+                object.action = 0;
+                object.intensity = 0;
+                object.wordCount = 0;
+            }
+            if (message.sentiment != null && message.hasOwnProperty("sentiment"))
                 object.sentiment = message.sentiment;
-                if (options.oneofs)
-                    object._sentiment = "sentiment";
-            }
-            if (message.behaviorGraph != null && message.hasOwnProperty("behaviorGraph")) {
+            if (message.behaviorGraph != null && message.hasOwnProperty("behaviorGraph"))
                 object.behaviorGraph = message.behaviorGraph;
-                if (options.oneofs)
-                    object._behaviorGraph = "behaviorGraph";
-            }
-            if (message.action != null && message.hasOwnProperty("action")) {
+            if (message.action != null && message.hasOwnProperty("action"))
                 object.action = message.action;
-                if (options.oneofs)
-                    object._action = "action";
-            }
-            if (message.intensity != null && message.hasOwnProperty("intensity")) {
+            if (message.intensity != null && message.hasOwnProperty("intensity"))
                 object.intensity = message.intensity;
-                if (options.oneofs)
-                    object._intensity = "intensity";
-            }
-            if (message.wordCount != null && message.hasOwnProperty("wordCount")) {
+            if (message.wordCount != null && message.hasOwnProperty("wordCount"))
                 object.wordCount = message.wordCount;
-                if (options.oneofs)
-                    object._wordCount = "wordCount";
-            }
             return object;
         };
 

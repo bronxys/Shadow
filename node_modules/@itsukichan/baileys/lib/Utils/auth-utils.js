@@ -66,7 +66,7 @@ function makeCacheableSignalKeyStore(store, logger, _cache) {
                 let keys = 0
                 for (const type in data) {
                     for (const id in data[type]) {
-                        cache.set(getUniqueId(type, id), data[type][id])
+                        await cache.set(getUniqueId(type, id), data[type][id])
                         keys += 1
                     }
                 }
@@ -75,7 +75,7 @@ function makeCacheableSignalKeyStore(store, logger, _cache) {
             })
         },
         async clear() {
-            cache.flushAll()
+            await cache.flushAll()
             await store.clear?.call(store)
         }
     }

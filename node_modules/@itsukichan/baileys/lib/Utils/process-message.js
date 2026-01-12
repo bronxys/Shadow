@@ -202,7 +202,7 @@ const processMessage = async (message, { shouldProcessHistoryMsg, placeholderRes
             case WAProto_1.proto.Message.ProtocolMessage.Type.PEER_DATA_OPERATION_REQUEST_RESPONSE_MESSAGE:
                 const response = protocolMsg.peerDataOperationRequestResponseMessage
                 if (response) {
-                    placeholderResendCache?.del(response.stanzaId)
+                    await laceholderResendCache?.del(response.stanzaId)
                     // TODO: IMPLEMENT HISTORY SYNC ETC (sticker uploads etc.).
                     const { peerDataOperationResult } = response
                     for (const result of peerDataOperationResult) {
@@ -241,16 +241,19 @@ const processMessage = async (message, { shouldProcessHistoryMsg, placeholderRes
                 ])
                 break
             case WAProto_1.proto.Message.ProtocolMessage.Type.LID_MIGRATION_MAPPING_SYNC:
-                const lidMappingStore = signalRepository.getLIDMappingStore()
                 const encodedPayload = protocolMsg.lidMigrationMappingSyncMessage?.encodedMappingPayload
                 const { pnToLidMappings, chatDbMigrationTimestamp } = WAProto_1.proto.LIDMigrationMappingSyncPayload.decode(encodedPayload)
+                
                 logger?.debug({ pnToLidMappings, chatDbMigrationTimestamp }, 'got lid mappings and chat db migration timestamp')
+                
                 const pairs = []
+                
                 for (const { pn, latestLid, assignedLid } of pnToLidMappings) {
                     const lid = latestLid || assignedLid
                     pairs.push({ lid: `${lid}@lid`, pn: `${pn}@s.whatsapp.net` })
                 }
-                await lidMappingStore.storeLIDPNMappings(pairs)
+                
+                await signalRepository.lidMapping.storeLIDPNMappings(pairs)
                 break
             case WAProto_1.proto.Message.ProtocolMessage.Type.LIMIT_SHARING:
                 ev.emit('limit-sharing.update', {

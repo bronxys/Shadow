@@ -3,8 +3,8 @@
  * Copyright 2020 Google Inc.
  * SPDX-License-Identifier: Apache-2.0
  */
-import type * as Bidi from 'chromium-bidi/lib/cjs/protocol/protocol.js';
 import type {Protocol} from 'devtools-protocol';
+import type * as Bidi from 'webdriver-bidi-protocol';
 
 import type {Frame} from '../api/Frame.js';
 import {HTTPResponse, type RemoteAddress} from '../api/HTTPResponse.js';
@@ -146,7 +146,7 @@ export class BidiHTTPResponse extends HTTPResponse {
     return this.#securityDetails ?? null;
   }
 
-  override content(): never {
-    throw new UnsupportedOperation();
+  async content(): Promise<Uint8Array> {
+    return await this.#request.getResponseContent();
   }
 }

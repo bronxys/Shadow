@@ -31,6 +31,7 @@ $root.StatusAttributions = (function() {
          * @property {StatusAttributions.StatusAttribution.IMusic|null} [music] StatusAttribution music
          * @property {StatusAttributions.StatusAttribution.IGroupStatus|null} [groupStatus] StatusAttribution groupStatus
          * @property {StatusAttributions.StatusAttribution.IRLAttribution|null} [rlAttribution] StatusAttribution rlAttribution
+         * @property {StatusAttributions.StatusAttribution.IAiCreatedAttribution|null} [aiCreatedAttribution] StatusAttribution aiCreatedAttribution
          */
 
         /**
@@ -104,6 +105,14 @@ $root.StatusAttributions = (function() {
          */
         StatusAttribution.prototype.rlAttribution = null;
 
+        /**
+         * StatusAttribution aiCreatedAttribution.
+         * @member {StatusAttributions.StatusAttribution.IAiCreatedAttribution|null|undefined} aiCreatedAttribution
+         * @memberof StatusAttributions.StatusAttribution
+         * @instance
+         */
+        StatusAttribution.prototype.aiCreatedAttribution = null;
+
         // OneOf field names bound to virtual getters and setters
         var $oneOfFields;
 
@@ -131,12 +140,12 @@ $root.StatusAttributions = (function() {
 
         /**
          * StatusAttribution attributionData.
-         * @member {"statusReshare"|"externalShare"|"music"|"groupStatus"|"rlAttribution"|undefined} attributionData
+         * @member {"statusReshare"|"externalShare"|"music"|"groupStatus"|"rlAttribution"|"aiCreatedAttribution"|undefined} attributionData
          * @memberof StatusAttributions.StatusAttribution
          * @instance
          */
         Object.defineProperty(StatusAttribution.prototype, "attributionData", {
-            get: $util.oneOfGetter($oneOfFields = ["statusReshare", "externalShare", "music", "groupStatus", "rlAttribution"]),
+            get: $util.oneOfGetter($oneOfFields = ["statusReshare", "externalShare", "music", "groupStatus", "rlAttribution", "aiCreatedAttribution"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -178,6 +187,8 @@ $root.StatusAttributions = (function() {
                 $root.StatusAttributions.StatusAttribution.GroupStatus.encode(message.groupStatus, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
             if (message.rlAttribution != null && Object.hasOwnProperty.call(message, "rlAttribution"))
                 $root.StatusAttributions.StatusAttribution.RLAttribution.encode(message.rlAttribution, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
+            if (message.aiCreatedAttribution != null && Object.hasOwnProperty.call(message, "aiCreatedAttribution"))
+                $root.StatusAttributions.StatusAttribution.AiCreatedAttribution.encode(message.aiCreatedAttribution, writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
             return writer;
         };
 
@@ -242,6 +253,10 @@ $root.StatusAttributions = (function() {
                         message.rlAttribution = $root.StatusAttributions.StatusAttribution.RLAttribution.decode(reader, reader.uint32());
                         break;
                     }
+                case 8: {
+                        message.aiCreatedAttribution = $root.StatusAttributions.StatusAttribution.AiCreatedAttribution.decode(reader, reader.uint32());
+                        break;
+                    }
                 default:
                     reader.skipType(tag & 7);
                     break;
@@ -290,6 +305,7 @@ $root.StatusAttributions = (function() {
                 case 4:
                 case 5:
                 case 6:
+                case 7:
                     break;
                 }
             }
@@ -346,6 +362,16 @@ $root.StatusAttributions = (function() {
                         return "rlAttribution." + error;
                 }
             }
+            if (message.aiCreatedAttribution != null && message.hasOwnProperty("aiCreatedAttribution")) {
+                if (properties.attributionData === 1)
+                    return "attributionData: multiple values";
+                properties.attributionData = 1;
+                {
+                    var error = $root.StatusAttributions.StatusAttribution.AiCreatedAttribution.verify(message.aiCreatedAttribution);
+                    if (error)
+                        return "aiCreatedAttribution." + error;
+                }
+            }
             return null;
         };
 
@@ -396,6 +422,10 @@ $root.StatusAttributions = (function() {
             case 6:
                 message.type = 6;
                 break;
+            case "AI_CREATED":
+            case 7:
+                message.type = 7;
+                break;
             }
             if (object.actionUrl != null)
                 message.actionUrl = String(object.actionUrl);
@@ -423,6 +453,11 @@ $root.StatusAttributions = (function() {
                 if (typeof object.rlAttribution !== "object")
                     throw TypeError(".StatusAttributions.StatusAttribution.rlAttribution: object expected");
                 message.rlAttribution = $root.StatusAttributions.StatusAttribution.RLAttribution.fromObject(object.rlAttribution);
+            }
+            if (object.aiCreatedAttribution != null) {
+                if (typeof object.aiCreatedAttribution !== "object")
+                    throw TypeError(".StatusAttributions.StatusAttribution.aiCreatedAttribution: object expected");
+                message.aiCreatedAttribution = $root.StatusAttributions.StatusAttribution.AiCreatedAttribution.fromObject(object.aiCreatedAttribution);
             }
             return message;
         };
@@ -475,6 +510,11 @@ $root.StatusAttributions = (function() {
                 if (options.oneofs)
                     object.attributionData = "rlAttribution";
             }
+            if (message.aiCreatedAttribution != null && message.hasOwnProperty("aiCreatedAttribution")) {
+                object.aiCreatedAttribution = $root.StatusAttributions.StatusAttribution.AiCreatedAttribution.toObject(message.aiCreatedAttribution, options);
+                if (options.oneofs)
+                    object.attributionData = "aiCreatedAttribution";
+            }
             return object;
         };
 
@@ -503,6 +543,262 @@ $root.StatusAttributions = (function() {
             }
             return typeUrlPrefix + "/StatusAttributions.StatusAttribution";
         };
+
+        StatusAttribution.AiCreatedAttribution = (function() {
+
+            /**
+             * Properties of an AiCreatedAttribution.
+             * @memberof StatusAttributions.StatusAttribution
+             * @interface IAiCreatedAttribution
+             * @property {StatusAttributions.StatusAttribution.AiCreatedAttribution.Source|null} [source] AiCreatedAttribution source
+             */
+
+            /**
+             * Constructs a new AiCreatedAttribution.
+             * @memberof StatusAttributions.StatusAttribution
+             * @classdesc Represents an AiCreatedAttribution.
+             * @implements IAiCreatedAttribution
+             * @constructor
+             * @param {StatusAttributions.StatusAttribution.IAiCreatedAttribution=} [properties] Properties to set
+             */
+            function AiCreatedAttribution(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * AiCreatedAttribution source.
+             * @member {StatusAttributions.StatusAttribution.AiCreatedAttribution.Source|null|undefined} source
+             * @memberof StatusAttributions.StatusAttribution.AiCreatedAttribution
+             * @instance
+             */
+            AiCreatedAttribution.prototype.source = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * AiCreatedAttribution _source.
+             * @member {"source"|undefined} _source
+             * @memberof StatusAttributions.StatusAttribution.AiCreatedAttribution
+             * @instance
+             */
+            Object.defineProperty(AiCreatedAttribution.prototype, "_source", {
+                get: $util.oneOfGetter($oneOfFields = ["source"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * Creates a new AiCreatedAttribution instance using the specified properties.
+             * @function create
+             * @memberof StatusAttributions.StatusAttribution.AiCreatedAttribution
+             * @static
+             * @param {StatusAttributions.StatusAttribution.IAiCreatedAttribution=} [properties] Properties to set
+             * @returns {StatusAttributions.StatusAttribution.AiCreatedAttribution} AiCreatedAttribution instance
+             */
+            AiCreatedAttribution.create = function create(properties) {
+                return new AiCreatedAttribution(properties);
+            };
+
+            /**
+             * Encodes the specified AiCreatedAttribution message. Does not implicitly {@link StatusAttributions.StatusAttribution.AiCreatedAttribution.verify|verify} messages.
+             * @function encode
+             * @memberof StatusAttributions.StatusAttribution.AiCreatedAttribution
+             * @static
+             * @param {StatusAttributions.StatusAttribution.IAiCreatedAttribution} message AiCreatedAttribution message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AiCreatedAttribution.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.source != null && Object.hasOwnProperty.call(message, "source"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int32(message.source);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified AiCreatedAttribution message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.AiCreatedAttribution.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof StatusAttributions.StatusAttribution.AiCreatedAttribution
+             * @static
+             * @param {StatusAttributions.StatusAttribution.IAiCreatedAttribution} message AiCreatedAttribution message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AiCreatedAttribution.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an AiCreatedAttribution message from the specified reader or buffer.
+             * @function decode
+             * @memberof StatusAttributions.StatusAttribution.AiCreatedAttribution
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {StatusAttributions.StatusAttribution.AiCreatedAttribution} AiCreatedAttribution
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AiCreatedAttribution.decode = function decode(reader, length, error) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.StatusAttributions.StatusAttribution.AiCreatedAttribution();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    if (tag === error)
+                        break;
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.source = reader.int32();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an AiCreatedAttribution message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof StatusAttributions.StatusAttribution.AiCreatedAttribution
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {StatusAttributions.StatusAttribution.AiCreatedAttribution} AiCreatedAttribution
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AiCreatedAttribution.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an AiCreatedAttribution message.
+             * @function verify
+             * @memberof StatusAttributions.StatusAttribution.AiCreatedAttribution
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            AiCreatedAttribution.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                var properties = {};
+                if (message.source != null && message.hasOwnProperty("source")) {
+                    properties._source = 1;
+                    switch (message.source) {
+                    default:
+                        return "source: enum value expected";
+                    case 0:
+                    case 1:
+                        break;
+                    }
+                }
+                return null;
+            };
+
+            /**
+             * Creates an AiCreatedAttribution message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof StatusAttributions.StatusAttribution.AiCreatedAttribution
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {StatusAttributions.StatusAttribution.AiCreatedAttribution} AiCreatedAttribution
+             */
+            AiCreatedAttribution.fromObject = function fromObject(object) {
+                if (object instanceof $root.StatusAttributions.StatusAttribution.AiCreatedAttribution)
+                    return object;
+                var message = new $root.StatusAttributions.StatusAttribution.AiCreatedAttribution();
+                switch (object.source) {
+                default:
+                    if (typeof object.source === "number") {
+                        message.source = object.source;
+                        break;
+                    }
+                    break;
+                case "UNKNOWN":
+                case 0:
+                    message.source = 0;
+                    break;
+                case "STATUS_MIMICRY":
+                case 1:
+                    message.source = 1;
+                    break;
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an AiCreatedAttribution message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof StatusAttributions.StatusAttribution.AiCreatedAttribution
+             * @static
+             * @param {StatusAttributions.StatusAttribution.AiCreatedAttribution} message AiCreatedAttribution
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            AiCreatedAttribution.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (message.source != null && message.hasOwnProperty("source")) {
+                    object.source = options.enums === String ? $root.StatusAttributions.StatusAttribution.AiCreatedAttribution.Source[message.source] === undefined ? message.source : $root.StatusAttributions.StatusAttribution.AiCreatedAttribution.Source[message.source] : message.source;
+                    if (options.oneofs)
+                        object._source = "source";
+                }
+                return object;
+            };
+
+            /**
+             * Converts this AiCreatedAttribution to JSON.
+             * @function toJSON
+             * @memberof StatusAttributions.StatusAttribution.AiCreatedAttribution
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            AiCreatedAttribution.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for AiCreatedAttribution
+             * @function getTypeUrl
+             * @memberof StatusAttributions.StatusAttribution.AiCreatedAttribution
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            AiCreatedAttribution.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/StatusAttributions.StatusAttribution.AiCreatedAttribution";
+            };
+
+            /**
+             * Source enum.
+             * @name StatusAttributions.StatusAttribution.AiCreatedAttribution.Source
+             * @enum {number}
+             * @property {number} UNKNOWN=0 UNKNOWN value
+             * @property {number} STATUS_MIMICRY=1 STATUS_MIMICRY value
+             */
+            AiCreatedAttribution.Source = (function() {
+                var valuesById = {}, values = Object.create(valuesById);
+                values[valuesById[0] = "UNKNOWN"] = 0;
+                values[valuesById[1] = "STATUS_MIMICRY"] = 1;
+                return values;
+            })();
+
+            return AiCreatedAttribution;
+        })();
 
         StatusAttribution.ExternalShare = (function() {
 
@@ -748,6 +1044,7 @@ $root.StatusAttributions = (function() {
                     case 5:
                     case 6:
                     case 7:
+                    case 8:
                         break;
                     }
                 }
@@ -816,6 +1113,10 @@ $root.StatusAttributions = (function() {
                 case "THREADS":
                 case 7:
                     message.source = 7;
+                    break;
+                case "APPLE_MUSIC":
+                case 8:
+                    message.source = 8;
                     break;
                 }
                 if (object.duration != null)
@@ -899,6 +1200,7 @@ $root.StatusAttributions = (function() {
              * @property {number} YOUTUBE=5 YOUTUBE value
              * @property {number} PINTEREST=6 PINTEREST value
              * @property {number} THREADS=7 THREADS value
+             * @property {number} APPLE_MUSIC=8 APPLE_MUSIC value
              */
             ExternalShare.Source = (function() {
                 var valuesById = {}, values = Object.create(valuesById);
@@ -910,6 +1212,7 @@ $root.StatusAttributions = (function() {
                 values[valuesById[5] = "YOUTUBE"] = 5;
                 values[valuesById[6] = "PINTEREST"] = 6;
                 values[valuesById[7] = "THREADS"] = 7;
+                values[valuesById[8] = "APPLE_MUSIC"] = 8;
                 return values;
             })();
 
@@ -2005,6 +2308,7 @@ $root.StatusAttributions = (function() {
                     case 1:
                     case 2:
                     case 3:
+                    case 4:
                         break;
                     }
                 }
@@ -2053,6 +2357,10 @@ $root.StatusAttributions = (function() {
                 case "CHANNEL_RESHARE":
                 case 3:
                     message.source = 3;
+                    break;
+                case "FORWARD":
+                case 4:
+                    message.source = 4;
                     break;
                 }
                 if (object.metadata != null) {
@@ -2460,6 +2768,7 @@ $root.StatusAttributions = (function() {
              * @property {number} INTERNAL_RESHARE=1 INTERNAL_RESHARE value
              * @property {number} MENTION_RESHARE=2 MENTION_RESHARE value
              * @property {number} CHANNEL_RESHARE=3 CHANNEL_RESHARE value
+             * @property {number} FORWARD=4 FORWARD value
              */
             StatusReshare.Source = (function() {
                 var valuesById = {}, values = Object.create(valuesById);
@@ -2467,6 +2776,7 @@ $root.StatusAttributions = (function() {
                 values[valuesById[1] = "INTERNAL_RESHARE"] = 1;
                 values[valuesById[2] = "MENTION_RESHARE"] = 2;
                 values[valuesById[3] = "CHANNEL_RESHARE"] = 3;
+                values[valuesById[4] = "FORWARD"] = 4;
                 return values;
             })();
 
@@ -2484,6 +2794,7 @@ $root.StatusAttributions = (function() {
          * @property {number} STATUS_MENTION=4 STATUS_MENTION value
          * @property {number} GROUP_STATUS=5 GROUP_STATUS value
          * @property {number} RL_ATTRIBUTION=6 RL_ATTRIBUTION value
+         * @property {number} AI_CREATED=7 AI_CREATED value
          */
         StatusAttribution.Type = (function() {
             var valuesById = {}, values = Object.create(valuesById);
@@ -2494,6 +2805,7 @@ $root.StatusAttributions = (function() {
             values[valuesById[4] = "STATUS_MENTION"] = 4;
             values[valuesById[5] = "GROUP_STATUS"] = 5;
             values[valuesById[6] = "RL_ATTRIBUTION"] = 6;
+            values[valuesById[7] = "AI_CREATED"] = 7;
             return values;
         })();
 

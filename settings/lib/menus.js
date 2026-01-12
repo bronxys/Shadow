@@ -140,6 +140,7 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ┖╮
 ╭┤ˑ࣪    ִ .̇  ۫  ̣ ֽ֗ 📚 𝐏𝐄𝐒𝐐𝐔𝐈𝐒𝐀𝐒 🤓·๋  ִ֗  ᐧ ֶּ֓ ˑ࣪ 
 ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆
+┇ | 📚⋆͜͡҈➳ *${prefix}clashstalk*
 ┇ | 📚⋆͜͡҈➳ *${prefix}igstalk*
 ┇ | 📚⋆͜͡҈➳ *${prefix}steam*
 ┇ | 📚⋆͜͡҈➳ *${prefix}pensador*
@@ -395,12 +396,10 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ┇ | 👑⋆͜͡҈➳ *${prefix}configurar-bot
 ┇ | 👑⋆͜͡҈➳ *${prefix}tirarrent*
 ┇ | 👑⋆͜͡҈➳ *${prefix}delrent*
-┇ | 👑⋆͜͡҈➳ *${prefix}cortesia24*
 ┇ | 👑⋆͜͡҈➳ *${prefix}listrent*
 ┇ | 👑⋆͜͡҈➳ *${prefix}lastrent*
 ┇ | 👑⋆͜͡҈➳ *${prefix}keys*
 ┇ | 👑⋆͜͡҈➳ *${prefix}gerarkeygp*
-┇ | 👑⋆͜͡҈➳ *${prefix}gerarkeycort*
 ┇ | 👑⋆͜͡҈➳ *${prefix}rmkey*
 ┇ | 👑⋆͜͡҈➳ *${prefix}addvipgp (dias)*
 ┇ | 👑⋆͜͡҈➳ *${prefix}delvipgp*
@@ -799,8 +798,6 @@ return `
 ╭┤ˑ࣪    ִ .̇  ۫  ̣ ֽ֗  🎮 𝐌𝐄𝐍𝐔 - 𝐆𝐀𝐌𝐄𝐒  🕹·๋  ִ֗  ᐧ ֶּ֓ ˑ࣪ 
 ┇├┉━┅━┅━┅━┅━┅━┅━⋅≎⋆
 ┇ | 🎮⋆͜͡҈➳ *${prefix}gay (marcar @)*
-┇ | 🎮⋆͜͡҈➳ *${prefix}estuprar (marcar @)*
-┇ | 🎮⋆͜͡҈➳ *${prefix}queijo (marcar @)*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}infiel (marcar @)*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}feio (marcar @)*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}corno (marcar @)*
@@ -810,7 +807,6 @@ return `
 ┇ | 🎮⋆͜͡҈➳ *${prefix}matar (marcar @)*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}tapa (marcar @)*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}chute (marcar @)*
-┇ | 🎮⋆͜͡҈➳ *${prefix}nazista (marcar @)*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}chance (fale algo)*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}jogodavelha (marcar @)*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}anagrama (1/0)*
@@ -821,14 +817,12 @@ return `
 ┇ | 🎮⋆͜͡҈➳ *${prefix}resetforca (resetar)*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}jogodaforca (iniciar)*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}ppt (pedra/papel/tesoura)*
-┇ | 🎮⋆͜͡҈➳ *${prefix}cassino*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}quando (pergunta)*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}rankgay*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}rankgado*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}rankcorno*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}rankgostoso*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}rankgostosa*
-┇ | 🎮⋆͜͡҈➳ *${prefix}ranknazista*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}rankotakus*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}rankpau*
 ┇ | 🎮⋆͜͡҈➳ *${prefix}mencionar (fale algo)*

@@ -6,7 +6,7 @@ import CanceledError from '../cancel/CanceledError.js';
 import parseProtocol from '../helpers/parseProtocol.js';
 import platform from '../platform/index.js';
 import AxiosHeaders from '../core/AxiosHeaders.js';
-import progressEventReducer from '../helpers/progressEventReducer.js';
+import {progressEventReducer} from '../helpers/progressEventReducer.js';
 import resolveConfig from "../helpers/resolveConfig.js";
 
 const isXHRAdapterSupported = typeof XMLHttpRequest !== 'undefined';
@@ -16,16 +16,18 @@ export default isXHRAdapterSupported && function (config) {
     const _config = resolveConfig(config);
     let requestData = _config.data;
     const requestHeaders = AxiosHeaders.from(_config.headers).normalize();
-    let {responseType} = _config;
+    let {responseType, onUploadProgress, onDownloadProgress} = _config;
     let onCanceled;
-    function done() {
-      if (_config.cancelToken) {
-        _config.cancelToken.unsubscribe(onCanceled);
-      }
+    let uploadThrottled, downloadThrottled;
+    let flushUpload, flushDownload;
 
-      if (_config.signal) {
-        _config.signal.removeEventListener('abort', onCanceled);
-      }
+    function done() {
+      flushUpload && flushUpload(); // flush events
+      flushDownload && flushDownload(); // flush events
+
+      _config.cancelToken && _config.cancelToken.unsubscribe(onCanceled);
+
+      _config.signal && _config.signal.removeEventListener('abort', onCanceled);
     }
 
     let request = new XMLHttpRequest();
@@ -95,22 +97,25 @@ export default isXHRAdapterSupported && function (config) {
         return;
       }
 
-      reject(new AxiosError('Request aborted', AxiosError.ECONNABORTED, _config, request));
+      reject(new AxiosError('Request aborted', AxiosError.ECONNABORTED, config, request));
 
       // Clean up request
       request = null;
     };
 
     // Handle low level network errors
-    request.onerror = function handleError() {
-      // Real errors are hidden from us by the browser
-      // onerror should only fire if it's a network error
-      reject(new AxiosError('Network Error', AxiosError.ERR_NETWORK, _config, request));
-
-      // Clean up request
-      request = null;
+  request.onerror = function handleError(event) {
+       // Browsers deliver a ProgressEvent in XHR onerror
+       // (message may be empty; when present, surface it)
+       // See https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/error_event
+       const msg = event && event.message ? event.message : 'Network Error';
+       const err = new AxiosError(msg, AxiosError.ERR_NETWORK, config, request);
+       // attach the underlying event for consumers who want details
+       err.event = event || null;
+       reject(err);
+       request = null;
     };
-
+    
     // Handle timeout
     request.ontimeout = function handleTimeout() {
       let timeoutErrorMessage = _config.timeout ? 'timeout of ' + _config.timeout + 'ms exceeded' : 'timeout exceeded';
@@ -121,7 +126,7 @@ export default isXHRAdapterSupported && function (config) {
       reject(new AxiosError(
         timeoutErrorMessage,
         transitional.clarifyTimeoutError ? AxiosError.ETIMEDOUT : AxiosError.ECONNABORTED,
-        _config,
+        config,
         request));
 
       // Clean up request
@@ -149,13 +154,18 @@ export default isXHRAdapterSupported && function (config) {
     }
 
     // Handle progress if needed
-    if (typeof _config.onDownloadProgress === 'function') {
-      request.addEventListener('progress', progressEventReducer(_config.onDownloadProgress, true));
+    if (onDownloadProgress) {
+      ([downloadThrottled, flushDownload] = progressEventReducer(onDownloadProgress, true));
+      request.addEventListener('progress', downloadThrottled);
     }
 
     // Not all browsers support upload events
-    if (typeof _config.onUploadProgress === 'function' && request.upload) {
-      request.upload.addEventListener('progress', progressEventReducer(_config.onUploadProgress));
+    if (onUploadProgress && request.upload) {
+      ([uploadThrottled, flushUpload] = progressEventReducer(onUploadProgress));
+
+      request.upload.addEventListener('progress', uploadThrottled);
+
+      request.upload.addEventListener('loadend', flushUpload);
     }
 
     if (_config.cancelToken || _config.signal) {

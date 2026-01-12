@@ -3,10 +3,8 @@
     "@adiwajshing/keyed-db": "^0.2.4",
     "@cacheable/node-cache": "^1.5.3",
     "@distube/ytdl-core": "^4.16.4",
-    "@itsukichan/baileys": "^7.3.2",
-    "@nazi-team/baileys": "^6.7.14",
+    "@itsukichan/baileys": "npm:@innovatorssoft/baileys",
     "@vitalets/google-translate-api": "^9.2.0",
-    "@whiskeysockets/baileys": "npm:@itsukichan/baileys@^7.3.2",
     "acrcloud": "^1.4.0",
     "aki-api": "^7.0.1",
     "archiver": "^6.0.1",
@@ -60,15 +58,14 @@
     "youtube-captions-scraper": "^2.0.3",
     "youtube-transcript": "^1.2.1",
     "yt-search": "^2.10.4",
-    "ytdl-core": "^4.11.5",
-    "ytdownloader": "^1.0.2"
+    "ytdl-core": "^4.11.5"
   },
   "name": "Shadow-Bot",
   "description": "Sempre buscando melhorar, qualquer dúvida entra em contato comigo por meio do WhatsApp: +55 21 97198-3758",
-  "version": "3.0.0",
+  "version": "5.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "ulimit -c 0 && sh start.sh",
+    "start": "sh start.sh",
     "test": "node connect.js"
   },
   "repository": {

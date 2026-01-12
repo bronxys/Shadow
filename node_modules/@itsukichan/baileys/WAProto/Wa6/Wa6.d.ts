@@ -95,6 +95,12 @@ export namespace Wa6 {
 
         /** ClientPayload accountType */
         accountType?: (Wa6.ClientPayload.AccountType|null);
+
+        /** ClientPayload connectionSequenceInfo */
+        connectionSequenceInfo?: (number|null);
+
+        /** ClientPayload paaLink */
+        paaLink?: (boolean|null);
     }
 
     /** Represents a ClientPayload. */
@@ -196,6 +202,12 @@ export namespace Wa6 {
         /** ClientPayload accountType. */
         public accountType?: (Wa6.ClientPayload.AccountType|null);
 
+        /** ClientPayload connectionSequenceInfo. */
+        public connectionSequenceInfo?: (number|null);
+
+        /** ClientPayload paaLink. */
+        public paaLink?: (boolean|null);
+
         /** ClientPayload _username. */
         public _username?: "username";
 
@@ -282,6 +294,12 @@ export namespace Wa6 {
 
         /** ClientPayload _accountType. */
         public _accountType?: "accountType";
+
+        /** ClientPayload _connectionSequenceInfo. */
+        public _connectionSequenceInfo?: "connectionSequenceInfo";
+
+        /** ClientPayload _paaLink. */
+        public _paaLink?: "paaLink";
 
         /**
          * Creates a new ClientPayload instance using the specified properties.
@@ -1715,6 +1733,9 @@ export namespace Wa6 {
 
             /** ClientFinish payload */
             payload?: (Uint8Array|null);
+
+            /** ClientFinish extendedCiphertext */
+            extendedCiphertext?: (Uint8Array|null);
         }
 
         /** Represents a ClientFinish. */
@@ -1732,11 +1753,17 @@ export namespace Wa6 {
             /** ClientFinish payload. */
             public payload?: (Uint8Array|null);
 
+            /** ClientFinish extendedCiphertext. */
+            public extendedCiphertext?: (Uint8Array|null);
+
             /** ClientFinish _static. */
             public _static?: "static";
 
             /** ClientFinish _payload. */
             public _payload?: "payload";
+
+            /** ClientFinish _extendedCiphertext. */
+            public _extendedCiphertext?: "extendedCiphertext";
 
             /**
              * Creates a new ClientFinish instance using the specified properties.
@@ -1827,6 +1854,12 @@ export namespace Wa6 {
 
             /** ClientHello payload */
             payload?: (Uint8Array|null);
+
+            /** ClientHello useExtended */
+            useExtended?: (boolean|null);
+
+            /** ClientHello extendedCiphertext */
+            extendedCiphertext?: (Uint8Array|null);
         }
 
         /** Represents a ClientHello. */
@@ -1847,6 +1880,12 @@ export namespace Wa6 {
             /** ClientHello payload. */
             public payload?: (Uint8Array|null);
 
+            /** ClientHello useExtended. */
+            public useExtended?: (boolean|null);
+
+            /** ClientHello extendedCiphertext. */
+            public extendedCiphertext?: (Uint8Array|null);
+
             /** ClientHello _ephemeral. */
             public _ephemeral?: "ephemeral";
 
@@ -1855,6 +1894,12 @@ export namespace Wa6 {
 
             /** ClientHello _payload. */
             public _payload?: "payload";
+
+            /** ClientHello _useExtended. */
+            public _useExtended?: "useExtended";
+
+            /** ClientHello _extendedCiphertext. */
+            public _extendedCiphertext?: "extendedCiphertext";
 
             /**
              * Creates a new ClientHello instance using the specified properties.
@@ -1945,6 +1990,9 @@ export namespace Wa6 {
 
             /** ServerHello payload */
             payload?: (Uint8Array|null);
+
+            /** ServerHello extendedStatic */
+            extendedStatic?: (Uint8Array|null);
         }
 
         /** Represents a ServerHello. */
@@ -1965,6 +2013,9 @@ export namespace Wa6 {
             /** ServerHello payload. */
             public payload?: (Uint8Array|null);
 
+            /** ServerHello extendedStatic. */
+            public extendedStatic?: (Uint8Array|null);
+
             /** ServerHello _ephemeral. */
             public _ephemeral?: "ephemeral";
 
@@ -1973,6 +2024,9 @@ export namespace Wa6 {
 
             /** ServerHello _payload. */
             public _payload?: "payload";
+
+            /** ServerHello _extendedStatic. */
+            public _extendedStatic?: "extendedStatic";
 
             /**
              * Creates a new ServerHello instance using the specified properties.

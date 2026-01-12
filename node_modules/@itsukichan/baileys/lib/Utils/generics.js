@@ -35,6 +35,7 @@ Object.defineProperty(exports, "__esModule", { value: true })
 const boom_1 = require("@hapi/boom")
 const axios_1 = __importDefault(require("axios"))
 const crypto_1 = require("crypto")
+const crypto_2 = require("./crypto")
 const os_1 = require("os")
 const WAProto_1 = require("../../WAProto")
 const baileys_version_json_1 = require("../Defaults/baileys-version.json")
@@ -313,6 +314,13 @@ const generateMessageID = (userId) => {
     return sha + hash.toString('hex').toUpperCase().substring(0, 16)
 }
 
+// code is inspired by whatsmeow
+const generateParticipantHashV2 = (participants) => {
+    participants.sort()
+    const sha256Hash = crypto_2.sha256(Buffer.from(participants.join(''))).toString('base64')
+    return '2:' + sha256Hash.slice(0, 6)
+};
+
 function bindWaitForEvent(ev, event) {
     return async (check, timeoutMs) => {
         let listener
@@ -541,6 +549,7 @@ module.exports = {
   delayCancellable, 
   promiseTimeout, 
   generateMessageID, 
+  generateParticipantHashV2, 
   bindWaitForEvent, 
   bindWaitForConnectionUpdate, 
   printQRIfNecessaryListener, 

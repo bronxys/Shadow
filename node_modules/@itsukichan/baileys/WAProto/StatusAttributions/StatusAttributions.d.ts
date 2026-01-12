@@ -26,6 +26,9 @@ export namespace StatusAttributions {
 
         /** StatusAttribution rlAttribution */
         rlAttribution?: (StatusAttributions.StatusAttribution.IRLAttribution|null);
+
+        /** StatusAttribution aiCreatedAttribution */
+        aiCreatedAttribution?: (StatusAttributions.StatusAttribution.IAiCreatedAttribution|null);
     }
 
     /** Represents a StatusAttribution. */
@@ -58,6 +61,9 @@ export namespace StatusAttributions {
         /** StatusAttribution rlAttribution. */
         public rlAttribution?: (StatusAttributions.StatusAttribution.IRLAttribution|null);
 
+        /** StatusAttribution aiCreatedAttribution. */
+        public aiCreatedAttribution?: (StatusAttributions.StatusAttribution.IAiCreatedAttribution|null);
+
         /** StatusAttribution _type. */
         public _type?: "type";
 
@@ -65,7 +71,7 @@ export namespace StatusAttributions {
         public _actionUrl?: "actionUrl";
 
         /** StatusAttribution attributionData. */
-        public attributionData?: ("statusReshare"|"externalShare"|"music"|"groupStatus"|"rlAttribution");
+        public attributionData?: ("statusReshare"|"externalShare"|"music"|"groupStatus"|"rlAttribution"|"aiCreatedAttribution");
 
         /**
          * Creates a new StatusAttribution instance using the specified properties.
@@ -146,6 +152,115 @@ export namespace StatusAttributions {
     }
 
     namespace StatusAttribution {
+
+        /** Properties of an AiCreatedAttribution. */
+        interface IAiCreatedAttribution {
+
+            /** AiCreatedAttribution source */
+            source?: (StatusAttributions.StatusAttribution.AiCreatedAttribution.Source|null);
+        }
+
+        /** Represents an AiCreatedAttribution. */
+        class AiCreatedAttribution implements IAiCreatedAttribution {
+
+            /**
+             * Constructs a new AiCreatedAttribution.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: StatusAttributions.StatusAttribution.IAiCreatedAttribution);
+
+            /** AiCreatedAttribution source. */
+            public source?: (StatusAttributions.StatusAttribution.AiCreatedAttribution.Source|null);
+
+            /** AiCreatedAttribution _source. */
+            public _source?: "source";
+
+            /**
+             * Creates a new AiCreatedAttribution instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns AiCreatedAttribution instance
+             */
+            public static create(properties?: StatusAttributions.StatusAttribution.IAiCreatedAttribution): StatusAttributions.StatusAttribution.AiCreatedAttribution;
+
+            /**
+             * Encodes the specified AiCreatedAttribution message. Does not implicitly {@link StatusAttributions.StatusAttribution.AiCreatedAttribution.verify|verify} messages.
+             * @param message AiCreatedAttribution message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: StatusAttributions.StatusAttribution.IAiCreatedAttribution, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified AiCreatedAttribution message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.AiCreatedAttribution.verify|verify} messages.
+             * @param message AiCreatedAttribution message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: StatusAttributions.StatusAttribution.IAiCreatedAttribution, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an AiCreatedAttribution message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns AiCreatedAttribution
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): StatusAttributions.StatusAttribution.AiCreatedAttribution;
+
+            /**
+             * Decodes an AiCreatedAttribution message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns AiCreatedAttribution
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): StatusAttributions.StatusAttribution.AiCreatedAttribution;
+
+            /**
+             * Verifies an AiCreatedAttribution message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an AiCreatedAttribution message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns AiCreatedAttribution
+             */
+            public static fromObject(object: { [k: string]: any }): StatusAttributions.StatusAttribution.AiCreatedAttribution;
+
+            /**
+             * Creates a plain object from an AiCreatedAttribution message. Also converts values to other types if specified.
+             * @param message AiCreatedAttribution
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: StatusAttributions.StatusAttribution.AiCreatedAttribution, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this AiCreatedAttribution to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for AiCreatedAttribution
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        namespace AiCreatedAttribution {
+
+            /** Source enum. */
+            enum Source {
+                UNKNOWN = 0,
+                STATUS_MIMICRY = 1
+            }
+        }
 
         /** Properties of an ExternalShare. */
         interface IExternalShare {
@@ -285,7 +400,8 @@ export namespace StatusAttributions {
                 SPOTIFY = 4,
                 YOUTUBE = 5,
                 PINTEREST = 6,
-                THREADS = 7
+                THREADS = 7,
+                APPLE_MUSIC = 8
             }
         }
 
@@ -888,7 +1004,8 @@ export namespace StatusAttributions {
                 UNKNOWN = 0,
                 INTERNAL_RESHARE = 1,
                 MENTION_RESHARE = 2,
-                CHANNEL_RESHARE = 3
+                CHANNEL_RESHARE = 3,
+                FORWARD = 4
             }
         }
 
@@ -900,7 +1017,8 @@ export namespace StatusAttributions {
             MUSIC = 3,
             STATUS_MENTION = 4,
             GROUP_STATUS = 5,
-            RL_ATTRIBUTION = 6
+            RL_ATTRIBUTION = 6,
+            AI_CREATED = 7
         }
     }
 }

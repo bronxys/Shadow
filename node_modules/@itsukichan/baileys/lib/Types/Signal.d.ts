@@ -79,15 +79,20 @@ export type SignalRepository = {
         reason?: string
     }>
     jidToSignalProtocolAddress(jid: string): string
-    storeLIDPNMapping(lid: string, pn: string): Promise<void>
-    getLIDMappingStore(): LIDMappingStore
-    migrateSession(fromJid: string, toJid: string): Promise<void>
+    migrateSession(fromJids: string[], toJid: string): Promise<{
+        migrated: number
+        skipped: number
+        total: number
+    }>
     validateSession(jid: string): Promise<{
         exists: boolean
         reason?: string
     }>
-    deleteSession(jid: string): Promise<void>
-    destroy(): void
+    deleteSession(jids: string[]): Promise<void>
+}
+
+export interface SignalRepositoryWithLIDStore extends SignalRepository {
+    lidMapping: LIDMappingStore
 }
 
 export {}

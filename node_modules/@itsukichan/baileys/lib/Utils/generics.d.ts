@@ -52,6 +52,8 @@ export declare function promiseTimeout<T>(ms: number | undefined, promise: (reso
 
 export declare const generateMessageID: (userId?: string) => string
 
+export declare const generateParticipantHashV2: (participants: string[]) => string
+
 export declare function bindWaitForEvent<T extends keyof BaileysEventMap>(ev: BaileysEventEmitter, event: T): (check: (u: BaileysEventMap[T]) => boolean | undefined, timeoutMs?: number) => Promise<void>
 
 export declare const bindWaitForConnectionUpdate: (ev: BaileysEventEmitter) => (check: (u: Partial<ConnectionState>) => boolean | undefined, timeoutMs?: number) => Promise<void>

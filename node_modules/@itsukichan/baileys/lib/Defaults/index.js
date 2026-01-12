@@ -34,11 +34,13 @@ exports.PHONE_CONNECTION_CB = 'CB:Pong'
 exports.WA_DEFAULT_EPHEMERAL = 7 * 24 * 60 * 60
 
 exports.NOISE_MODE = 'Noise_XX_25519_AESGCM_SHA256\0\0\0\0'
+
 exports.DICT_VERSION = 3
 
 exports.KEY_BUNDLE_TYPE = Buffer.from([5])
 
 exports.NOISE_WA_HEADER = Buffer.from([87, 65, 6, exports.DICT_VERSION]) // last is "DICT_VERSION"
+
 /** from: https://stackoverflow.com/questions/3809401/what-is-a-good-regular-expression-to-match-a-url */
 exports.URL_REGEX = /https:\/\/(?![^:@\/\s]+:[^:@\/\s]+@)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(:\d+)?(\/[^\s]*)?/g
 
@@ -47,11 +49,11 @@ exports.WA_CERT_DETAILS = {
 }
 
 exports.PROCESSABLE_HISTORY_TYPES = [
-    WAProto_1.proto.Message.HistorySyncNotification.HistorySyncType.INITIAL_BOOTSTRAP,
-    WAProto_1.proto.Message.HistorySyncNotification.HistorySyncType.PUSH_NAME,
-    WAProto_1.proto.Message.HistorySyncNotification.HistorySyncType.RECENT,
-    WAProto_1.proto.Message.HistorySyncNotification.HistorySyncType.FULL,
-    WAProto_1.proto.Message.HistorySyncNotification.HistorySyncType.ON_DEMAND,
+    WAProto_1.proto.Message.HistorySyncType.INITIAL_BOOTSTRAP,
+    WAProto_1.proto.Message.HistorySyncType.PUSH_NAME,
+    WAProto_1.proto.Message.HistorySyncType.RECENT,
+    WAProto_1.proto.Message.HistorySyncType.FULL,
+    WAProto_1.proto.Message.HistorySyncType.ON_DEMAND
 ]
 
 exports.DEFAULT_CONNECTION_CONFIG = {

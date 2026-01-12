@@ -15,6 +15,7 @@ const {
     isPromise
   }
 } = require('node:util')
+const { InvalidArgumentError } = require('../core/errors')
 
 function matchValue (match, value) {
   if (typeof match === 'string') {
@@ -91,13 +92,42 @@ function matchHeaders (mockDispatch, headers) {
   return true
 }
 
+function normalizeSearchParams (query) {
+  if (typeof query !== 'string') {
+    return query
+  }
+
+  const originalQp = new URLSearchParams(query)
+  const normalizedQp = new URLSearchParams()
+
+  for (let [key, value] of originalQp.entries()) {
+    key = key.replace('[]', '')
+
+    const valueRepresentsString = /^(['"]).*\1$/.test(value)
+    if (valueRepresentsString) {
+      normalizedQp.append(key, value)
+      continue
+    }
+
+    if (value.includes(',')) {
+      const values = value.split(',')
+      for (const v of values) {
+        normalizedQp.append(key, v)
+      }
+      continue
+    }
+
+    normalizedQp.append(key, value)
+  }
+
+  return normalizedQp
+}
+
 function safeUrl (path) {
   if (typeof path !== 'string') {
     return path
   }
-
-  const pathSegments = path.split('?')
-
+  const pathSegments = path.split('?', 3)
   if (pathSegments.length !== 2) {
     return path
   }
@@ -337,7 +367,7 @@ function buildMockDispatch () {
       try {
         mockDispatch.call(this, opts, handler)
       } catch (error) {
-        if (error instanceof MockNotMatchedError) {
+        if (error.code === 'UND_MOCK_ERR_MOCK_NOT_MATCHED') {
           const netConnect = agent[kGetNetConnect]()
           if (netConnect === false) {
             throw new MockNotMatchedError(`${error.message}: subsequent request to origin ${origin} was not allowed (net.connect disabled)`)
@@ -367,11 +397,22 @@ function checkNetConnect (netConnect, origin) {
   return false
 }
 
-function buildMockOptions (opts) {
-  if (opts) {
-    const { agent, ...mockOptions } = opts
-    return mockOptions
+function buildAndValidateMockOptions (opts) {
+  const { agent, ...mockOptions } = opts
+
+  if ('enableCallHistory' in mockOptions && typeof mockOptions.enableCallHistory !== 'boolean') {
+    throw new InvalidArgumentError('options.enableCallHistory must to be a boolean')
   }
+
+  if ('acceptNonStandardSearchParameters' in mockOptions && typeof mockOptions.acceptNonStandardSearchParameters !== 'boolean') {
+    throw new InvalidArgumentError('options.acceptNonStandardSearchParameters must to be a boolean')
+  }
+
+  if ('ignoreTrailingSlash' in mockOptions && typeof mockOptions.ignoreTrailingSlash !== 'boolean') {
+    throw new InvalidArgumentError('options.ignoreTrailingSlash must to be a boolean')
+  }
+
+  return mockOptions
 }
 
 module.exports = {
@@ -387,7 +428,8 @@ module.exports = {
   mockDispatch,
   buildMockDispatch,
   checkNetConnect,
-  buildMockOptions,
+  buildAndValidateMockOptions,
   getHeaderByName,
-  buildHeadersFromArray
+  buildHeadersFromArray,
+  normalizeSearchParams
 }

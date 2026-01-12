@@ -8,9 +8,9 @@ Download do Termux atualizado: https://www.mediafire.com/file/0npdmv51pnttps0/co
 3°- pkg install python
 4°- pkg install
 5°- termux-setup-storage
-6°- cd /sdcard/Download/ShadowV4
+6°- cd /sdcard/Download/ShadowV4.2
 (se esse não for, tenta o de baixo)
-cd /sdcard/ShadowV4
+cd /sdcard/ShadowV4.2
 7°- sh start.sh
 */
 
