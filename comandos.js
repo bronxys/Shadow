@@ -1,5 +1,5 @@
 /*
-COMANDOS DE INSTALAÇÃO DO SHADOW-BOT - BY: VITUKJK
+COMANDOS DE INSTALAÇÃO DO SHADOW-BOT - BY: VITUKJK =D
 
 Download do Termux atualizado: https://www.mediafire.com/file/0npdmv51pnttps0/com.termux_0.119.1-119_minAPI21(arm64-v8a,armeabi-v7a,x86,x86_64)(nodpi)_apkmirror.com.apk/file
 
